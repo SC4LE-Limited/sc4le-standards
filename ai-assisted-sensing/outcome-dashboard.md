@@ -28,41 +28,41 @@ It aggregates counts by folder and by signal type to give a clear view of sensin
 The sensing engine updates these metrics automatically based on entries in adaptation-log.md.
 
 ### Total Signals
-- Total signals emitted: <count>
+- Total signals emitted: 0
 
 ### Metadata Signals
-- metadata_missing_header: <count>
-- metadata_invalid_schema: <count>
-- metadata_invalid_version: <count>
-- metadata_invalid_date: <count>
-- metadata_missing_tags: <count>
+- metadata_missing_header: 5
+- metadata_invalid_schema: 21
+- metadata_invalid_version: 0
+- metadata_invalid_date: 21
+- metadata_missing_tags: 21
 
 ### Structural Signals
-- structure_missing_section: <count>
-- structure_invalid_order: <count>
-- structure_schema_violation: <count>
+- structure_missing_section: 117
+- structure_invalid_order: 0
+- structure_schema_violation: 0
 
 ### Naming Signals
-- naming_invalid_filename: <count>
-- naming_taxonomy_violation: <count>
+- naming_invalid_filename: 0
+- naming_taxonomy_violation: 0
 
 ## 3. Folder Breakdown
 Counts per folder:
 
 ### meta/
-- metadata issues: <count>
-- structural issues: <count>
-- naming issues: <count>
+- metadata issues: 0
+- structural issues: 0
+- naming issues: 0
 
 ### foundations/
-- metadata issues: <count>
-- structural issues: <count>
-- naming issues: <count>
+- metadata issues: 0
+- structural issues: 0
+- naming issues: 0
 
 ### operating-model/
-- metadata issues: <count>
-- structural issues: <count>
-- naming issues: <count>
+- metadata issues: 0
+- structural issues: 0
+- naming issues: 0
 
 ## 4. Example Summary (Illustrative Only)
 This example shows how the dashboard might look after several sensing events:
