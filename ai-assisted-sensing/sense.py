@@ -1,237 +1,245 @@
 import os
-import re
-import datetime
 import yaml
+from datetime import datetime
 
-MONITORED_FOLDERS = ["meta", "foundations", "operating-model"]
-LOG_PATH = os.path.join("ai-assisted-sensing", "adaptation-log.md")
-DASHBOARD_PATH = os.path.join("ai-assisted-sensing", "outcome-dashboard.md")
+# Folders to scan (full repo, but you can tweak this list)
+SCAN_ROOTS = [
+    ".",  # whole repo
+]
 
-# ---------- Helpers ----------
+# File extensions to include
+INCLUDE_EXTENSIONS = [".md"]
 
-def iso_now():
-    return datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+# Simple severity mapping
+def classify_severity(issue: str) -> str:
+    if "missing" in issue or "invalid" in issue:
+        return "high"
+    if "non_compliant" in issue:
+        return "medium"
+    return "low"
 
-def is_semver(version):
-    return bool(re.match(r"^\d+\.\d+\.\d+$", str(version)))
 
-def is_iso_date(value):
-    try:
-        datetime.datetime.fromisoformat(str(value).replace("Z", ""))
-        return True
-    except Exception:
-        return False
+def find_markdown_files():
+    files = []
+    for root in SCAN_ROOTS:
+        for dirpath, dirnames, filenames in os.walk(root):
+            # Skip .git and ai-assisted-sensing itself
+            if ".git" in dirpath or "ai-assisted-sensing" in dirpath:
+                continue
+            for name in filenames:
+                if any(name.endswith(ext) for ext in INCLUDE_EXTENSIONS):
+                    rel_path = os.path.relpath(os.path.join(dirpath, name), ".")
+                    files.append(rel_path)
+    return files
 
-def read_file(path):
-    with open(path, "r", encoding="utf-8") as f:
-        return f.read()
 
-def write_append(path, text):
-    with open(path, "a", encoding="utf-8") as f:
-        f.write(text + "\n")
-
-def load_dashboard():
-    if not os.path.exists(DASHBOARD_PATH):
-        return {}
-    content = read_file(DASHBOARD_PATH)
-    metrics = {}
-    for line in content.splitlines():
-        if "<count>" in line:
-            continue
-        m = re.search(r"^- (.+?): (\d+)$", line.strip())
-        if m:
-            key, val = m.group(1), int(m.group(2))
-            metrics[key] = val
-    return metrics
-
-def save_dashboard(metrics):
-    # Very simple: we only rewrite the counts section, not the whole file structure.
-    # Assumes the dashboard uses lines like: "- metadata_missing_header: <count>"
-    content = read_file(DASHBOARD_PATH)
-    lines = content.splitlines()
-    new_lines = []
-    for line in lines:
-        m = re.search(r"^- (.+?): <count>$", line.strip())
-        if m:
-            key = m.group(1)
-            val = metrics.get(key, 0)
-            new_lines.append(f"- {key}: {val}")
-        else:
-            new_lines.append(line)
-    with open(DASHBOARD_PATH, "w", encoding="utf-8") as f:
-        f.write("\n".join(new_lines))
-
-def parse_yaml_header(text):
-    lines = text.splitlines()
-    if not lines or lines[0].strip() != "---":
-        return None, text
-    yaml_lines = []
-    body_lines = []
-    in_yaml = True
-    for line in lines[1:]:
-        if in_yaml and line.strip() == "---":
-            in_yaml = False
-            continue
-        if in_yaml:
-            yaml_lines.append(line)
-        else:
-            body_lines.append(line)
-    try:
-        meta = yaml.safe_load("\n".join(yaml_lines)) or {}
-    except Exception:
-        meta = {}
-    body = "\n".join(body_lines)
-    return meta, body
-
-def detect_sections(body):
-    # Very simple: look for markdown headings as section markers
-    sections = []
-    for line in body.splitlines():
-        if line.startswith("#"):
-            sections.append(line.strip("# ").strip())
-    return sections
-
-def emit_signal(folder, file_path, issue, signal_type, routed_to):
-    timestamp = iso_now()
-    line = f"{timestamp} | {folder}/ | {file_path} | {issue} | {signal_type} | {routed_to}"
-    write_append(LOG_PATH, line)
-    return line
-
-# ---------- Rule Checks ----------
-
-def check_metadata(folder, file_path, meta):
+def analyze_file(path):
+    """
+    Return a list of signals for a single file.
+    Each signal is a dict:
+    {
+        "folder": "foundations",
+        "file": "sc4le-principles.md",
+        "issue": "metadata_missing_tags",
+        "severity": "high"
+    }
+    """
     signals = []
-    routed_to = "Governance Workspace"
 
-    if meta is None:
-        signals.append(("metadata_missing_header", "metadata_non_compliant"))
+    folder = os.path.dirname(path) or "."
+    file = os.path.basename(path)
+
+    # Read file
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            content = f.read()
+    except Exception:
+        signals.append({
+            "folder": folder,
+            "file": file,
+            "issue": "file_unreadable",
+            "severity": "high",
+        })
         return signals
 
-    schema = meta.get("schema")
-    version = meta.get("version")
-    updated = meta.get("updated")
-    owner = meta.get("owner")
-    tags = meta.get("tags")
+    # Detect YAML front matter
+    yaml_data = None
+    if content.startswith("---"):
+        parts = content.split("---", 2)
+        if len(parts) >= 3:
+            yaml_block = parts[1]
+            try:
+                yaml_data = yaml.safe_load(yaml_block) or {}
+            except Exception:
+                signals.append({
+                    "folder": folder,
+                    "file": file,
+                    "issue": "metadata_invalid_yaml",
+                    "severity": "high",
+                })
 
-    if schema != "sc4le-meta-v1":
-        signals.append(("metadata_invalid_schema", "metadata_non_compliant"))
-    if not is_semver(version):
-        signals.append(("metadata_invalid_version", "metadata_non_compliant"))
-    if not is_iso_date(updated):
-        signals.append(("metadata_invalid_date", "metadata_non_compliant"))
-    if owner != "SC4LE Limited":
-        signals.append(("metadata_invalid_owner", "metadata_non_compliant"))
-    if not tags or not isinstance(tags, list) or len(tags) == 0:
-        signals.append(("metadata_missing_tags", "metadata_non_compliant"))
+    # Metadata checks
+    if yaml_data is None:
+        signals.append({
+            "folder": folder,
+            "file": file,
+            "issue": "metadata_missing_header",
+            "severity": "high",
+        })
+    else:
+        # Example checks: title, tags
+        if "title" not in yaml_data:
+            signals.append({
+                "folder": folder,
+                "file": file,
+                "issue": "metadata_missing_title",
+                "severity": "high",
+            })
+        if "tags" not in yaml_data or not yaml_data.get("tags"):
+            signals.append({
+                "folder": folder,
+                "file": file,
+                "issue": "metadata_missing_tags",
+                "severity": "high",
+            })
+
+    # Simple structural checks (example: must contain at least one H1)
+    if "# " not in content:
+        signals.append({
+            "folder": folder,
+            "file": file,
+            "issue": "structure_missing_h1",
+            "severity": "medium",
+        })
+
+    # Naming checks (spaces, parentheses)
+    if " " in file or "(" in file or ")" in file:
+        signals.append({
+            "folder": folder,
+            "file": file,
+            "issue": "naming_invalid_filename",
+            "severity": "low",
+        })
 
     return signals
 
-def check_structure(folder, file_path, body):
-    signals = []
-    routed_to = "Governance Workspace"
-    sections = detect_sections(body)
 
-    required = []
-    if folder == "meta":
-        required = ["Purpose", "Scope", "Governance", "Roles", "Workflow", "Versioning"]
-    elif folder == "foundations":
-        required = ["Principle", "Description", "Behaviour", "Anti‑patterns"]
-    elif folder == "operating-model":
-        required = ["Domains", "Cadences", "Decision pathways", "Roles"]
+def write_grouped_log(signals):
+    by_folder = {}
+    by_type = {}
+    severity_counts = {"high": 0, "medium": 0, "low": 0}
 
-    for req in required:
-        if not any(req.lower() in s.lower() for s in sections):
-            signals.append((f"structure_missing_section:{req}", "structure_non_compliant"))
+    for s in signals:
+        folder = s["folder"]
+        file = s["file"]
+        issue = s["issue"]
+        severity = s.get("severity", classify_severity(issue))
 
-    return signals
+        severity_counts[severity] += 1
 
-def check_naming(folder, file_path):
-    signals = []
-    routed_to = "Brand Workspace"
+        if folder not in by_folder:
+            by_folder[folder] = {}
+        if file not in by_folder[folder]:
+            by_folder[folder][file] = []
+        by_folder[folder][file].append(issue)
 
-    filename = os.path.basename(file_path)
+        if issue not in by_type:
+            by_type[issue] = []
+        by_type[issue].append(f"{folder}/{file}")
 
-    # Very simple naming checks as a starting point
-    if " " in filename:
-        signals.append(("naming_invalid_filename", "naming_taxonomy_violation"))
+    md = []
+    md.append("# SC4LE Adaptation Log")
+    md.append(f"_Last updated: {datetime.utcnow().isoformat()}Z_")
+    md.append("\n---\n")
 
-    # Example taxonomy rule: roles should be lowercase with hyphens
-    if folder == "operating-model/roles":
-        if not re.match(r"^[a-z0-9\-]+\.md$", filename):
-            signals.append(("naming_taxonomy_violation", "naming_taxonomy_violation"))
+    md.append("## 🔍 Summary of Signals")
+    md.append(f"- **High severity:** {severity_counts['high']}")
+    md.append(f"- **Medium severity:** {severity_counts['medium']}")
+    md.append(f"- **Low severity:** {severity_counts['low']}")
+    md.append("\n---\n")
 
-    return signals
+    md.append("## 📁 Signals by Folder\n")
+    for folder, files in sorted(by_folder.items()):
+        md.append(f"### {folder}/")
+        for file, issues in sorted(files.items()):
+            md.append(f"- **{file}**")
+            for issue in issues:
+                md.append(f"  - {issue}")
+        md.append("")
 
-# ---------- Main Scanner ----------
+    md.append("\n---\n")
 
-def scan_file(root_folder, rel_path):
-    full_path = os.path.join(root_folder, rel_path)
-    text = read_file(full_path)
-    meta, body = parse_yaml_header(text)
+    md.append("## 🧭 Signals by Type\n")
+    for issue, locations in sorted(by_type.items()):
+        md.append(f"### {issue}")
+        for loc in sorted(locations):
+            md.append(f"- {loc}")
+        md.append("")
 
-    # Metadata
-    metadata_signals = check_metadata(root_folder, rel_path, meta)
-    for issue, signal_type in metadata_signals:
-        emit_signal(root_folder, rel_path, issue, signal_type, "Governance Workspace")
+    md.append("\n---\n")
 
-    # Structural
-    structural_signals = check_structure(root_folder, rel_path, body)
-    for issue, signal_type in structural_signals:
-        emit_signal(root_folder, rel_path, issue, signal_type, "Governance Workspace")
+    md.append("## 🚨 High‑Priority Issues (Fix Soon)")
+    for folder, files in sorted(by_folder.items()):
+        for file, issues in sorted(files.items()):
+            for issue in issues:
+                if "missing" in issue or "invalid" in issue:
+                    md.append(f"- {folder}/{file} — {issue}")
+    md.append("\n---\n")
 
-    # Naming
-    naming_signals = check_naming(root_folder, rel_path)
-    for issue, signal_type in naming_signals:
-        emit_signal(root_folder, rel_path, issue, signal_type, "Brand Workspace")
+    with open("ai-assisted-sensing/adaptation-log.md", "w", encoding="utf-8") as f:
+        f.write("\n".join(md))
+
+
+def write_dashboard(signals):
+    severity_counts = {"high": 0, "medium": 0, "low": 0}
+    by_folder = {}
+
+    for s in signals:
+        folder = s["folder"]
+        file = s["file"]
+        issue = s["issue"]
+        severity = s.get("severity", classify_severity(issue))
+
+        severity_counts[severity] += 1
+
+        if folder not in by_folder:
+            by_folder[folder] = {"high": 0, "medium": 0, "low": 0}
+        by_folder[folder][severity] += 1
+
+    md = []
+    md.append("# SC4LE Sensing Dashboard")
+    md.append(f"_Last updated: {datetime.utcnow().isoformat()}Z_")
+    md.append("\n---\n")
+
+    md.append("## 🔍 Overall Severity Counts")
+    md.append(f"- **High:** {severity_counts['high']}")
+    md.append(f"- **Medium:** {severity_counts['medium']}")
+    md.append(f"- **Low:** {severity_counts['low']}")
+    md.append("\n---\n")
+
+    md.append("## 📁 Folder Health")
+    for folder, counts in sorted(by_folder.items()):
+        md.append(f"### {folder}/")
+        md.append(f"- High: {counts['high']}")
+        md.append(f"- Medium: {counts['medium']}")
+        md.append(f"- Low: {counts['low']}")
+        md.append("")
+
+    with open("ai-assisted-sensing/outcome-dashboard.md", "w", encoding="utf-8") as f:
+        f.write("\n".join(md))
+
 
 def main():
-    # Ensure log file exists
-    if not os.path.exists(LOG_PATH):
-        with open(LOG_PATH, "w", encoding="utf-8") as f:
-            f.write("# AI‑Assisted Sensing — Adaptation Log\n")
+    files = find_markdown_files()
+    all_signals = []
 
-    # Scan monitored folders
-    for folder in MONITORED_FOLDERS:
-        if not os.path.exists(folder):
-            continue
-        for root, dirs, files in os.walk(folder):
-            for name in files:
-                if not name.endswith(".md"):
-                    continue
-                rel_path = os.path.relpath(os.path.join(root, name), folder)
-                scan_file(folder, rel_path)
+    for path in files:
+        signals = analyze_file(path)
+        all_signals.extend(signals)
 
-    # Dashboard update (simple count aggregation)
-    metrics = {}
-    if os.path.exists(LOG_PATH):
-        content = read_file(LOG_PATH)
-        for line in content.splitlines():
-            if "|" not in line:
-                continue
-            parts = [p.strip() for p in line.split("|")]
-            if len(parts) != 6:
-                continue
-            issue = parts[3]
-            metrics[issue] = metrics.get(issue, 0) + 1
+    write_grouped_log(all_signals)
+    write_dashboard(all_signals)
 
-    # Map issues to dashboard keys
-    dashboard_metrics = {
-        "metadata_missing_header": metrics.get("metadata_missing_header", 0),
-        "metadata_invalid_schema": metrics.get("metadata_invalid_schema", 0),
-        "metadata_invalid_version": metrics.get("metadata_invalid_version", 0),
-        "metadata_invalid_date": metrics.get("metadata_invalid_date", 0),
-        "metadata_missing_tags": metrics.get("metadata_missing_tags", 0),
-        "structure_missing_section": sum(
-            v for k, v in metrics.items() if k.startswith("structure_missing_section")
-        ),
-        "structure_invalid_order": metrics.get("structure_invalid_order", 0),
-        "structure_schema_violation": metrics.get("structure_schema_violation", 0),
-        "naming_invalid_filename": metrics.get("naming_invalid_filename", 0),
-        "naming_taxonomy_violation": metrics.get("naming_taxonomy_violation", 0),
-    }
-
-    if os.path.exists(DASHBOARD_PATH):
-        save_dashboard(dashboard_metrics)
 
 if __name__ == "__main__":
     main()
