@@ -1,5 +1,5 @@
 # SC4LE Sensing Dashboard
-_Last updated: 2026-08-21T20:20:46.470035Z_
+_Last updated: 2026-08-21T20:29:22.555330Z_
 
 ---
 
@@ -10,7 +10,7 @@ _Last updated: 2026-08-21T20:20:46.470035Z_
 
 ---
 
-## 📁 Folder Health
+## 📁 Folder Health (Severity-first)
 ### ./
 - High: 4
 - Medium: 0
@@ -85,3 +85,6 @@ _Last updated: 2026-08-21T20:20:46.470035Z_
 - High: 3
 - Medium: 0
 - Low: 0
+
+
+---
