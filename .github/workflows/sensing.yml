@@ -1,0 +1,46 @@
+name: SC4LE Sensing Engine
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * *"   # Runs nightly at 02:00 UTC
+
+jobs:
+  run-sensing:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the SC4LE Standards repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Run the SC4LE sensing engine
+        run: |
+          python ai-assisted-sensing/sense.py
+
+      - name: Commit sensing updates (log + dashboard)
+        run: |
+          git config --global user.name "SC4LE Sensing Engine"
+          git config --global user.email "sensing@sc4le.co.uk"
+          git add ai-assisted-sensing/adaptation-log.md
+          git add ai-assisted-sensing/outcome-dashboard.md
+          git commit -m "SC4LE Sensing Update: automated log + dashboard refresh" || echo "No changes to commit"
+
+      - name: Push updates back to the repo
+        if: success()
+        run: |
+          git push
