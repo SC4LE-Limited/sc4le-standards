@@ -1,11 +1,14 @@
 ---
-title: SC4LE Evidence Base
-version: 1.0.0
-status: canonical
-document-type: foundation
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "SC4LE Evidence Base"
+tags: ["foundations", "evidence", "research", "case-studies"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "The evidence base underpinning SC4LE, including research, case studies, and practical validation of the operating model."
 ---
+
 # SC4LE Evidence Base
 
 ## 1. Purpose
