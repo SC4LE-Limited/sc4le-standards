@@ -1,12 +1,14 @@
 ---
-title: SC4LE Narrative Architecture
-version: 1.0.0
-status: canonical
-owner: SC4LE Design Authority
-last-updated: 2026-06-01
+schema: sc4le-standard-v1
+title: "SC4LE Narrative Architecture"
+tags: ["foundations", "narrative", "story", "positioning"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "The narrative architecture that explains SC4LE’s story, positioning, and how the model is communicated across audiences."
 ---
 
----
 
 # 1. Executive Summary
 
