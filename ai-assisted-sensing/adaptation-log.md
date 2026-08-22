@@ -1,44 +1,44 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-22T02:44:15.720220Z_
+_Last updated: 2026-08-22T10:00:57.152990Z_
 
 ---
 
 ## 🔍 Summary of Signals
-- **High severity files:** 83
+- **High severity files:** 79
 - **Medium severity files:** 0
 - **Low severity files:** 3
 
 ---
 
 ## 🚨 High Severity Issues
-### ./CONTRIBUTING.md
-- metadata_missing_header
-
-### ./LICENSE.md
-- metadata_missing_header
-
-### ./README.md
-- metadata_missing_header
-
-### ./TRADEMARKS.md
-- metadata_missing_header
-
 ### Templates/README.md
+- metadata_missing_template_type
+- metadata_missing_use_cases
 - metadata_missing_tags
 
 ### Templates/decision-log.md
+- metadata_missing_template_type
+- metadata_missing_use_cases
 - metadata_missing_tags
 
 ### Templates/flow-diagnostic-template.md
+- metadata_missing_template_type
+- metadata_missing_use_cases
 - metadata_missing_tags
 
 ### Templates/governance-record.md
+- metadata_missing_template_type
+- metadata_missing_use_cases
 - metadata_missing_tags
 
 ### Templates/prioritisation-template.md
+- metadata_missing_template_type
+- metadata_missing_use_cases
 - metadata_missing_tags
 
 ### Templates/risk-log.md
+- metadata_missing_template_type
+- metadata_missing_use_cases
 - metadata_missing_tags
 
 ### brand/brand-overview.md
@@ -51,36 +51,54 @@ _Last updated: 2026-08-22T02:44:15.720220Z_
 - metadata_missing_header
 
 ### diagrams/README.md
+- metadata_missing_diagram_type
+- metadata_missing_source_file
 - metadata_missing_tags
 
 ### diagrams/SC4LE-diagrams.md
+- metadata_missing_diagram_type
+- metadata_missing_source_file
 - metadata_missing_tags
 
 ### diagrams/decision-pathway.md
+- metadata_missing_diagram_type
+- metadata_missing_source_file
 - metadata_missing_tags
 
 ### diagrams/governance-architecture.md
+- metadata_missing_diagram_type
+- metadata_missing_source_file
 - metadata_missing_tags
 
 ### diagrams/sensing-loop.md
+- metadata_missing_diagram_type
+- metadata_missing_source_file
 - metadata_missing_tags
 
 ### foundations/evidence-base.md
 - metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
 ### foundations/sc4le-narrative-architecture.md
 - metadata_missing_tags
+- metadata_missing_updated
 
 ### foundations/sc4le-principles.md
 - metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
 ### maturity-model/README.md
+- metadata_missing_maturity_dimension
 - metadata_missing_tags
 
 ### maturity-model/maturity-assessment-template.md
+- metadata_missing_maturity_dimension
 - metadata_missing_tags
 
 ### maturity-model/maturity-dashboard.md
+- metadata_missing_maturity_dimension
 - metadata_missing_tags
 
 ### maturity-model/maturity-heatmap.md
@@ -124,24 +142,54 @@ _Last updated: 2026-08-22T02:44:15.720220Z_
 
 ### operating-model/README.md
 - metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
 ### operating-model/ai-enabled-sensing-operating-model.md
 - metadata_missing_header
 
-### operating-model/decision-pathways/cda-decision-guide.md
+### operating-model/cda-decision-guide.md
 - metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
-### operating-model/decision-pathways/escalation-thresholds.md
+### operating-model/cda.md
 - metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
-### operating-model/decision-pathways/lda-decision-guide.md
+### operating-model/escalation-thresholds.md
 - metadata_missing_tags
-
-### operating-model/decision-pathways/standard-decision-flow.md
-- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
 ### operating-model/federated-governance.md
 - metadata_missing_header
+
+### operating-model/flow-cadence.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
+
+### operating-model/improvement-cadence.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
+
+### operating-model/lda-decision-guide.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
+
+### operating-model/lda.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
+
+### operating-model/leadership-cadence.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
 ### operating-model/maturity-model.md
 - metadata_missing_header
@@ -149,91 +197,136 @@ _Last updated: 2026-08-22T02:44:15.720220Z_
 ### operating-model/operating-model-index.md
 - metadata_missing_header
 
-### operating-model/rhythms/flow-cadence.md
+### operating-model/sc4le-academy-lead.md
 - metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
-### operating-model/rhythms/improvement-cadence.md
+### operating-model/sc4le-enablement-lead.md
 - metadata_missing_tags
-
-### operating-model/rhythms/leadership-cadence.md
-- metadata_missing_tags
-
-### operating-model/rhythms/sensing-cadence.md
-- metadata_missing_tags
-
-### operating-model/roles/cda.md
-- metadata_missing_tags
-
-### operating-model/roles/lda.md
-- metadata_missing_tags
-
-### operating-model/roles/sc4le-academy-lead.md
-- metadata_missing_tags
-
-### operating-model/roles/sc4le-enablement-lead.md
-- metadata_missing_tags
-
-### operating-model/roles/sc4le-flow-architect.md
-- metadata_missing_tags
-
-### operating-model/roles/sc4le-governance-architect.md
-- metadata_missing_tags
-
-### operating-model/roles/sc4le-insight-architect.md
-- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
 ### operating-model/sc4le-federated-governance-standard.md
 - metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
+
+### operating-model/sc4le-flow-architect.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
+
+### operating-model/sc4le-governance-architect.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
+
+### operating-model/sc4le-insight-architect.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
 ### operating-model/sc4le-model-overview.md
 - metadata_missing_header
 
 ### operating-model/sc4le-operating-model-standard.md
 - metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
+
+### operating-model/sensing-cadence.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
+
+### operating-model/standard-decision-flow.md
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_updated
 
 ### programmes/SC4LE-SCALE-UPS.md
 - metadata_missing_header
 
 ### services/Advisory‑as‑a‑Service (Fractional Transformation Office).md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/Principle System Design.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/README.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/SC4LE Operating Model Design & Blueprinting.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/ai-enabled-sensing-and-insight-system-design.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/change-portfolio-prioritisation-and-decision-frameworks.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/federated-governance-system-design-and-assurance.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/index.md
 - metadata_missing_header
 
 ### services/leadership-decision-coaching-and-executive-enablement.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/local-design-authority-setup-and-enablement.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/operating-model-health-check.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/risk-dependency-and-decision-latency-diagnostics.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/sc4le-academy-capability-building-and-skills-development.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/sc4le-enablement-cycles-and-continuous-improvement-system.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/service-interlink-map.md
@@ -243,12 +336,20 @@ _Last updated: 2026-08-22T02:44:15.720220Z_
 - metadata_missing_header
 
 ### services/strategy-activation-and-alignment-workshops.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### services/value-stream-mapping-and-flow-optimisation.md
+- metadata_missing_service_category
+- metadata_missing_target_customer
+- metadata_missing_pricing_model
 - metadata_missing_tags
 
 ### value-propositions/sc4le-value-proposition-framework.md
+- metadata_missing_value_type
+- metadata_missing_target_customer
 - metadata_missing_tags
 
 ### web/master-prompt.md

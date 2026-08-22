@@ -1,23 +1,18 @@
 # SC4LE Sensing Dashboard
-_Last updated: 2026-08-22T02:44:15.720541Z_
+_Last updated: 2026-08-22T10:00:57.153363Z_
 
 ---
 
 ## 🔍 Overall Severity Counts
-- **High:** 83
+- **High:** 192
 - **Medium:** 0
 - **Low:** 3
 
 ---
 
-## 📁 Folder Health (Severity-first)
-### ./
-- High: 4
-- Medium: 0
-- Low: 0
-
+## 📁 Folder Health
 ### Templates/
-- High: 6
+- High: 18
 - Medium: 0
 - Low: 0
 
@@ -27,17 +22,17 @@ _Last updated: 2026-08-22T02:44:15.720541Z_
 - Low: 0
 
 ### diagrams/
-- High: 5
+- High: 15
 - Medium: 0
 - Low: 0
 
 ### foundations/
-- High: 3
+- High: 8
 - Medium: 0
 - Low: 0
 
 ### maturity-model/
-- High: 4
+- High: 7
 - Medium: 0
 - Low: 0
 
@@ -47,22 +42,7 @@ _Last updated: 2026-08-22T02:44:15.720541Z_
 - Low: 0
 
 ### operating-model/
-- High: 8
-- Medium: 0
-- Low: 0
-
-### operating-model/decision-pathways/
-- High: 4
-- Medium: 0
-- Low: 0
-
-### operating-model/rhythms/
-- High: 4
-- Medium: 0
-- Low: 0
-
-### operating-model/roles/
-- High: 7
+- High: 59
 - Medium: 0
 - Low: 0
 
@@ -72,12 +52,12 @@ _Last updated: 2026-08-22T02:44:15.720541Z_
 - Low: 0
 
 ### services/
-- High: 18
+- High: 63
 - Medium: 0
 - Low: 3
 
 ### value-propositions/
-- High: 1
+- High: 3
 - Medium: 0
 - Low: 0
 
