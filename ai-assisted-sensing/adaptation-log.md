@@ -1,10 +1,10 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-22T10:00:57.152990Z_
+_Last updated: 2026-08-22T21:29:39.492120Z_
 
 ---
 
 ## 🔍 Summary of Signals
-- **High severity files:** 79
+- **High severity files:** 78
 - **Medium severity files:** 0
 - **Low severity files:** 3
 
@@ -74,11 +74,6 @@ _Last updated: 2026-08-22T10:00:57.152990Z_
 - metadata_missing_diagram_type
 - metadata_missing_source_file
 - metadata_missing_tags
-
-### foundations/evidence-base.md
-- metadata_missing_tags
-- metadata_missing_owner
-- metadata_missing_updated
 
 ### foundations/sc4le-narrative-architecture.md
 - metadata_missing_tags
