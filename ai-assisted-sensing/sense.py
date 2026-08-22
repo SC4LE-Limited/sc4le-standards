@@ -3,24 +3,65 @@ import yaml
 from datetime import datetime
 
 # ------------------------------------------------------------
-# CONFIGURATION
+# SCHEMA MAP
 # ------------------------------------------------------------
 
-# Scan the entire repo (except .git and sensing folder)
-SCAN_ROOTS = ["."]
-INCLUDE_EXTENSIONS = [".md"]
+SCHEMA_MAP = {
+    "foundations": {
+        "schema": "sc4le-standard-v1",
+        "required": ["title", "tags", "owner", "status", "version", "updated"]
+    },
+    "operating-model": {
+        "schema": "sc4le-standard-v1",
+        "required": ["title", "tags", "owner", "status", "version", "updated"]
+    },
+    "meta": {
+        "schema": "sc4le-standard-v1",
+        "required": ["title", "tags", "owner", "status", "version", "updated"]
+    },
+    "services": {
+        "schema": "sc4le-service-v1",
+        "required": ["title", "service_category", "target_customer", "pricing_model", "tags"]
+    },
+    "brand": {
+        "schema": "sc4le-brand-v1",
+        "required": ["title", "brand_asset_type", "usage_rules", "tags"]
+    },
+    "diagrams": {
+        "schema": "sc4le-diagram-v1",
+        "required": ["title", "diagram_type", "source_file", "tags"]
+    },
+    "Templates": {
+        "schema": "sc4le-template-v1",
+        "required": ["title", "template_type", "use_cases", "tags"]
+    },
+    "web": {
+        "schema": "sc4le-web-v1",
+        "required": ["title", "slug", "layout", "tags"]
+    },
+    "value-propositions": {
+        "schema": "sc4le-value-v1",
+        "required": ["title", "value_type", "target_customer", "tags"]
+    },
+    "programmes": {
+        "schema": "sc4le-programme-v1",
+        "required": ["title", "programme_type", "target_group", "tags"]
+    },
+    "maturity-model": {
+        "schema": "sc4le-maturity-v1",
+        "required": ["title", "maturity_dimension", "tags"]
+    }
+}
+
+IGNORE_ROOT_FILES = [
+    "README.md", "LICENSE.md", "CONTRIBUTING.md", "TRADEMARKS.md"
+]
 
 # ------------------------------------------------------------
 # SEVERITY CLASSIFICATION
 # ------------------------------------------------------------
 
 def classify_severity(issue: str) -> str:
-    """
-    Simple severity rules:
-    - High: missing or invalid metadata/structure
-    - Medium: structural non-compliance
-    - Low: naming issues
-    """
     if "missing" in issue or "invalid" in issue:
         return "high"
     if "non_compliant" in issue:
@@ -33,14 +74,13 @@ def classify_severity(issue: str) -> str:
 
 def find_markdown_files():
     files = []
-    for root in SCAN_ROOTS:
-        for dirpath, dirnames, filenames in os.walk(root):
-            if ".git" in dirpath or "ai-assisted-sensing" in dirpath:
-                continue
-            for name in filenames:
-                if any(name.endswith(ext) for ext in INCLUDE_EXTENSIONS):
-                    rel_path = os.path.relpath(os.path.join(dirpath, name), ".")
-                    files.append(rel_path)
+    for dirpath, dirnames, filenames in os.walk("."):
+        if ".git" in dirpath or "ai-assisted-sensing" in dirpath:
+            continue
+        for name in filenames:
+            if name.endswith(".md"):
+                rel = os.path.relpath(os.path.join(dirpath, name), ".")
+                files.append(rel)
     return files
 
 # ------------------------------------------------------------
@@ -48,10 +88,23 @@ def find_markdown_files():
 # ------------------------------------------------------------
 
 def analyze_file(path):
-    signals = []
-    folder = os.path.dirname(path) or "."
+    folder = os.path.dirname(path).split("/")[0] or "."
     file = os.path.basename(path)
 
+    # Ignore root-level docs
+    if folder == "." and file in IGNORE_ROOT_FILES:
+        return []
+
+    signals = []
+
+    # Determine schema
+    schema_info = SCHEMA_MAP.get(folder)
+    if not schema_info:
+        return []  # ignore folders without schemas
+
+    required_fields = schema_info["required"]
+
+    # Read file
     try:
         with open(path, "r", encoding="utf-8") as f:
             content = f.read()
@@ -60,11 +113,11 @@ def analyze_file(path):
             "folder": folder,
             "file": file,
             "issue": "file_unreadable",
-            "severity": "high",
+            "severity": "high"
         })
         return signals
 
-    # YAML front matter detection
+    # YAML detection
     yaml_data = None
     if content.startswith("---"):
         parts = content.split("---", 2)
@@ -76,49 +129,44 @@ def analyze_file(path):
                     "folder": folder,
                     "file": file,
                     "issue": "metadata_invalid_yaml",
-                    "severity": "high",
+                    "severity": "high"
                 })
 
-    # Metadata checks
     if yaml_data is None:
         signals.append({
             "folder": folder,
             "file": file,
             "issue": "metadata_missing_header",
-            "severity": "high",
+            "severity": "high"
         })
-    else:
-        if "title" not in yaml_data:
+        return signals
+
+    # Schema validation
+    for field in required_fields:
+        if field not in yaml_data or yaml_data.get(field) in ["", None]:
             signals.append({
                 "folder": folder,
                 "file": file,
-                "issue": "metadata_missing_title",
-                "severity": "high",
-            })
-        if "tags" not in yaml_data or not yaml_data.get("tags"):
-            signals.append({
-                "folder": folder,
-                "file": file,
-                "issue": "metadata_missing_tags",
-                "severity": "high",
+                "issue": f"metadata_missing_{field}",
+                "severity": "high"
             })
 
-    # Structural checks
+    # Structural check
     if "# " not in content:
         signals.append({
             "folder": folder,
             "file": file,
             "issue": "structure_missing_h1",
-            "severity": "medium",
+            "severity": "medium"
         })
 
-    # Naming checks
+    # Naming check
     if " " in file or "(" in file or ")" in file:
         signals.append({
             "folder": folder,
             "file": file,
             "issue": "naming_invalid_filename",
-            "severity": "low",
+            "severity": "low"
         })
 
     return signals
@@ -131,67 +179,44 @@ def write_grouped_log(signals):
     severity_groups = {"high": {}, "medium": {}, "low": {}}
 
     for s in signals:
-        severity = s.get("severity", classify_severity(s["issue"]))
+        severity = s["severity"]
         file_key = f"{s['folder']}/{s['file']}"
         issue = s["issue"]
 
-        if file_key not in severity_groups[severity]:
-            severity_groups[severity][file_key] = []
-        severity_groups[severity][file_key].append(issue)
+        severity_groups[severity].setdefault(file_key, []).append(issue)
 
     md = []
     md.append("# SC4LE Adaptation Log")
     md.append(f"_Last updated: {datetime.utcnow().isoformat()}Z_")
     md.append("\n---\n")
 
-    # Summary
     md.append("## 🔍 Summary of Signals")
     md.append(f"- **High severity files:** {len(severity_groups['high'])}")
     md.append(f"- **Medium severity files:** {len(severity_groups['medium'])}")
     md.append(f"- **Low severity files:** {len(severity_groups['low'])}")
     md.append("\n---\n")
 
-    # High severity
-    md.append("## 🚨 High Severity Issues")
-    if severity_groups["high"]:
-        for file_key, issues in sorted(severity_groups["high"].items()):
-            md.append(f"### {file_key}")
-            for issue in issues:
-                md.append(f"- {issue}")
-            md.append("")
-    else:
-        md.append("_No high severity issues detected._")
-    md.append("\n---\n")
-
-    # Medium severity
-    md.append("## 🟡 Medium Severity Issues")
-    if severity_groups["medium"]:
-        for file_key, issues in sorted(severity_groups["medium"].items()):
-            md.append(f"### {file_key}")
-            for issue in issues:
-                md.append(f"- {issue}")
-            md.append("")
-    else:
-        md.append("_No medium severity issues detected._")
-    md.append("\n---\n")
-
-    # Low severity
-    md.append("## 🟢 Low Severity Issues")
-    if severity_groups["low"]:
-        for file_key, issues in sorted(severity_groups["low"].items()):
-            md.append(f"### {file_key}")
-            for issue in issues:
-                md.append(f"- {issue}")
-            md.append("")
-    else:
-        md.append("_No low severity issues detected._")
-    md.append("\n---\n")
+    for level, title in [
+        ("high", "🚨 High Severity Issues"),
+        ("medium", "🟡 Medium Severity Issues"),
+        ("low", "🟢 Low Severity Issues")
+    ]:
+        md.append(f"## {title}")
+        if severity_groups[level]:
+            for file_key, issues in sorted(severity_groups[level].items()):
+                md.append(f"### {file_key}")
+                for issue in issues:
+                    md.append(f"- {issue}")
+                md.append("")
+        else:
+            md.append(f"_No {level} severity issues detected._")
+        md.append("\n---\n")
 
     with open("ai-assisted-sensing/adaptation-log.md", "w", encoding="utf-8") as f:
         f.write("\n".join(md))
 
 # ------------------------------------------------------------
-# DASHBOARD WRITER (Severity-first folder health)
+# DASHBOARD WRITER
 # ------------------------------------------------------------
 
 def write_dashboard(signals):
@@ -199,13 +224,11 @@ def write_dashboard(signals):
     folder_health = {}
 
     for s in signals:
-        severity = s.get("severity", classify_severity(s["issue"]))
+        severity = s["severity"]
         folder = s["folder"]
 
         severity_counts[severity] += 1
-
-        if folder not in folder_health:
-            folder_health[folder] = {"high": 0, "medium": 0, "low": 0}
+        folder_health.setdefault(folder, {"high": 0, "medium": 0, "low": 0})
         folder_health[folder][severity] += 1
 
     md = []
@@ -219,7 +242,7 @@ def write_dashboard(signals):
     md.append(f"- **Low:** {severity_counts['low']}")
     md.append("\n---\n")
 
-    md.append("## 📁 Folder Health (Severity-first)")
+    md.append("## 📁 Folder Health")
     for folder, counts in sorted(folder_health.items()):
         md.append(f"### {folder}/")
         md.append(f"- High: {counts['high']}")
@@ -238,7 +261,6 @@ def write_dashboard(signals):
 def main():
     files = find_markdown_files()
     all_signals = []
-
     for path in files:
         all_signals.extend(analyze_file(path))
 
