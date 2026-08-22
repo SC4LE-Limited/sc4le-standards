@@ -1,10 +1,14 @@
 ---
-title: SC4LE Principles (Canonical Standard)
-version: 1.1.0
-status: canonical
-last-updated: 2026-06-08
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "SC4LE Shared Principles"
+tags: ["foundations", "principles", "behaviour", "alignment"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "The core behavioural principles that reduce cognitive load, accelerate decision-making, and create alignment across federated teams."
 ---
+
 
 # SC4LE Principles (Canonical Standard)
 The SC4LE Principles are the foundational guardrails that ensure alignment, coherence and ethical integrity across all SC4LE implementations. They guide decision‑making, governance, flow, capability uplift and continuous improvement across federated teams.
