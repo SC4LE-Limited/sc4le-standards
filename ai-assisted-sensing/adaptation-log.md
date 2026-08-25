@@ -1,5 +1,5 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T15:03:07.327044Z_
+_Last updated: 2026-08-25T15:04:18.238220Z_
 
 ---
 
@@ -179,7 +179,6 @@ _Last updated: 2026-08-25T15:03:07.327044Z_
 - metadata_missing_service_category
 - metadata_missing_target_customer
 - metadata_missing_pricing_model
-- metadata_missing_tags
 
 ### value-propositions/sc4le-value-proposition-framework.md
 - metadata_missing_value_type
