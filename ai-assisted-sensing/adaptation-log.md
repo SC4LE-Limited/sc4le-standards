@@ -1,5 +1,5 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T14:59:26.792141Z_
+_Last updated: 2026-08-25T15:00:10.235380Z_
 
 ---
 
@@ -109,7 +109,6 @@ _Last updated: 2026-08-25T14:59:26.792141Z_
 - metadata_missing_service_category
 - metadata_missing_target_customer
 - metadata_missing_pricing_model
-- metadata_missing_tags
 
 ### services/ai-enabled-sensing-and-insight-system-design.md
 - metadata_missing_service_category
