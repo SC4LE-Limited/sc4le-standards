@@ -1,9 +1,14 @@
 ---
-title: Sensing Cadence
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "Sensing Cadence"
+tags: ["sensing", "ai-enabled", "rhythms", "cadence"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "Cadence for AI-enabled sensing cycles that monitor flow, risk, governance signals, and organisational health."
 ---
+
 
 # Sensing Cadence
 
