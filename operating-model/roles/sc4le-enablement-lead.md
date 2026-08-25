@@ -1,9 +1,14 @@
 ---
-title: SC4LE Enablement Lead
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "SC4LE Enablement Lead Role"
+tags: ["roles", "enablement", "governance"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.0"
+updated: "2026-08-22"
+description: "Role responsible for diagnosing systemic issues, running enablement cycles, and uplifting local capability."
 ---
+
 
 # SC4LE Enablement Lead
 
