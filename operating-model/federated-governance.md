@@ -1,3 +1,14 @@
+---
+schema: sc4le-standard-v1
+title: "Federated Governance Model"
+tags: ["governance", "federated", "lda", "decision-making"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "Explains how SC4LE uses federated governance through Local Design Authorities to balance autonomy with strategic alignment."
+---
+
 # SC4LE Federated Governance
 
 Federated Governance is a core pillar of the SC4LE operating model.  
