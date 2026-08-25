@@ -1,9 +1,14 @@
 ---
-title: CDA Decision Guide
-version: 1.0.3
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "Central Design Authority Decision Guide"
+tags: ["decision-pathway", "cda", "governance", "escalation"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.3"
+updated: "2026-08-22"
+description: "Guidance for decisions handled by the Central Design Authority, including escalation thresholds and alignment with shared principles."
 ---
+
 
 # CDA Decision Guide
 
