@@ -1,5 +1,4 @@
 ---
----
 schema: sc4le-meta-v1
 title: "Website Publishing Playbook"
 tags: ["website", "publishing", "playbook"]
