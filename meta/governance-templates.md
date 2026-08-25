@@ -1,15 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.0.0
-type: governance
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - governance
-  - templates
-  - sc4le
+title: "Template Governance Standard"
+tags: ["governance", "templates", "sc4le"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "Defines governance rules for SC4LE templates, including structure, metadata, usage, and update workflows."
 ---
+
 
 # SC4LE Template Governance  
 ### Governance of Structural Templates, Schemas, and Page Frameworks  
