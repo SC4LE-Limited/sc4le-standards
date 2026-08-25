@@ -1,9 +1,14 @@
 ---
-title: SC4LE Academy Lead
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "SC4LE Academy Lead Role"
+tags: ["roles", "academy", "enablement"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "Defines the role responsible for capability uplift, training, and embedding SC4LE principles across teams."
 ---
+
 
 # SC4LE Academy Lead
 
