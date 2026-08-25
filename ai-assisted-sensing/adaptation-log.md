@@ -1,5 +1,5 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T14:58:30.648932Z_
+_Last updated: 2026-08-25T14:58:57.766064Z_
 
 ---
 
@@ -99,7 +99,6 @@ _Last updated: 2026-08-25T14:58:30.648932Z_
 - metadata_missing_service_category
 - metadata_missing_target_customer
 - metadata_missing_pricing_model
-- metadata_missing_tags
 
 ### services/README.md
 - metadata_missing_service_category
