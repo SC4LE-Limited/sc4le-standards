@@ -1,16 +1,15 @@
 ---
-schema: sc4le-meta-v1
-version: 1.0.0
-type: publishing-playbook
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - website
-  - publishing
-  - governance
-  - sc4le
 ---
+schema: sc4le-meta-v1
+title: "Website Publishing Playbook"
+tags: ["website", "publishing", "playbook"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "Defines the publishing workflow, approvals, and content lifecycle for SC4LE website updates."
+---
+
 
 # SC4LE Website Publishing Playbook  
 ### Governed Process for Publishing, Updating, and Maintaining Website Content  
