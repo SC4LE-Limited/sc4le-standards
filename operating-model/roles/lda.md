@@ -1,9 +1,14 @@
 ---
-title: Local Design Authority (LDA)
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "Local Design Authority Role"
+tags: ["roles", "lda", "governance"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.0"
+updated: "2026-08-22"
+description: "Describes the role of Local Design Authorities in contextual governance, decision-making, and principle interpretation."
 ---
+
 
 # Local Design Authority (LDA)
 
