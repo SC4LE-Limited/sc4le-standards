@@ -43,6 +43,10 @@ jobs:
           git add ai-assisted-sensing/outcome-dashboard.md
           git commit -m "SC4LE Sensing Update: automated log + dashboard refresh" || echo "No changes to commit"
 
+      - name: Pull latest changes
+        run: |
+          git pull --rebase
+
       - name: Push updates back to the repo
         if: success()
         run: |
