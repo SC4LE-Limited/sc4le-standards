@@ -1,11 +1,14 @@
 ---
-title: AI-Enabled Sensing & Insight System Design
-version: 1.0.0
-status: canonical
-service-category: intelligence-and-sensing
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "AI‑Enabled Sensing & Insight System Design"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "ai", "sensing", "insight", "sc4le"]
+description: "Design and implementation of AI‑enabled sensing loops, insight dashboards, and decision‑support systems aligned to SC4LE governance."
 ---
+
 # AI-Enabled Sensing & Insight System Design
 
 ## 1. Purpose
