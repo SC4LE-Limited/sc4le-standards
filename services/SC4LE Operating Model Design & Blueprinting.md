@@ -1,11 +1,14 @@
 ---
-title: SC4LE Operating Model Design & Blueprinting
-version: 2.0.0
-status: canonical
-service-category: operating-model-and-governance
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "SC4LE Operating Model Design & Blueprinting"
+version: "2.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "operating-model", "design", "blueprinting", "sc4le"]
+description: "Design and blueprinting of the SC4LE Operating Model, including governance, roles, rhythms, decision pathways, and sensing loops."
 ---
+
 # SC4LE Operating Model Design & Blueprinting
 
 ## 1. Purpose
