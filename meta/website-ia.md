@@ -1,15 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.0.0
-type: information-architecture
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - website
-  - information-architecture
-  - sc4le
+title: "Website Information Architecture"
+tags: ["website", "information-architecture", "sc4le"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "The information architecture for the SC4LE website, including navigation, content hierarchy, and structural rules."
 ---
+
 
 # SC4LE Website Information Architecture (IA)  
 ### Governed Structure for Navigation, Page Hierarchy, and Content Placement  
