@@ -18,6 +18,10 @@ jobs:
         with:
           python-version: "3.x"
 
+      - name: Install PyYAML
+        run: |
+          pip install pyyaml
+
       - name: Run sensing engine
         run: |
           python ai-assisted-sensing/sense.py
