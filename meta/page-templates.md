@@ -1,15 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.0.0
-type: templates
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - templates
-  - pages
-  - sc4le
+title: "SC4LE Page Templates"
+tags: ["templates", "pages", "sc4le"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "Defines the structure and metadata requirements for SC4LE page templates across all content types."
 ---
+
 
 # SC4LE Page Templates  
 ### Governed Templates for Website, Services, Programmes, and Operating Model Pages  
