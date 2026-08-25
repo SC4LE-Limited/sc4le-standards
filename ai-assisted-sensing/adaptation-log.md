@@ -1,5 +1,5 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T11:31:32.069199Z_
+_Last updated: 2026-08-25T11:32:14.255408Z_
 
 ---
 
@@ -85,7 +85,7 @@ _Last updated: 2026-08-25T11:31:32.069199Z_
 - metadata_missing_maturity_dimension
 
 ### maturity-model/maturity-heatmap.md
-- metadata_missing_header
+- metadata_missing_maturity_dimension
 
 ### programmes/SC4LE-SCALE-UPS.md
 - metadata_missing_header
