@@ -1,16 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.1.0
-type: documentation
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - meta
-  - governance
-  - index
-  - sc4le
+title: "SC4LE Meta Governance Overview"
+tags: ["meta", "governance", "overview"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.1.0"
+updated: "2026-06-16"
+description: "Overview of the meta-governance system that maintains coherence, consistency, and controlled evolution of the SC4LE Standard."
 ---
+
 
 # SC4LE Meta Layer  
 ### Governed System for Standards, Messaging, Templates, Website Structure, and Publishing  
