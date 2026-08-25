@@ -1,10 +1,10 @@
 # SC4LE Sensing Dashboard
-_Last updated: 2026-08-25T11:05:48.757384Z_
+_Last updated: 2026-08-25T11:06:07.534714Z_
 
 ---
 
 ## 🔍 Overall Severity Counts
-- **High:** 118
+- **High:** 117
 - **Medium:** 0
 - **Low:** 3
 
@@ -32,7 +32,7 @@ _Last updated: 2026-08-25T11:05:48.757384Z_
 - Low: 0
 
 ### meta/
-- High: 5
+- High: 4
 - Medium: 0
 - Low: 0
 
