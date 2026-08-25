@@ -1,10 +1,10 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T11:04:26.450264Z_
+_Last updated: 2026-08-25T11:04:46.669581Z_
 
 ---
 
 ## 🔍 Summary of Signals
-- **High severity files:** 51
+- **High severity files:** 50
 - **Medium severity files:** 0
 - **Low severity files:** 3
 
@@ -89,9 +89,6 @@ _Last updated: 2026-08-25T11:04:26.450264Z_
 
 ### maturity-model/maturity-heatmap.md
 - metadata_missing_header
-
-### meta/governance-brand.md
-- metadata_missing_title
 
 ### meta/governance-diagrams.md
 - metadata_missing_title
