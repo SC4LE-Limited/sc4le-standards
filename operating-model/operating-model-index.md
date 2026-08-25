@@ -1,3 +1,14 @@
+---
+schema: sc4le-standard-v1
+title: "SC4LE Operating Model Index"
+tags: ["index", "operating-model", "navigation"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "Index of all SC4LE operating model components, including roles, rhythms, decision pathways, and governance structures."
+---
+
 # SC4LE Operating Modelindex 
 ### Canonical Overview of the SC4LE Standard  
 © 2026 SC4LE Limited
