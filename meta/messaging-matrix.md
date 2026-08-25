@@ -1,15 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.0.0
-type: matrix
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - messaging
-  - matrix
-  - sc4le
+title: "SC4LE Messaging Matrix"
+tags: ["messaging", "matrix", "sc4le"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "A structured matrix defining SC4LE messaging across audiences, contexts, and communication channels."
 ---
+
 
 # SC4LE Messaging Matrix  
 ### Governed System for Naming, Language, and Value Communication  
