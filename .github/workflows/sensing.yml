@@ -1,53 +1,58 @@
 name: SC4LE Sensing Engine
 
 on:
-  push:
-    branches:
-      - main
-      - master
-  pull_request:
-  workflow_dispatch:
   schedule:
-    - cron: "0 2 * * *"   # Runs nightly at 02:00 UTC
-
-permissions:
-  contents: write
+    - cron: "0 * * * *"   # hourly sensing (adjust as needed)
+  workflow_dispatch:
 
 jobs:
   run-sensing:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out the SC4LE Standards repo
+      # 1. Checkout repo (Node 24 compatible)
+      - name: Checkout repository
         uses: actions/checkout@v4
 
+      # 2. Set up Python (Node 24 compatible)
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
-      - name: Install Python dependencies
+      # 3. Install dependencies
+      - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install pyyaml
+          pip install -r ai-assisted-sensing/requirements.txt
 
-      - name: Run the SC4LE sensing engine
+      # 4. Run sensing engine
+      - name: Run sensing engine
         run: |
           python ai-assisted-sensing/sense.py
 
-      - name: Commit sensing updates (log + dashboard)
+      # 5. Configure bot identity
+      - name: Configure Git identity
         run: |
           git config --global user.name "SC4LE Sensing Engine"
           git config --global user.email "sensing@sc4le.co.uk"
+
+      # 6. Stage sensing outputs
+      - name: Stage sensing updates
+        run: |
           git add ai-assisted-sensing/adaptation-log.md
           git add ai-assisted-sensing/outcome-dashboard.md
+
+      # 7. Commit (but do not fail if no changes)
+      - name: Commit sensing updates
+        run: |
           git commit -m "SC4LE Sensing Update: automated log + dashboard refresh" || echo "No changes to commit"
 
-      - name: Pull latest changes
+      # 8. Safe pull (conflict‑free)
+      - name: Pull latest changes (safe merge)
         run: |
-          git pull --rebase
+          git pull --strategy-option theirs
 
-      - name: Push updates back to the repo
-        if: success()
+      # 9. Push cleanly
+      - name: Push updates
         run: |
           git push
