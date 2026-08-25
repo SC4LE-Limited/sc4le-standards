@@ -1,9 +1,14 @@
 ---
-title: LDA Decision Guide
-version: 1.0.3
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "Local Design Authority Decision Guide"
+tags: ["lda", "decision-pathway", "governance"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.3"
+updated: "2026-08-22"
+description: "Decision guidance for Local Design Authorities, outlining local autonomy, principle interpretation, and governance fit."
 ---
+
 
 # LDA Decision Guide
 
