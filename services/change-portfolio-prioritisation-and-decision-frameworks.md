@@ -1,11 +1,14 @@
 ---
-title: Change Portfolio Prioritisation & Decision Frameworks
-version: 1.0.0
-status: canonical
-service-category: strategy-and-prioritisation
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "Change Portfolio Prioritisation & Decision Frameworks"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "portfolio", "decision-frameworks", "sc4le"]
+description: "Development of prioritisation frameworks and decision pathways to optimise change portfolios and reduce decision latency."
 ---
+
 # Change Portfolio Prioritisation & Decision Frameworks
 
 ## 1. Purpose
