@@ -1,10 +1,14 @@
 ---
-title: SC4LE Maturity Assessment Template
+schema: sc4le-standard-v1
+title: "SC4LE Maturity Assessment Template"
 version: 1.0.0
 status: draft
 owner: CDA
-last-updated: 2026-06-08
+updated: 2026-06-08
+tags: ["maturity-model", "assessment", "template"]
+description: "A structured template for assessing organisational maturity across SC4LE dimensions, supporting diagnostics and enablement cycles."
 ---
+
 
 # SC4LE Maturity Assessment Template
 
