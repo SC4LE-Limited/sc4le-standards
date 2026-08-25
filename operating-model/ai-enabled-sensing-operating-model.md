@@ -4,7 +4,7 @@ title: "AI-Enabled Sensing Operating Model"
 tags: ["ai-enabled", "sensing", "governance", "flow"]
 owner: "Scott Zebedee"
 status: "draft"
-version: "1.0"
+version: "1.0.0"
 updated: "2026-08-22"
 description: "Defines how AI-enabled feedback loops support continuous sensing of flow, risk, and governance across Local Design Authorities and leadership."
 ---
