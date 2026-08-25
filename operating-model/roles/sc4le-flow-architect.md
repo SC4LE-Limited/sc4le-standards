@@ -1,9 +1,14 @@
 ---
-title: SC4LE Flow Architect
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "SC4LE Flow Architect Role"
+tags: ["roles", "flow", "architecture"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.0"
+updated: "2026-08-22"
+description: "Defines the role focused on improving organisational flow, reducing bottlenecks, and enabling continuous improvement."
 ---
+
 
 # SC4LE Flow Architect
 
