@@ -1,9 +1,14 @@
 ---
-title: Standard Decision Flow
-version: 1.0.3
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "Standard SC4LE Decision Flow"
+tags: ["decision-flow", "governance", "pathways"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.3"
+updated: "2026-08-22"
+description: "The standardised decision flow used across SC4LE, showing how decisions move through teams, LDAs, CDAs, and leadership."
 ---
+
 
 # Standard Decision Flow
 
