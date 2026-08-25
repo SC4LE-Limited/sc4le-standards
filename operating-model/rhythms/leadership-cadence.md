@@ -1,9 +1,14 @@
 ---
-title: Leadership Cadence
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "Leadership Cadence"
+tags: ["leadership", "rhythms", "cadence"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.0"
+updated: "2026-08-22"
+description: "Defines leadership rhythms for maintaining clarity, alignment, and governance flow across SC4LE."
 ---
+
 
 # Leadership Cadence
 
