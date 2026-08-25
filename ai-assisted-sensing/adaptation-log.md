@@ -1,10 +1,10 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T09:56:53.780814Z_
+_Last updated: 2026-08-25T09:57:19.531946Z_
 
 ---
 
 ## 🔍 Summary of Signals
-- **High severity files:** 59
+- **High severity files:** 58
 - **Medium severity files:** 0
 - **Low severity files:** 3
 
@@ -125,11 +125,6 @@ _Last updated: 2026-08-25T09:56:53.780814Z_
 
 ### meta/website-publishing-playbook.md
 - metadata_missing_title
-
-### operating-model/lda.md
-- metadata_missing_tags
-- metadata_missing_owner
-- metadata_missing_updated
 
 ### operating-model/sc4le-academy-lead.md
 - metadata_missing_tags
