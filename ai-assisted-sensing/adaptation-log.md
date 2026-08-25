@@ -1,5 +1,5 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T11:11:26.631692Z_
+_Last updated: 2026-08-25T11:11:44.596669Z_
 
 ---
 
@@ -92,6 +92,11 @@ _Last updated: 2026-08-25T11:11:26.631692Z_
 
 ### meta/website-publishing-playbook.md
 - metadata_missing_title
+- metadata_missing_tags
+- metadata_missing_owner
+- metadata_missing_status
+- metadata_missing_version
+- metadata_missing_updated
 
 ### programmes/SC4LE-SCALE-UPS.md
 - metadata_missing_header
