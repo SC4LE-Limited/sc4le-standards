@@ -1,3 +1,14 @@
+---
+schema: sc4le-standard-v1
+title: "SC4LE Maturity Model"
+tags: ["maturity", "governance", "capability", "assessment"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "Describes the maturity criteria for SC4LE adoption, including governance establishment, principles embedding, and AI-enabled feedback readiness."
+---
+
 # SC4LE Maturity Model
 
 The SC4LE Maturity Model provides a structured way to assess how effectively an organisation has embedded shared principles, federated governance, flow, sensing, and continuous improvement.  
