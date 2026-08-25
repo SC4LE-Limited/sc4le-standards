@@ -1,15 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.0.0
-type: matrix
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - website
-  - content-matrix
-  - sc4le
+title: "Website Content Matrix"
+tags: ["website", "content", "matrix"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "Defines the content structure, categories, and publishing rules for the SC4LE website."
 ---
+
 
 # SC4LE Website Content Matrix  
 ### Governed Structure for Website Content Types, Placement, and Relationships  
