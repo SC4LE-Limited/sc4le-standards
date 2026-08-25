@@ -1,9 +1,12 @@
 ---
-title: SC4LE Operating Model Standard
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "SC4LE Operating Model Standard"
+tags: ["standard", "operating-model", "governance", "enablement"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "The canonical definition of the SC4LE operating model, outlining its layers, governance flows, enablement cycles, and systemic design."
 ---
 
 # SC4LE Operating Model Standard
