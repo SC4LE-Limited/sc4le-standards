@@ -1,7 +1,7 @@
 ---
 schema: sc4le-standard-v1
 title: "Operating Model Health Check"
-version: "1.0.0"
+version: "2.0.0"
 status: "draft"
 owner: "CDA"
 updated: "2026-08-25"
