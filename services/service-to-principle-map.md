@@ -1,3 +1,14 @@
+---
+schema: sc4le-standard-v1
+title: "SC4LE Service‑to‑Principle Map"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "principles", "mapping", "sc4le"]
+description: "A mapping of SC4LE services to SC4LE Shared Principles, showing how each service reinforces principle‑led governance and decision‑making."
+---
+
 # SC4LE Service‑to‑Principle Dependency Map
 
 This map shows how each SC4LE service depends on, reinforces or operationalises the SC4LE Shared Principles.  
