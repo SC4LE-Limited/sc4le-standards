@@ -1,10 +1,10 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T09:54:47.013140Z_
+_Last updated: 2026-08-25T09:55:29.529293Z_
 
 ---
 
 ## 🔍 Summary of Signals
-- **High severity files:** 62
+- **High severity files:** 61
 - **Medium severity files:** 0
 - **Low severity files:** 3
 
@@ -132,11 +132,6 @@ _Last updated: 2026-08-25T09:54:47.013140Z_
 - metadata_missing_updated
 
 ### operating-model/lda.md
-- metadata_missing_tags
-- metadata_missing_owner
-- metadata_missing_updated
-
-### operating-model/leadership-cadence.md
 - metadata_missing_tags
 - metadata_missing_owner
 - metadata_missing_updated
