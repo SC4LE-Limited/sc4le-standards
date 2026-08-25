@@ -1,11 +1,14 @@
 ---
-title: SC4LE Academy — Capability Building & Skills Development
-version: 1.0.0
-status: canonical
-service-category: enablement-and-capability
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "SC4LE Academy Capability Building & Skills Development"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "academy", "capability", "skills", "sc4le"]
+description: "Capability building and skills development through the SC4LE Academy, supporting leadership, governance, and enablement roles."
 ---
+
 # SC4LE Academy — Capability Building & Skills Development
 
 ## 1. Purpose
