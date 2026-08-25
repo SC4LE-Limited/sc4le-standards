@@ -1,9 +1,14 @@
 ---
-title: SC4LE Maturity Dashboard
+schema: sc4le-standard-v1
+title: "SC4LE Maturity Dashboard"
 version: 1.0.0
 status: canonical
-last-updated: 2026-06-08
+owner: CDA
+updated: 2026-06-08
+tags: ["maturity-model", "dashboard", "governance"]
+description: "A visual dashboard summarising maturity levels, governance actions, insights, and priorities across SC4LE dimensions."
 ---
+
 
 # SC4LE Maturity Dashboard
 
