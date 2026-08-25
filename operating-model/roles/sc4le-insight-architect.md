@@ -1,8 +1,12 @@
 ---
-title: SC4LE Insight Architect
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "SC4LE Insight Architect Role"
+tags: ["roles", "insight", "ai-enabled", "sensing"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.0"
+updated: "2026-08-22"
+description: "Defines the role responsible for AI-enabled sensing, insight generation, and feedback loop activation."
 ---
 
 # SC4LE Insight Architect
