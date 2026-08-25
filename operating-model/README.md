@@ -1,9 +1,14 @@
 ---
-title: SC4LE Operating Model
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "SC4LE Operating Model Overview"
+tags: ["operating-model", "overview", "foundations"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "High-level overview of the SC4LE operating model, including its structure, purpose, and federated enablement approach."
 ---
+
 
 # SC4LE Operating Model
 
