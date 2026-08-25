@@ -4,7 +4,7 @@ title: "SC4LE Operating Model Overview"
 tags: ["operating-model", "overview", "foundations"]
 owner: "Scott Zebedee"
 status: "draft"
-version: "1.0"
+version: "1.0.0"
 updated: "2026-08-22"
 description: "High-level overview of the SC4LE operating model, including its structure, purpose, and federated enablement approach."
 ---
