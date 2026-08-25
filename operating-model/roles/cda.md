@@ -1,9 +1,14 @@
 ---
-title: Central Design Authority (CDA)
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "Central Design Authority Role"
+tags: ["roles", "cda", "governance"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.0"
+updated: "2026-08-22"
+description: "Defines the responsibilities of the Central Design Authority, including governance alignment, decision ownership, and principle interpretation."
 ---
+
 
 # Central Design Authority (CDA)
 
