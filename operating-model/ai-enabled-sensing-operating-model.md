@@ -1,3 +1,14 @@
+---
+schema: sc4le-standard-v1
+title: "AI-Enabled Sensing Operating Model"
+tags: ["ai-enabled", "sensing", "governance", "flow"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "Defines how AI-enabled feedback loops support continuous sensing of flow, risk, and governance across Local Design Authorities and leadership."
+---
+
 # SC4LE AI‑Enabled Sensing Op Model
 
 AI‑Enabled Sensing is a foundational component of the SC4LE operating model.  
