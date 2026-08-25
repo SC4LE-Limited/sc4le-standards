@@ -1,3 +1,14 @@
+---
+schema: sc4le-standard-v1
+title: "SC4LE Service Interlink Map"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "mapping", "interlink", "sc4le"]
+description: "A visual and conceptual map showing how SC4LE services interconnect across governance, enablement, diagnostics, and operating model design."
+---
+
 # SC4LE Service Interlink Map
 
 The SC4LE Service Catalogue is intentionally designed as a **modular, interconnected system**.  
