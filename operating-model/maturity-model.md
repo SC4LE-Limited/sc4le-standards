@@ -4,7 +4,7 @@ title: "SC4LE Maturity Model"
 tags: ["maturity", "governance", "capability", "assessment"]
 owner: "Scott Zebedee"
 status: "draft"
-version: "1.0"
+version: "1.0.0"
 updated: "2026-08-22"
 description: "Describes the maturity criteria for SC4LE adoption, including governance establishment, principles embedding, and AI-enabled feedback readiness."
 ---
