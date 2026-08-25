@@ -1,15 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.0.0
-type: governance
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - governance
-  - content
-  - sc4le
+title: "SC4LE Content Governance Standard"
+tags: ["governance", "content", "sc4le"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "Defines how SC4LE content is governed, approved, updated, and maintained across all folders and artefacts."
 ---
+
 
 # SC4LE Content Governance  
 ### Governance of Written, Structured, and Published Content  
