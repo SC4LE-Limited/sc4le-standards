@@ -1,11 +1,14 @@
 ---
-title: Leadership Decision Coaching & Executive Enablement
-version: 1.0.0
-status: canonical
-service-category: advisory-and-leadership
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "Leadership Decision Coaching & Executive Enablement"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "leadership", "coaching", "enablement", "sc4le"]
+description: "Executive coaching focused on decision quality, principle‑led leadership, and alignment with SC4LE governance and operating rhythms."
 ---
+
 # Leadership Decision Coaching & Executive Enablement
 
 ## 1. Purpose
