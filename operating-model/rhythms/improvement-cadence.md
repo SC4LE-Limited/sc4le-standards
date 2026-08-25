@@ -1,8 +1,12 @@
 ---
-title: Improvement Cadence
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "Improvement Cadence"
+tags: ["rhythms", "cadence", "improvement", "continuous-improvement"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.0"
+updated: "2026-08-22"
+description: "Describes the cadence for continuous improvement cycles, including sensing, learning, and adaptation."
 ---
 
 # Improvement Cadence
