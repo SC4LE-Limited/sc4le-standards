@@ -1,17 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.2.0
-type: brand-governance
-status: approved
-owner: SC4LE Limited
-updated: 2026-07-12
-tags:
-  - brand
-  - identity
-  - design
-  - governance
-  - sc4le
+title: "Brand Governance Standard"
+tags: ["governance", "brand", "sc4le"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.2.0"
+updated: "2026-06-16"
+description: "Defines how SC4LE brand assets are governed, approved, and updated, including logo usage, tone of voice, and visual identity."
 ---
+
 
 # SC4LE Brand Governance Standard  
 ### Authoritative Brand, Identity, and Visual System  
