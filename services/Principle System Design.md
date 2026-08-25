@@ -1,11 +1,14 @@
 ---
-title: Principle System Design
-version: 1.0.0
-status: canonical
-service-category: operating-model-and-governance
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "Principle System Design"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "principles", "design", "sc4le"]
+description: "Design and embedding of SC4LE Shared Principles into decision‑making, governance, and organisational behaviours."
 ---
+
 # Principle System Design
 
 ## 1. Purpose
