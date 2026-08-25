@@ -1,11 +1,15 @@
 ---
-title: SC4LE Enablement Cycles & Continuous Improvement System
-version: 1.0.0
-status: canonical
-service-category: enablement-and-capability
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "SC4LE Enablement Cycles & Continuous Improvement System"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "enablement", "continuous-improvement", "sc4le"]
+description: "Design and facilitation of SC4LE enablement cycles, supporting continuous improvement, LDA development, and governance evolution."
 ---
+
+
 # SC4LE Enablement Cycles & Continuous Improvement System
 
 ## 1. Purpose
