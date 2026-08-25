@@ -1,9 +1,14 @@
 ---
-title: Escalation Thresholds
-version: 1.0.3
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "SC4LE Escalation Thresholds"
+tags: ["escalation", "governance", "decision-flow"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0.3"
+updated: "2026-08-22"
+description: "Defines when decisions must escalate from operational teams to LDAs or CDAs, ensuring clarity and reducing governance delays."
 ---
+
 
 # Escalation Thresholds
 
