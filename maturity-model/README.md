@@ -1,9 +1,14 @@
 ---
-title: SC4LE Maturity Model
+schema: sc4le-standard-v1
+title: "SC4LE Maturity Model"
 version: 1.0.0
 status: canonical
-last-updated: 2026-06-08
+owner: CDA
+updated: 2026-06-08
+tags: ["maturity-model", "assessment", "governance"]
+description: "Defines the SC4LE Maturity Model and its dimensions, levels, and assessment approach for diagnosing organisational maturity."
 ---
+
 
 # SC4LE Maturity Model
 
