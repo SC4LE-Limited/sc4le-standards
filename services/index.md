@@ -1,3 +1,14 @@
+---
+schema: sc4le-standard-v1
+title: "SC4LE Services Index"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "index", "sc4le"]
+description: "Index of all SC4LE services with links to detailed service definitions and related artefacts."
+---
+
 # SC4LE Service Catalogue — Master Index
 
 The SC4LE Service Catalogue defines the complete suite of advisory, operating model, governance, enablement and capability‑building services that together form the Strategic Centre for Leading Enablement.  
