@@ -1,15 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.0.0
-type: governance
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - governance
-  - messaging
-  - sc4le
+title: "Messaging Governance Standard"
+tags: ["governance", "messaging", "sc4le"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "Defines how SC4LE messaging is created, approved, and maintained to ensure clarity, consistency, and alignment with the SC4LE narrative."
 ---
+
 
 # SC4LE Messaging Governance  
 ### Governance of Language, Naming, Value Propositions, and Communication Standards  
