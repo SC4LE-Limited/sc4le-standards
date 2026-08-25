@@ -1,11 +1,14 @@
 ---
-title: Operating Model Health Checks & Readiness Audits
-version: 2.0.0
-status: canonical
-service-category: flow-performance-and-capability
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "Operating Model Health Check"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "operating-model", "diagnostic", "sc4le"]
+description: "A structured diagnostic assessing the health, coherence, and maturity of an organisation’s operating model against SC4LE standards."
 ---
+
 # Operating Model Health Checks & Readiness Audits
 
 ## 1. Purpose
