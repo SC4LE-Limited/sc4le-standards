@@ -1,5 +1,5 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T11:30:55.758834Z_
+_Last updated: 2026-08-25T11:31:11.820678Z_
 
 ---
 
@@ -80,7 +80,6 @@ _Last updated: 2026-08-25T11:30:55.758834Z_
 
 ### maturity-model/maturity-assessment-template.md
 - metadata_missing_maturity_dimension
-- metadata_missing_tags
 
 ### maturity-model/maturity-dashboard.md
 - metadata_missing_maturity_dimension
