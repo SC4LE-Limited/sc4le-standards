@@ -1,15 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.0.0
-type: governance
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - governance
-  - diagrams
-  - sc4le
+title: "Diagram Governance Standard"
+tags: ["governance", "diagrams", "sc4le"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "Outlines governance rules for SC4LE diagrams, including source files, updates, versioning, and visual consistency."
 ---
+
 
 # SC4LE Diagram Governance  
 ### Governance of Visual Models, Diagrams, and System Representations  
