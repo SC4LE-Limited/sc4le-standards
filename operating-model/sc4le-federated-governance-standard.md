@@ -1,10 +1,14 @@
 ---
-title: SC4LE Federated Governance Standard
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "SC4LE Federated Governance Standard"
+tags: ["governance", "standard", "lda", "decision-flow"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "The authoritative standard describing how federated governance operates within SC4LE, including escalation pathways and decision ownership."
 ---
+
 
 # SC4LE Federated Governance Standard
 The SC4LE Federated Governance Standard defines how organisations make decisions, manage risk, maintain alignment and uphold ethical guardrails within a federated operating model. It provides a clear, principle‑driven structure that balances autonomy with coherence, enabling faster decisions, reduced escalation, and improved flow.
