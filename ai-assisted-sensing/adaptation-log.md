@@ -1,10 +1,10 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-25T09:46:13.443882Z_
+_Last updated: 2026-08-25T09:46:47.405542Z_
 
 ---
 
 ## 🔍 Summary of Signals
-- **High severity files:** 70
+- **High severity files:** 69
 - **Medium severity files:** 0
 - **Low severity files:** 3
 
@@ -190,9 +190,6 @@ _Last updated: 2026-08-25T09:46:13.443882Z_
 - metadata_missing_tags
 - metadata_missing_owner
 - metadata_missing_updated
-
-### operating-model/sc4le-model-overview.md
-- metadata_missing_header
 
 ### operating-model/sc4le-operating-model-standard.md
 - metadata_missing_tags
