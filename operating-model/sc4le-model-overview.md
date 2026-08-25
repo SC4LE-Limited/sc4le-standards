@@ -4,7 +4,7 @@ title: "SC4LE Model Overview"
 tags: ["overview", "operating-model", "structure"]
 owner: "Scott Zebedee"
 status: "draft"
-version: "1.0"
+version: "1.0.0"
 updated: "2026-08-22"
 description: "A visual and narrative overview of the SC4LE operating model, including shared principles, LDAs, operational teams, and AI-enabled feedback loops."
 ---
