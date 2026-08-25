@@ -1,11 +1,14 @@
 ---
-title: Strategy Activation & Alignment Workshops
-version: 2.0.0
-status: canonical
-service-category: advisory-and-leadership
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "Strategy Activation & Alignment Workshops"
+version: "2.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "strategy", "workshops", "alignment", "sc4le"]
+description: "Facilitated workshops to activate strategy, align leadership, and embed SC4LE principles into decision‑making and governance."
 ---
+
 # Strategy Activation & Alignment Workshops
 
 ## 1. Purpose
