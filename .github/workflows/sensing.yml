@@ -2,7 +2,7 @@ name: SC4LE Sensing Engine
 
 on:
   schedule:
-    - cron: "0 * * * *"   # hourly sensing (adjust as needed)
+    - cron: "0 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,49 +10,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Checkout repo (Node 24 compatible)
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Set up Python (Node 24 compatible)
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
-      # 3. Install dependencies
-      - name: Install dependencies
-        run: |
-          pip install -r ai-assisted-sensing/requirements.txt
-
-      # 4. Run sensing engine
       - name: Run sensing engine
         run: |
           python ai-assisted-sensing/sense.py
 
-      # 5. Configure bot identity
       - name: Configure Git identity
         run: |
           git config --global user.name "SC4LE Sensing Engine"
           git config --global user.email "sensing@sc4le.co.uk"
 
-      # 6. Stage sensing outputs
       - name: Stage sensing updates
         run: |
           git add ai-assisted-sensing/adaptation-log.md
           git add ai-assisted-sensing/outcome-dashboard.md
 
-      # 7. Commit (but do not fail if no changes)
       - name: Commit sensing updates
         run: |
           git commit -m "SC4LE Sensing Update: automated log + dashboard refresh" || echo "No changes to commit"
 
-      # 8. Safe pull (conflict‑free)
       - name: Pull latest changes (safe merge)
         run: |
           git pull --strategy-option theirs
 
-      # 9. Push cleanly
       - name: Push updates
         run: |
           git push
