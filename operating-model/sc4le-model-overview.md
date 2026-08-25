@@ -1,3 +1,14 @@
+---
+schema: sc4le-standard-v1
+title: "SC4LE Model Overview"
+tags: ["overview", "operating-model", "structure"]
+owner: "Scott Zebedee"
+status: "draft"
+version: "1.0"
+updated: "2026-08-22"
+description: "A visual and narrative overview of the SC4LE operating model, including shared principles, LDAs, operational teams, and AI-enabled feedback loops."
+---
+
 # SC4LE Operating Model Overview
 
 SC4LE is a strategic enablement model that helps organisations of all sizes — startups, scale‑ups, SMEs, and enterprises — build clarity, capability, and governance through shared principles, federated decision‑making, and AI‑enabled sensing. It replaces episodic transformation with a continuous, systems‑led approach that evolves with the organisation.
