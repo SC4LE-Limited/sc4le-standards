@@ -1,11 +1,14 @@
 ---
-title: Risk, Dependency & Decision-Latency Diagnostics
-version: 1.0.0
-status: canonical
-service-category: flow-performance-and-capability
-last-updated: 2026-06-03
-schema-version: 1.0.0
+schema: sc4le-standard-v1
+title: "Risk, Dependency & Decision Latency Diagnostics"
+version: "1.0.0"
+status: "draft"
+owner: "CDA"
+updated: "2026-08-25"
+tags: ["service", "diagnostic", "risk", "latency", "sc4le"]
+description: "Diagnostics identifying risks, dependencies, and decision latency patterns that constrain flow and governance effectiveness."
 ---
+
 # Risk, Dependency & Decision-Latency Diagnostics
 
 ## 1. Purpose
