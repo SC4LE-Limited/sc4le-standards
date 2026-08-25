@@ -1,15 +1,14 @@
 ---
 schema: sc4le-meta-v1
-version: 1.1.0
-type: governance
-status: approved
-owner: SC4LE Limited
-updated: 2026-06-16
-tags:
-  - governance
-  - standard
-  - sc4le
+title: "SC4LE Governance Standard"
+tags: ["governance", "standard", "sc4le"]
+owner: "SC4LE Limited"
+status: "approved"
+version: "1.0.0"
+updated: "2026-06-16"
+description: "The overarching governance standard that defines how SC4LE evolves, including versioning, approvals, and lifecycle management."
 ---
+
 
 # SC4LE Governance Standard  
 ### Governing the Evolution, Integrity, and Stewardship of the SC4LE Standard  
