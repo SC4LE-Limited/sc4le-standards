@@ -1,3 +1,10 @@
+---
+schema: sc4le-template-v1
+title: "SC4LE Web Page Templates"
+template_type: "web-page-template"
+use_cases: ["website pages", "content structure", "layout guidance"]
+tags: ["template", "web", "content", "sc4le"]
+---
 # SC4LE Page Templates  
 Authoritative Layout & Content Structures for Loveable + AI Tools
 
