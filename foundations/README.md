@@ -1,9 +1,13 @@
 ---
-title: SC4LE Foundations
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-standard-v1
+title: "SC4LE Foundations"
+owner: "CDA"
+status: "canonical"
+version: "1.0.0"
+updated: "2026-06-08"
+tags: ["foundations", "architecture", "principles", "sc4le"]
 ---
+
 
 # Foundations
 
