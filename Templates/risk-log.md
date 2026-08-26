@@ -1,9 +1,11 @@
 ---
-title: SC4LE Risk Log
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-template-v1
+title: "Risk Log Template"
+template_type: "risk-log"
+use_cases: ["risk tracking", "governance reporting"]
+tags: ["template", "risk", "log", "sc4le"]
 ---
+
 
 # SC4LE Risk Log
 
