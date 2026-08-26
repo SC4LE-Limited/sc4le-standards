@@ -45,7 +45,7 @@ jobs:
 
       - name: Pull latest changes (safe merge)
         run: |
-          git pull --strategy recursive --strategy-option theirs
+          git pull --no-rebase --strategy=recursive --strategy-option=theirs
 
       - name: Push updates
         run: |
