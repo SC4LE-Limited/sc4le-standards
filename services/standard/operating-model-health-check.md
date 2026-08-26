@@ -4,10 +4,10 @@ title: "Operating Model Health Check"
 version: "2.0.0"
 status: "draft"
 owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "operating-model", "diagnostic", "sc4le"]
-description: "A structured diagnostic assessing the health, coherence, and maturity of an organisation’s operating model against SC4LE standards."
+updated: "2026-08-26"
+tags: ["operating-model", "diagnostic", "sc4le"]
 ---
+
 
 # Operating Model Health Checks & Readiness Audits
 
