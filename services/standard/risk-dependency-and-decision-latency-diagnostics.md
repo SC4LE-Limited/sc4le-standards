@@ -4,10 +4,10 @@ title: "Risk, Dependency & Decision Latency Diagnostics"
 version: "1.0.0"
 status: "draft"
 owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "diagnostic", "risk", "latency", "sc4le"]
-description: "Diagnostics identifying risks, dependencies, and decision latency patterns that constrain flow and governance effectiveness."
+updated: "2026-08-26"
+tags: ["diagnostic", "risk", "latency", "sc4le"]
 ---
+
 
 # Risk, Dependency & Decision-Latency Diagnostics
 
