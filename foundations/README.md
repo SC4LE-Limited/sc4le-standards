@@ -1,14 +1,3 @@
----
-schema: sc4le-standard-v1
-title: "SC4LE Foundations"
-owner: "CDA"
-status: "canonical"
-version: "1.0.0"
-updated: "2026-06-08"
-tags: ["foundations", "architecture", "principles", "sc4le"]
----
-
-
 # Foundations
 
 The Foundations layer defines the core concepts, principles, and architectural elements that underpin the SC4LE Standard.  
