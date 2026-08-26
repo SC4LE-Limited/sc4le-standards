@@ -1,15 +1,3 @@
----
-schema: sc4le-standard-v1
-title: "SC4LE Services Overview"
-version: "1.0.0"
-status: "draft"
-owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "overview", "sc4le"]
-description: "Overview of all SC4LE services, including advisory, enablement, diagnostics, governance, and operating model design offerings."
----
-
-
 # SC4LE Services
 
 SC4LE services are the practical mechanisms through which the Strategic Centre for Leading Enablement delivers value across an organisation.  
