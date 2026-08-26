@@ -1,3 +1,10 @@
+---
+schema: sc4le-programme-v1
+title: "SC4LE Programme: Scale-Ups"
+programme_type: "scale-up enablement"
+target_group: "founders, leadership teams, and operational heads in scaling organisations"
+tags: ["programme", "scale-ups", "enablement", "sc4le"]
+---
 # SC4LE Scale-Ups Programme  
 Federated governance, shared principles, and AI-enabled sensing for organisations moving beyond product–market fit.
 
