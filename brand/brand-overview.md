@@ -1,3 +1,11 @@
+---
+schema: sc4le-brand-v1
+title: "SC4LE Brand Overview"
+brand_asset_type: "brand-overview"
+usage_rules: "Use as the canonical description of SC4LE brand identity."
+tags: ["brand", "overview", "identity", "sc4le"]
+---
+
 # SC4LE Brand Overview
 
 SC4LE is a modern, AI‑aligned transformation and governance model designed for organisations of all sizes — startups, scale‑ups, SMEs, and enterprises. The brand represents structured enablement, federated decision‑making, sensing, learning, and continuous improvement.
