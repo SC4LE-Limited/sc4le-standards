@@ -1,3 +1,12 @@
+---
+schema: sc4le-standard-v1
+title: "SC4LE Web Master Prompt"
+owner: "CDA"
+status: "draft"
+version: "1.0.0"
+updated: "2026-08-26"
+tags: ["meta", "prompt", "web", "sc4le"]
+---
 # SC4LE Master Prompt  
 Use With Loveable + SC4LE Workspace Pack
 
