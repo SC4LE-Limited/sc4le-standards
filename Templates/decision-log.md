@@ -1,9 +1,11 @@
 ---
-title: SC4LE Decision Log Template
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-template-v1
+title: "Decision Log Template"
+template_type: "decision-log"
+use_cases: ["decision tracking", "governance documentation"]
+tags: ["template", "decision", "log", "sc4le"]
 ---
+
 
 # SC4LE Decision Log Template
 
