@@ -1,9 +1,11 @@
 ---
-title: SC4LE Decision Pathway Diagram
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-diagram-v1
+title: "Decision Pathway Diagram"
+diagram_type: "decision-pathway"
+source_file: "decision-pathway.md"
+tags: ["diagram", "decision", "pathway", "sc4le"]
 ---
+
 
 # SC4LE Decision Pathway Diagram
 
