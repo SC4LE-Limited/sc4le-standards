@@ -19,10 +19,27 @@ SCHEMA_MAP = {
         "schema": "sc4le-standard-v1",
         "required": ["title", "tags", "owner", "status", "version", "updated"]
     },
-    "services": {
+
+    # NEW — split services into standard + commercial
+    "services/standard": {
+        "schema": "sc4le-standard-v1",
+        "required": ["title", "tags", "owner", "status", "version", "updated"]
+    },
+    "services/commercial": {
         "schema": "sc4le-service-v1",
         "required": ["title", "service_category", "target_customer", "pricing_model", "tags"]
     },
+
+    # NEW — split value props into framework + commercial
+    "value-propositions/framework": {
+        "schema": "sc4le-standard-v1",
+        "required": ["title", "tags", "owner", "status", "version", "updated"]
+    },
+    "value-propositions/commercial": {
+        "schema": "sc4le-value-v1",
+        "required": ["title", "value_type", "target_customer", "tags"]
+    },
+
     "brand": {
         "schema": "sc4le-brand-v1",
         "required": ["title", "brand_asset_type", "usage_rules", "tags"]
@@ -38,10 +55,6 @@ SCHEMA_MAP = {
     "web": {
         "schema": "sc4le-web-v1",
         "required": ["title", "slug", "layout", "tags"]
-    },
-    "value-propositions": {
-        "schema": "sc4le-value-v1",
-        "required": ["title", "value_type", "target_customer", "tags"]
     },
     "programmes": {
         "schema": "sc4le-programme-v1",
