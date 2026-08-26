@@ -1,28 +1,18 @@
 # SC4LE Sensing Dashboard
-_Last updated: 2026-08-26T16:09:00.294258Z_
+_Last updated: 2026-08-26T18:31:48.390516Z_
 
 ---
 
 ## 🔍 Overall Severity Counts
-- **High:** 100
+- **High:** 26
 - **Medium:** 0
-- **Low:** 3
+- **Low:** 0
 
 ---
 
 ## 📁 Folder Health
 ### Templates/
 - High: 18
-- Medium: 0
-- Low: 0
-
-### brand/
-- High: 3
-- Medium: 0
-- Low: 0
-
-### diagrams/
-- High: 15
 - Medium: 0
 - Low: 0
 
@@ -33,16 +23,6 @@ _Last updated: 2026-08-26T16:09:00.294258Z_
 
 ### programmes/
 - High: 1
-- Medium: 0
-- Low: 0
-
-### services/
-- High: 54
-- Medium: 0
-- Low: 3
-
-### value-propositions/
-- High: 2
 - Medium: 0
 - Low: 0
 
