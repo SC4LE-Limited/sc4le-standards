@@ -1,3 +1,10 @@
+---
+schema: sc4le-brand-v1
+title: "SC4LE Tone of Voice"
+brand_asset_type: "tone-of-voice"
+usage_rules: "Use approved tone guidelines for all SC4LE communications."
+tags: ["brand", "tone-of-voice", "messaging", "sc4le"]
+---
 # SC4LE Tone of Voice
 
 The SC4LE tone of voice expresses clarity, confidence, and modern strategic leadership.  
