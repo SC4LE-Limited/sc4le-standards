@@ -4,10 +4,10 @@ title: "Principle System Design"
 version: "1.0.0"
 status: "draft"
 owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "principles", "design", "sc4le"]
-description: "Design and embedding of SC4LE Shared Principles into decision‑making, governance, and organisational behaviours."
+updated: "2026-08-26"
+tags: ["principles", "design", "sc4le"]
 ---
+
 
 # Principle System Design
 
