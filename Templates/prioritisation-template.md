@@ -1,9 +1,11 @@
 ---
-title: SC4LE Prioritisation Template
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-template-v1
+title: "Prioritisation Template"
+template_type: "prioritisation"
+use_cases: ["prioritisation", "decision-making", "portfolio management"]
+tags: ["template", "prioritisation", "sc4le"]
 ---
+
 
 # SC4LE Prioritisation Template
 
