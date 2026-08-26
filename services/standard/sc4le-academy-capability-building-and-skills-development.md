@@ -4,10 +4,10 @@ title: "SC4LE Academy Capability Building & Skills Development"
 version: "1.0.0"
 status: "draft"
 owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "academy", "capability", "skills", "sc4le"]
-description: "Capability building and skills development through the SC4LE Academy, supporting leadership, governance, and enablement roles."
+updated: "2026-08-26"
+tags: ["academy", "capability", "skills", "sc4le"]
 ---
+
 
 # SC4LE Academy — Capability Building & Skills Development
 
