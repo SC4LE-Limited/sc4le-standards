@@ -4,9 +4,8 @@ title: "SC4LE Value Proposition Framework"
 version: "1.0.0"
 status: "draft"
 owner: "CDA"
-updated: "2026-08-25"
-tags: ["value-proposition", "sc4le", "messaging"]
-description: "Defines the SC4LE value proposition, including the primary and secondary value propositions, messaging architecture, and alignment to the SC4LE operating model."
+updated: "2026-08-26"
+tags: ["value-proposition", "framework", "messaging", "sc4le"]
 ---
 
 
