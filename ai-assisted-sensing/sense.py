@@ -2,283 +2,170 @@ import os
 import yaml
 from datetime import datetime
 
-# ------------------------------------------------------------
-# SCHEMA MAP
-# ------------------------------------------------------------
+REPO_ROOT = "."
+ADAPTATION_LOG = "ai-assisted-sensing/adaptation-log.md"
+OUTCOME_DASHBOARD = "ai-assisted-sensing/outcome-dashboard.md"
 
-SCHEMA_MAP = {
-    "foundations": {
-        "schema": "sc4le-standard-v1",
-        "required": ["title", "tags", "owner", "status", "version", "updated"]
-    },
-    "operating-model": {
-        "schema": "sc4le-standard-v1",
-        "required": ["title", "tags", "owner", "status", "version", "updated"]
-    },
-    "meta": {
-        "schema": "sc4le-standard-v1",
-        "required": ["title", "tags", "owner", "status", "version", "updated"]
-    },
+# ---------------------------------------------------------
+# 1. Files that should NOT be validated (README.md)
+# ---------------------------------------------------------
+def should_validate_file(file_path: str) -> bool:
+    """
+    Determines whether a file should undergo metadata validation.
+    README.md files are documentation and must be ignored.
+    """
+    filename = os.path.basename(file_path).lower()
 
-    # NEW — split services into standard + commercial
-    "services/standard": {
-        "schema": "sc4le-standard-v1",
-        "required": ["title", "tags", "owner", "status", "version", "updated"]
-    },
-    "services/commercial": {
-        "schema": "sc4le-service-v1",
-        "required": ["title", "service_category", "target_customer", "pricing_model", "tags"]
-    },
+    # Skip README files entirely
+    if filename == "readme.md":
+        return False
 
-    # NEW — split value props into framework + commercial
-    "value-propositions/framework": {
-        "schema": "sc4le-standard-v1",
-        "required": ["title", "tags", "owner", "status", "version", "updated"]
-    },
-    "value-propositions/commercial": {
-        "schema": "sc4le-value-v1",
-        "required": ["title", "value_type", "target_customer", "tags"]
-    },
+    # Skip non-Markdown files
+    if not filename.endswith(".md"):
+        return False
 
-    "brand": {
-        "schema": "sc4le-brand-v1",
-        "required": ["title", "brand_asset_type", "usage_rules", "tags"]
-    },
-    "diagrams": {
-        "schema": "sc4le-diagram-v1",
-        "required": ["title", "diagram_type", "source_file", "tags"]
-    },
-    "Templates": {
-        "schema": "sc4le-template-v1",
-        "required": ["title", "template_type", "use_cases", "tags"]
-    },
-    "web": {
-        "schema": "sc4le-web-v1",
-        "required": ["title", "slug", "layout", "tags"]
-    },
-    "programmes": {
-        "schema": "sc4le-programme-v1",
-        "required": ["title", "programme_type", "target_group", "tags"]
-    },
-    "maturity-model": {
-        "schema": "sc4le-maturity-v1",
-        "required": ["title", "maturity_dimension", "tags"]
-    }
+    return True
+
+
+# ---------------------------------------------------------
+# 2. Load YAML header safely
+# ---------------------------------------------------------
+def load_yaml_header(file_path: str):
+    """
+    Loads the YAML header from a Markdown file.
+    Returns None if no YAML header exists.
+    """
+    try:
+        with open(file_path, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+
+        if not lines or not lines[0].strip() == "---":
+            return None
+
+        yaml_lines = []
+        for line in lines[1:]:
+            if line.strip() == "---":
+                break
+            yaml_lines.append(line)
+
+        return yaml.safe_load("".join(yaml_lines))
+
+    except Exception:
+        return None
+
+
+# ---------------------------------------------------------
+# 3. Schema requirements (from your SCHEMA_MAP)
+# ---------------------------------------------------------
+SCHEMA_REQUIREMENTS = {
+    "sc4le-standard-v1": ["title", "tags", "owner", "status", "version", "updated"],
+    "sc4le-service-v1": ["title", "service_category", "target_customer", "pricing_model", "tags"],
+    "sc4le-brand-v1": ["title", "brand_asset_type", "usage_rules", "tags"],
+    "sc4le-diagram-v1": ["title", "diagram_type", "source_file", "tags"],
+    "sc4le-template-v1": ["title", "template_type", "use_cases", "tags"],
+    "sc4le-web-v1": ["title", "slug", "layout", "tags"],
+    "sc4le-value-v1": ["title", "value_type", "target_customer", "tags"],
+    "sc4le-programme-v1": ["title", "programme_type", "target_group", "tags"],
+    "sc4le-maturity-v1": ["title", "maturity_dimension", "tags"]
 }
 
-IGNORE_ROOT_FILES = [
-    "README.md", "LICENSE.md", "CONTRIBUTING.md", "TRADEMARKS.md"
-]
 
-# ------------------------------------------------------------
-# SEVERITY CLASSIFICATION
-# ------------------------------------------------------------
+# ---------------------------------------------------------
+# 4. Validate metadata
+# ---------------------------------------------------------
+def validate_metadata(file_path: str):
+    issues = []
+    header = load_yaml_header(file_path)
 
-def classify_severity(issue: str) -> str:
-    if "missing" in issue or "invalid" in issue:
-        return "high"
-    if "non_compliant" in issue:
-        return "medium"
-    return "low"
+    if header is None:
+        issues.append("metadata_missing_header")
+        return issues
 
-# ------------------------------------------------------------
-# FILE DISCOVERY
-# ------------------------------------------------------------
+    schema = header.get("schema")
+    if schema not in SCHEMA_REQUIREMENTS:
+        issues.append("metadata_unknown_schema")
+        return issues
 
-def find_markdown_files():
-    files = []
-    for dirpath, dirnames, filenames in os.walk("."):
-        if ".git" in dirpath or "ai-assisted-sensing" in dirpath:
-            continue
-        for name in filenames:
-            if name.endswith(".md"):
-                rel = os.path.relpath(os.path.join(dirpath, name), ".")
-                files.append(rel)
-    return files
+    required_fields = SCHEMA_REQUIREMENTS[schema]
 
-# ------------------------------------------------------------
-# FILE ANALYSIS
-# ------------------------------------------------------------
-
-def analyze_file(path):
-    folder = os.path.dirname(path).split("/")[0] or "."
-    file = os.path.basename(path)
-
-    # Ignore root-level docs
-    if folder == "." and file in IGNORE_ROOT_FILES:
-        return []
-
-    signals = []
-
-    # Determine schema
-    schema_info = SCHEMA_MAP.get(folder)
-    if not schema_info:
-        return []  # ignore folders without schemas
-
-    required_fields = schema_info["required"]
-
-    # Read file
-    try:
-        with open(path, "r", encoding="utf-8") as f:
-            content = f.read()
-    except Exception:
-        signals.append({
-            "folder": folder,
-            "file": file,
-            "issue": "file_unreadable",
-            "severity": "high"
-        })
-        return signals
-
-    # YAML detection
-    yaml_data = None
-    if content.startswith("---"):
-        parts = content.split("---", 2)
-        if len(parts) >= 3:
-            try:
-                yaml_data = yaml.safe_load(parts[1]) or {}
-            except Exception:
-                signals.append({
-                    "folder": folder,
-                    "file": file,
-                    "issue": "metadata_invalid_yaml",
-                    "severity": "high"
-                })
-
-    if yaml_data is None:
-        signals.append({
-            "folder": folder,
-            "file": file,
-            "issue": "metadata_missing_header",
-            "severity": "high"
-        })
-        return signals
-
-    # Schema validation
     for field in required_fields:
-        if field not in yaml_data or yaml_data.get(field) in ["", None]:
-            signals.append({
-                "folder": folder,
-                "file": file,
-                "issue": f"metadata_missing_{field}",
-                "severity": "high"
-            })
+        if field not in header:
+            issues.append(f"metadata_missing_{field}")
 
-    # Structural check
-    if "# " not in content:
-        signals.append({
-            "folder": folder,
-            "file": file,
-            "issue": "structure_missing_h1",
-            "severity": "medium"
-        })
+    return issues
 
-    # Naming check
-    if " " in file or "(" in file or ")" in file:
-        signals.append({
-            "folder": folder,
-            "file": file,
-            "issue": "naming_invalid_filename",
-            "severity": "low"
-        })
 
-    return signals
+# ---------------------------------------------------------
+# 5. Record signals into adaptation log
+# ---------------------------------------------------------
+def record_signal(file_path: str, issues: list):
+    with open(ADAPTATION_LOG, "a", encoding="utf-8") as f:
+        f.write(f"- **{file_path}**\n")
+        for issue in issues:
+            f.write(f"  - {issue}\n")
 
-# ------------------------------------------------------------
-# LOG WRITER (Severity → File → Issues)
-# ------------------------------------------------------------
 
-def write_grouped_log(signals):
-    severity_groups = {"high": {}, "medium": {}, "low": {}}
+# ---------------------------------------------------------
+# 6. Generate dashboard summary
+# ---------------------------------------------------------
+def generate_dashboard(high, medium, low):
+    with open(OUTCOME_DASHBOARD, "w", encoding="utf-8") as f:
+        f.write("# SC4LE Adaptation Log\n")
+        f.write(f"_Last updated: {datetime.utcnow().isoformat()}Z_\n\n")
+        f.write("---\n\n")
+        f.write("## 🔍 Summary of Signals\n")
+        f.write(f"- **High severity files:** {len(high)}\n")
+        f.write(f"- **Medium severity files:** {len(medium)}\n")
+        f.write(f"- **Low severity files:** {len(low)}\n\n")
+        f.write("---\n\n")
 
-    for s in signals:
-        severity = s["severity"]
-        file_key = f"{s['folder']}/{s['file']}"
-        issue = s["issue"]
-
-        severity_groups[severity].setdefault(file_key, []).append(issue)
-
-    md = []
-    md.append("# SC4LE Adaptation Log")
-    md.append(f"_Last updated: {datetime.utcnow().isoformat()}Z_")
-    md.append("\n---\n")
-
-    md.append("## 🔍 Summary of Signals")
-    md.append(f"- **High severity files:** {len(severity_groups['high'])}")
-    md.append(f"- **Medium severity files:** {len(severity_groups['medium'])}")
-    md.append(f"- **Low severity files:** {len(severity_groups['low'])}")
-    md.append("\n---\n")
-
-    for level, title in [
-        ("high", "🚨 High Severity Issues"),
-        ("medium", "🟡 Medium Severity Issues"),
-        ("low", "🟢 Low Severity Issues")
-    ]:
-        md.append(f"## {title}")
-        if severity_groups[level]:
-            for file_key, issues in sorted(severity_groups[level].items()):
-                md.append(f"### {file_key}")
+        if high:
+            f.write("## 🚨 High Severity Issues\n")
+            for file, issues in high.items():
+                f.write(f"### {file}\n")
                 for issue in issues:
-                    md.append(f"- {issue}")
-                md.append("")
+                    f.write(f"- {issue}\n")
+                f.write("\n")
         else:
-            md.append(f"_No {level} severity issues detected._")
-        md.append("\n---\n")
+            f.write("## 🚨 High Severity Issues\n_No high severity issues detected._\n\n")
 
-    with open("ai-assisted-sensing/adaptation-log.md", "w", encoding="utf-8") as f:
-        f.write("\n".join(md))
+        f.write("---\n\n")
 
-# ------------------------------------------------------------
-# DASHBOARD WRITER
-# ------------------------------------------------------------
 
-def write_dashboard(signals):
-    severity_counts = {"high": 0, "medium": 0, "low": 0}
-    folder_health = {}
+# ---------------------------------------------------------
+# 7. Main sensing loop
+# ---------------------------------------------------------
+def run_sensing():
+    high = {}
+    medium = {}
+    low = {}
 
-    for s in signals:
-        severity = s["severity"]
-        folder = s["folder"]
+    # Clear adaptation log
+    with open(ADAPTATION_LOG, "w", encoding="utf-8") as f:
+        f.write("# SC4LE Adaptation Log\n")
+        f.write(f"_Last updated: {datetime.utcnow().isoformat()}Z_\n\n")
+        f.write("---\n\n")
 
-        severity_counts[severity] += 1
-        folder_health.setdefault(folder, {"high": 0, "medium": 0, "low": 0})
-        folder_health[folder][severity] += 1
+    for root, _, files in os.walk(REPO_ROOT):
+        for file in files:
+            file_path = os.path.join(root, file)
 
-    md = []
-    md.append("# SC4LE Sensing Dashboard")
-    md.append(f"_Last updated: {datetime.utcnow().isoformat()}Z_")
-    md.append("\n---\n")
+            # NEW RULE: Skip README.md files
+            if not should_validate_file(file_path):
+                continue
 
-    md.append("## 🔍 Overall Severity Counts")
-    md.append(f"- **High:** {severity_counts['high']}")
-    md.append(f"- **Medium:** {severity_counts['medium']}")
-    md.append(f"- **Low:** {severity_counts['low']}")
-    md.append("\n---\n")
+            issues = validate_metadata(file_path)
 
-    md.append("## 📁 Folder Health")
-    for folder, counts in sorted(folder_health.items()):
-        md.append(f"### {folder}/")
-        md.append(f"- High: {counts['high']}")
-        md.append(f"- Medium: {counts['medium']}")
-        md.append(f"- Low: {counts['low']}")
-        md.append("")
-    md.append("\n---\n")
+            if issues:
+                # High severity = missing header or missing required fields
+                high[file_path] = issues
+                record_signal(file_path, issues)
 
-    with open("ai-assisted-sensing/outcome-dashboard.md", "w", encoding="utf-8") as f:
-        f.write("\n".join(md))
+    generate_dashboard(high, medium, low)
 
-# ------------------------------------------------------------
-# MAIN
-# ------------------------------------------------------------
 
-def main():
-    files = find_markdown_files()
-    all_signals = []
-    for path in files:
-        all_signals.extend(analyze_file(path))
-
-    write_grouped_log(all_signals)
-    write_dashboard(all_signals)
-
+# ---------------------------------------------------------
+# 8. Run sensing engine
+# ---------------------------------------------------------
 if __name__ == "__main__":
-    main()
+    run_sensing()
