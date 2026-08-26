@@ -7,17 +7,33 @@ ADAPTATION_LOG = "ai-assisted-sensing/adaptation-log.md"
 OUTCOME_DASHBOARD = "ai-assisted-sensing/outcome-dashboard.md"
 
 # ---------------------------------------------------------
-# 1. Files that should NOT be validated (README.md)
+# 1. Files that should NOT be validated
 # ---------------------------------------------------------
+SKIP_FILENAMES = {
+    "readme.md",
+    "license.md",
+    "contributing.md",
+    "trademarks.md"
+}
+
+SKIP_DIRECTORIES = {
+    "ai-assisted-sensing"
+}
+
 def should_validate_file(file_path: str) -> bool:
     """
     Determines whether a file should undergo metadata validation.
-    README.md files are documentation and must be ignored.
+    Documentation and sensing output files must be ignored.
     """
     filename = os.path.basename(file_path).lower()
+    directory = os.path.dirname(file_path).split(os.sep)[0].lower()
 
-    # Skip README files entirely
-    if filename == "readme.md":
+    # Skip documentation files
+    if filename in SKIP_FILENAMES:
+        return False
+
+    # Skip sensing output directory
+    if directory in SKIP_DIRECTORIES:
         return False
 
     # Skip non-Markdown files
@@ -31,10 +47,6 @@ def should_validate_file(file_path: str) -> bool:
 # 2. Load YAML header safely
 # ---------------------------------------------------------
 def load_yaml_header(file_path: str):
-    """
-    Loads the YAML header from a Markdown file.
-    Returns None if no YAML header exists.
-    """
     try:
         with open(file_path, "r", encoding="utf-8") as f:
             lines = f.readlines()
@@ -55,7 +67,7 @@ def load_yaml_header(file_path: str):
 
 
 # ---------------------------------------------------------
-# 3. Schema requirements (from your SCHEMA_MAP)
+# 3. Schema requirements
 # ---------------------------------------------------------
 SCHEMA_REQUIREMENTS = {
     "sc4le-standard-v1": ["title", "tags", "owner", "status", "version", "updated"],
@@ -96,7 +108,7 @@ def validate_metadata(file_path: str):
 
 
 # ---------------------------------------------------------
-# 5. Record signals into adaptation log
+# 5. Record signals
 # ---------------------------------------------------------
 def record_signal(file_path: str, issues: list):
     with open(ADAPTATION_LOG, "a", encoding="utf-8") as f:
@@ -106,7 +118,7 @@ def record_signal(file_path: str, issues: list):
 
 
 # ---------------------------------------------------------
-# 6. Generate dashboard summary
+# 6. Generate dashboard
 # ---------------------------------------------------------
 def generate_dashboard(high, medium, low):
     with open(OUTCOME_DASHBOARD, "w", encoding="utf-8") as f:
@@ -150,14 +162,13 @@ def run_sensing():
         for file in files:
             file_path = os.path.join(root, file)
 
-            # NEW RULE: Skip README.md files
+            # Skip documentation + sensing output
             if not should_validate_file(file_path):
                 continue
 
             issues = validate_metadata(file_path)
 
             if issues:
-                # High severity = missing header or missing required fields
                 high[file_path] = issues
                 record_signal(file_path, issues)
 
