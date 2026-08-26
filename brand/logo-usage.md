@@ -1,3 +1,11 @@
+---
+schema: sc4le-brand-v1
+title: "SC4LE Logo Usage"
+brand_asset_type: "logo-usage"
+usage_rules: "Follow spacing, colour, and placement rules."
+tags: ["brand", "logo", "usage", "sc4le"]
+---
+
 # SC4LE Logo Usage Guidelines
 
 The SC4LE logo is a protected brand asset and must be used consistently across all applications.  
