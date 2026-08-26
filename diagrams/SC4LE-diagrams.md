@@ -1,9 +1,11 @@
 ---
-title: SC4LE Diagrams Library (Master File)
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-diagram-v1
+title: "SC4LE Diagrams Overview"
+diagram_type: "overview"
+source_file: "SC4LE-diagrams.md"
+tags: ["diagram", "overview", "sc4le"]
 ---
+
 
 # SC4LE Diagrams Library (Master File)
 
