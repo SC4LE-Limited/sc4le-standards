@@ -4,10 +4,10 @@ title: "SC4LE Operating Model Design & Blueprinting"
 version: "2.0.0"
 status: "draft"
 owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "operating-model", "design", "blueprinting", "sc4le"]
-description: "Design and blueprinting of the SC4LE Operating Model, including governance, roles, rhythms, decision pathways, and sensing loops."
+updated: "2026-08-26"
+tags: ["operating-model", "design", "enablement", "sc4le"]
 ---
+
 
 # SC4LE Operating Model Design & Blueprinting
 
