@@ -4,10 +4,10 @@ title: "Local Design Authority Setup & Enablement"
 version: "1.0.0"
 status: "draft"
 owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "lda", "enablement", "governance", "sc4le"]
-description: "Setup, chartering, and capability building for Local Design Authorities, enabling federated governance and domain autonomy."
+updated: "2026-08-26"
+tags: ["lda", "governance", "enablement", "sc4le"]
 ---
+
 
 # Local Design Authority Setup & Enablement
 
