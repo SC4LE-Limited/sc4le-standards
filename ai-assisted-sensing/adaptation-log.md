@@ -1,92 +1,49 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-26T18:49:14.247308Z_
+_Last updated: 2026-08-26T18:55:15.988158Z_
 
 ---
 
-## 🔍 Summary of Signals
-- **High severity files:** 18
-- **Medium severity files:** 0
-- **Low severity files:** 0
-
----
-
-## 🚨 High Severity Issues
-### Templates/README.md
-- metadata_missing_header
-
-### Templates/decision-log.md
-- metadata_missing_template_type
-- metadata_missing_use_cases
-- metadata_missing_tags
-
-### Templates/flow-diagnostic-template.md
-- metadata_missing_template_type
-- metadata_missing_use_cases
-- metadata_missing_tags
-
-### Templates/governance-record.md
-- metadata_missing_template_type
-- metadata_missing_use_cases
-- metadata_missing_tags
-
-### Templates/prioritisation-template.md
-- metadata_missing_template_type
-- metadata_missing_use_cases
-- metadata_missing_tags
-
-### Templates/risk-log.md
-- metadata_missing_template_type
-- metadata_missing_use_cases
-- metadata_missing_tags
-
-### diagrams/README.md
-- metadata_missing_header
-
-### foundations/README.md
-- metadata_missing_header
-
-### maturity-model/README.md
-- metadata_missing_header
-
-### maturity-model/maturity-assessment-template.md
-- metadata_missing_maturity_dimension
-
-### maturity-model/maturity-dashboard.md
-- metadata_missing_maturity_dimension
-
-### maturity-model/maturity-heatmap.md
-- metadata_missing_maturity_dimension
-
-### meta/README.md
-- metadata_missing_header
-
-### operating-model/README.md
-- metadata_missing_header
-
-### programmes/SC4LE-SCALE-UPS.md
-- metadata_missing_header
-
-### web/master-prompt.md
-- metadata_missing_slug
-- metadata_missing_layout
-
-### web/page-templates.md
-- metadata_missing_slug
-- metadata_missing_layout
-
-### web/workspace-pack.md
-- metadata_missing_slug
-- metadata_missing_layout
-
-
----
-
-## 🟡 Medium Severity Issues
-_No medium severity issues detected._
-
----
-
-## 🟢 Low Severity Issues
-_No low severity issues detected._
-
----
+- **./LICENSE.md**
+  - metadata_missing_header
+- **./CONTRIBUTING.md**
+  - metadata_missing_header
+- **./TRADEMARKS.md**
+  - metadata_missing_header
+- **./ai-assisted-sensing/outcome-dashboard.md**
+  - metadata_missing_header
+- **./ai-assisted-sensing/adaptation-log.md**
+  - metadata_missing_header
+- **./programmes/SC4LE-SCALE-UPS.md**
+  - metadata_missing_header
+- **./meta/governance-standard.md**
+  - metadata_unknown_schema
+- **./meta/governance-brand.md**
+  - metadata_unknown_schema
+- **./meta/page-templates.md**
+  - metadata_unknown_schema
+- **./meta/website-content-matrix.md**
+  - metadata_unknown_schema
+- **./meta/website-ia.md**
+  - metadata_unknown_schema
+- **./meta/messaging-matrix.md**
+  - metadata_unknown_schema
+- **./meta/governance-diagrams.md**
+  - metadata_unknown_schema
+- **./meta/governance-messaging.md**
+  - metadata_unknown_schema
+- **./meta/website-publishing-playbook.md**
+  - metadata_unknown_schema
+- **./meta/governance-templates.md**
+  - metadata_unknown_schema
+- **./meta/CONTENT-GOVERNANCE.md**
+  - metadata_unknown_schema
+- **./Templates/governance-record.md**
+  - metadata_unknown_schema
+- **./Templates/flow-diagnostic-template.md**
+  - metadata_unknown_schema
+- **./Templates/risk-log.md**
+  - metadata_unknown_schema
+- **./Templates/prioritisation-template.md**
+  - metadata_unknown_schema
+- **./Templates/decision-log.md**
+  - metadata_unknown_schema
