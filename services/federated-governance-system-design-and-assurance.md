@@ -4,10 +4,10 @@ title: "Federated Governance System Design & Assurance"
 version: "1.0.0"
 status: "draft"
 owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "governance", "federated", "assurance", "sc4le"]
-description: "Design, establishment, and assurance of federated governance systems including CDA, LDAs, escalation thresholds, and decision rights."
+updated: "2026-08-26"
+tags: ["governance", "federated", "assurance", "sc4le"]
 ---
+
 
 # Federated Governance System Design & Assurance
 
