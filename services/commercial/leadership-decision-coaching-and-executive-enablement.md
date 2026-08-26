@@ -1,13 +1,12 @@
 ---
-schema: sc4le-standard-v1
+schema: sc4le-service-v1
 title: "Leadership Decision Coaching & Executive Enablement"
-version: "1.0.0"
-status: "draft"
-owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "leadership", "coaching", "enablement", "sc4le"]
-description: "Executive coaching focused on decision quality, principle‑led leadership, and alignment with SC4LE governance and operating rhythms."
+service_category: "leadership-coaching"
+target_customer: "executives"
+pricing_model: "session-based"
+tags: ["leadership", "coaching", "enablement", "service", "sc4le"]
 ---
+
 
 # Leadership Decision Coaching & Executive Enablement
 
