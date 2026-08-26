@@ -1,10 +1,10 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-26T18:31:48.390253Z_
+_Last updated: 2026-08-26T18:43:59.941265Z_
 
 ---
 
 ## 🔍 Summary of Signals
-- **High severity files:** 14
+- **High severity files:** 18
 - **Medium severity files:** 0
 - **Low severity files:** 0
 
@@ -12,9 +12,7 @@ _Last updated: 2026-08-26T18:31:48.390253Z_
 
 ## 🚨 High Severity Issues
 ### Templates/README.md
-- metadata_missing_template_type
-- metadata_missing_use_cases
-- metadata_missing_tags
+- metadata_missing_header
 
 ### Templates/decision-log.md
 - metadata_missing_template_type
@@ -41,8 +39,14 @@ _Last updated: 2026-08-26T18:31:48.390253Z_
 - metadata_missing_use_cases
 - metadata_missing_tags
 
+### diagrams/README.md
+- metadata_missing_header
+
+### foundations/README.md
+- metadata_missing_header
+
 ### maturity-model/README.md
-- metadata_missing_maturity_dimension
+- metadata_missing_header
 
 ### maturity-model/maturity-assessment-template.md
 - metadata_missing_maturity_dimension
@@ -53,17 +57,26 @@ _Last updated: 2026-08-26T18:31:48.390253Z_
 ### maturity-model/maturity-heatmap.md
 - metadata_missing_maturity_dimension
 
+### meta/README.md
+- metadata_missing_header
+
+### operating-model/README.md
+- metadata_missing_header
+
 ### programmes/SC4LE-SCALE-UPS.md
 - metadata_missing_header
 
 ### web/master-prompt.md
-- metadata_missing_header
+- metadata_missing_slug
+- metadata_missing_layout
 
 ### web/page-templates.md
-- metadata_missing_header
+- metadata_missing_slug
+- metadata_missing_layout
 
 ### web/workspace-pack.md
-- metadata_missing_header
+- metadata_missing_slug
+- metadata_missing_layout
 
 
 ---
