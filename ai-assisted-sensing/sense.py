@@ -13,16 +13,13 @@ SKIP_FILENAMES = {
     "readme.md",
     "license.md",
     "contributing.md",
-    "trademarks.md"
+    "trademarks.md",
 }
 
-SKIP_DIRECTORIES = {
-    "ai-assisted-sensing"
+SKIP_DIRECTORY_KEYWORDS = {
+    "ai-assisted-sensing",
 }
 
-def normalise(name: str) -> str:
-    """Normalises directory names by stripping ./ and converting to lowercase."""
-    return name.replace("./", "").lower()
 
 def should_validate_file(file_path: str) -> bool:
     """
@@ -30,15 +27,16 @@ def should_validate_file(file_path: str) -> bool:
     Documentation and sensing output files must be ignored.
     """
     filename = os.path.basename(file_path).lower()
-    directory = normalise(os.path.dirname(file_path).split(os.sep)[0])
+    directory_path = os.path.dirname(file_path).lower()
 
     # Skip documentation files
     if filename in SKIP_FILENAMES:
         return False
 
-    # Skip sensing output directory
-    if directory in SKIP_DIRECTORIES:
-        return False
+    # Skip any file inside ai-assisted-sensing (in any path form)
+    for keyword in SKIP_DIRECTORY_KEYWORDS:
+        if keyword in directory_path:
+            return False
 
     # Skip non-Markdown files
     if not filename.endswith(".md"):
@@ -51,6 +49,10 @@ def should_validate_file(file_path: str) -> bool:
 # 2. Load YAML header safely
 # ---------------------------------------------------------
 def load_yaml_header(file_path: str):
+    """
+    Loads the YAML header from a Markdown file.
+    Returns None if no YAML header exists.
+    """
     try:
         with open(file_path, "r", encoding="utf-8") as f:
             lines = f.readlines()
@@ -82,7 +84,7 @@ SCHEMA_REQUIREMENTS = {
     "sc4le-web-v1": ["title", "slug", "layout", "tags"],
     "sc4le-value-v1": ["title", "value_type", "target_customer", "tags"],
     "sc4le-programme-v1": ["title", "programme_type", "target_group", "tags"],
-    "sc4le-maturity-v1": ["title", "maturity_dimension", "tags"]
+    "sc4le-maturity-v1": ["title", "maturity_dimension", "tags"],
 }
 
 
@@ -156,7 +158,7 @@ def run_sensing():
     medium = {}
     low = {}
 
-    # Clear adaptation log
+    # Reset adaptation log header
     with open(ADAPTATION_LOG, "w", encoding="utf-8") as f:
         f.write("# SC4LE Adaptation Log\n")
         f.write(f"_Last updated: {datetime.utcnow().isoformat()}Z_\n\n")
