@@ -1,3 +1,12 @@
+---
+schema: sc4le-standard-v1
+title: "SC4LE Web Workspace Pack"
+owner: "CDA"
+status: "draft"
+version: "1.0.0"
+updated: "2026-08-26"
+tags: ["meta", "workspace", "web", "sc4le"]
+---
 # SC4LE Workspace Knowledge Pack  
 Authoritative Standards for Loveable, Websites, and AI Tools
 
