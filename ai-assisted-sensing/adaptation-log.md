@@ -1,14 +1,8 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-26T18:55:15.988158Z_
+_Last updated: 2026-08-26T19:45:11.047336Z_
 
 ---
 
-- **./LICENSE.md**
-  - metadata_missing_header
-- **./CONTRIBUTING.md**
-  - metadata_missing_header
-- **./TRADEMARKS.md**
-  - metadata_missing_header
 - **./ai-assisted-sensing/outcome-dashboard.md**
   - metadata_missing_header
 - **./ai-assisted-sensing/adaptation-log.md**
