@@ -1,9 +1,11 @@
 ---
-title: SC4LE Sensing Loop Diagram
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-diagram-v1
+title: "SC4LE Sensing Loop Diagram"
+diagram_type: "sensing-loop"
+source_file: "sensing-loop.md"
+tags: ["diagram", "sensing", "loop", "sc4le"]
 ---
+
 
 # SC4LE Sensing Loop Diagram
 
