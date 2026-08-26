@@ -1,9 +1,11 @@
 ---
-title: SC4LE Governance Architecture Diagram
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-diagram-v1
+title: "Governance Architecture Diagram"
+diagram_type: "governance-architecture"
+source_file: "governance-architecture.md"
+tags: ["diagram", "governance", "architecture", "sc4le"]
 ---
+
 
 # SC4LE Governance Architecture Diagram
 
