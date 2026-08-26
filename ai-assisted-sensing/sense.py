@@ -7,7 +7,7 @@ ADAPTATION_LOG = "ai-assisted-sensing/adaptation-log.md"
 OUTCOME_DASHBOARD = "ai-assisted-sensing/outcome-dashboard.md"
 
 # ---------------------------------------------------------
-# 1. Files that should NOT be validated
+# 1. Files and directories that should NOT be validated
 # ---------------------------------------------------------
 SKIP_FILENAMES = {
     "readme.md",
@@ -20,13 +20,17 @@ SKIP_DIRECTORIES = {
     "ai-assisted-sensing"
 }
 
+def normalise(name: str) -> str:
+    """Normalises directory names by stripping ./ and converting to lowercase."""
+    return name.replace("./", "").lower()
+
 def should_validate_file(file_path: str) -> bool:
     """
     Determines whether a file should undergo metadata validation.
     Documentation and sensing output files must be ignored.
     """
     filename = os.path.basename(file_path).lower()
-    directory = os.path.dirname(file_path).split(os.sep)[0].lower()
+    directory = normalise(os.path.dirname(file_path).split(os.sep)[0])
 
     # Skip documentation files
     if filename in SKIP_FILENAMES:
