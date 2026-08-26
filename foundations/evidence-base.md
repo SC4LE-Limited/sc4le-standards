@@ -1,13 +1,13 @@
 ---
 schema: sc4le-standard-v1
 title: "SC4LE Evidence Base"
-tags: ["foundations", "evidence", "research", "case-studies"]
-owner: "Scott Zebedee"
+owner: "CDA"
 status: "draft"
-version: "1.0"
-updated: "2026-08-22"
-description: "The evidence base underpinning SC4LE, including research, case studies, and practical validation of the operating model."
+version: "1.0.0"
+updated: "2026-08-26"
+tags: ["foundations", "evidence", "sc4le", "research", "case-studies"]
 ---
+
 
 # SC4LE Evidence Base
 
