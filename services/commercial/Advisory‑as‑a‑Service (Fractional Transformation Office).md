@@ -1,13 +1,12 @@
 ---
-schema: sc4le-standard-v1
+schema: sc4le-service-v1
 title: "Advisory‑as‑a‑Service (Fractional Transformation Office)"
-version: "2.0.0"
-status: "draft"
-owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "advisory", "transformation", "sc4le"]
-description: "Fractional transformation leadership providing strategic guidance, decision support, and governance alignment for organisations adopting SC4LE."
+service_category: "transformation-advisory"
+target_customer: "senior-leadership"
+pricing_model: "fractional-retainer"
+tags: ["advisory", "transformation", "service", "sc4le"]
 ---
+
 
 # Advisory-as-a-Service (Fractional Transformation Office)
 
