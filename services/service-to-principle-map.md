@@ -4,10 +4,10 @@ title: "SC4LE Service‑to‑Principle Map"
 version: "1.0.0"
 status: "draft"
 owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "principles", "mapping", "sc4le"]
-description: "A mapping of SC4LE services to SC4LE Shared Principles, showing how each service reinforces principle‑led governance and decision‑making."
+updated: "2026-08-26"
+tags: ["mapping", "principles", "services", "sc4le"]
 ---
+
 
 # SC4LE Service‑to‑Principle Dependency Map
 
