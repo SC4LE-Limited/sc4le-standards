@@ -1,9 +1,3 @@
----
-title: SC4LE Templates
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
----
 
 # SC4LE Templates
 
