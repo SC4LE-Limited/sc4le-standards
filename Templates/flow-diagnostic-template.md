@@ -1,9 +1,11 @@
 ---
-title: SC4LE Flow Diagnostic Template
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-template-v1
+title: "Flow Diagnostic Template"
+template_type: "flow-diagnostic"
+use_cases: ["flow analysis", "bottleneck identification"]
+tags: ["template", "flow", "diagnostic", "sc4le"]
 ---
+
 
 # SC4LE Flow Diagnostic Template
 
