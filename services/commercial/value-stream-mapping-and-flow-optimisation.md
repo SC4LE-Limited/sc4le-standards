@@ -1,13 +1,12 @@
 ---
-schema: sc4le-standard-v1
+schema: sc4le-service-v1
 title: "Value Stream Mapping & Flow Optimisation"
-version: "1.0.0"
-status: "draft"
-owner: "CDA"
-updated: "2026-08-25"
-tags: ["service", "flow", "value-stream", "diagnostic", "sc4le"]
-description: "Mapping and optimisation of value streams to improve flow efficiency, reduce decision latency, and enhance cross‑domain delivery."
+service_category: "flow-optimisation"
+target_customer: "delivery-teams"
+pricing_model: "fixed-fee"
+tags: ["flow", "value-stream", "diagnostic", "service", "sc4le"]
 ---
+
 
 # Value-Stream Mapping & Flow Optimisation
 
