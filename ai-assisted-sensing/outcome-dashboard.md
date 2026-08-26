@@ -1,22 +1,16 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-26T19:50:27.057470Z_
+_Last updated: 2026-08-26T19:54:16.263626Z_
 
 ---
 
 ## 🔍 Summary of Signals
-- **High severity files:** 19
+- **High severity files:** 17
 - **Medium severity files:** 0
 - **Low severity files:** 0
 
 ---
 
 ## 🚨 High Severity Issues
-### ./ai-assisted-sensing/outcome-dashboard.md
-- metadata_missing_header
-
-### ./ai-assisted-sensing/adaptation-log.md
-- metadata_missing_header
-
 ### ./programmes/SC4LE-SCALE-UPS.md
 - metadata_missing_header
 

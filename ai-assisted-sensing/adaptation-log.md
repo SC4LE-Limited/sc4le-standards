@@ -1,12 +1,8 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-26T19:50:27.017513Z_
+_Last updated: 2026-08-26T19:54:16.226245Z_
 
 ---
 
-- **./ai-assisted-sensing/outcome-dashboard.md**
-  - metadata_missing_header
-- **./ai-assisted-sensing/adaptation-log.md**
-  - metadata_missing_header
 - **./programmes/SC4LE-SCALE-UPS.md**
   - metadata_missing_header
 - **./meta/governance-standard.md**
