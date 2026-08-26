@@ -1,10 +1,8 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-26T19:54:16.226245Z_
+_Last updated: 2026-08-26T20:13:05.558941Z_
 
 ---
 
-- **./programmes/SC4LE-SCALE-UPS.md**
-  - metadata_missing_header
 - **./meta/governance-standard.md**
   - metadata_unknown_schema
 - **./meta/governance-brand.md**
@@ -26,14 +24,4 @@ _Last updated: 2026-08-26T19:54:16.226245Z_
 - **./meta/governance-templates.md**
   - metadata_unknown_schema
 - **./meta/CONTENT-GOVERNANCE.md**
-  - metadata_unknown_schema
-- **./Templates/governance-record.md**
-  - metadata_unknown_schema
-- **./Templates/flow-diagnostic-template.md**
-  - metadata_unknown_schema
-- **./Templates/risk-log.md**
-  - metadata_unknown_schema
-- **./Templates/prioritisation-template.md**
-  - metadata_unknown_schema
-- **./Templates/decision-log.md**
   - metadata_unknown_schema

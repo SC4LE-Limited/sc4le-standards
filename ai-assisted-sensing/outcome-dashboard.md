@@ -1,19 +1,16 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-08-26T19:54:16.263626Z_
+_Last updated: 2026-08-26T20:13:05.608639Z_
 
 ---
 
 ## 🔍 Summary of Signals
-- **High severity files:** 17
+- **High severity files:** 11
 - **Medium severity files:** 0
 - **Low severity files:** 0
 
 ---
 
 ## 🚨 High Severity Issues
-### ./programmes/SC4LE-SCALE-UPS.md
-- metadata_missing_header
-
 ### ./meta/governance-standard.md
 - metadata_unknown_schema
 
@@ -45,21 +42,6 @@ _Last updated: 2026-08-26T19:54:16.263626Z_
 - metadata_unknown_schema
 
 ### ./meta/CONTENT-GOVERNANCE.md
-- metadata_unknown_schema
-
-### ./Templates/governance-record.md
-- metadata_unknown_schema
-
-### ./Templates/flow-diagnostic-template.md
-- metadata_unknown_schema
-
-### ./Templates/risk-log.md
-- metadata_unknown_schema
-
-### ./Templates/prioritisation-template.md
-- metadata_unknown_schema
-
-### ./Templates/decision-log.md
 - metadata_unknown_schema
 
 ---
