@@ -1,9 +1,11 @@
 ---
-title: SC4LE Governance Record
-version: 1.0.0
-status: canonical
-last-updated: 2026-06-08
+schema: sc4le-template-v1
+title: "Governance Record Template"
+template_type: "governance-record"
+use_cases: ["decision documentation", "governance tracking"]
+tags: ["template", "governance", "record", "sc4le"]
 ---
+
 
 # SC4LE Governance Record
 
