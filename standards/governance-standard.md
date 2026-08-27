@@ -1,5 +1,5 @@
 ---
-schema: sc4le-meta-v1
+schema: sc4le-standard-v1
 title: "SC4LE Governance Standard"
 tags: ["governance", "standard", "sc4le"]
 owner: "SC4LE Limited"
