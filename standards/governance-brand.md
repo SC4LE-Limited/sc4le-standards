@@ -1,5 +1,5 @@
 ---
-schema: sc4le-meta-v1
+schema: sc4le-standard-v1
 title: "Brand Governance Standard"
 tags: ["governance", "brand", "sc4le"]
 owner: "SC4LE Limited"
