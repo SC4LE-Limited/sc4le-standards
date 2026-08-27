@@ -1,5 +1,5 @@
 ---
-schema: sc4le-meta-v1
+schema: sc4le-standard-v1
 title: "Diagram Governance Standard"
 tags: ["governance", "diagrams", "sc4le"]
 owner: "SC4LE Limited"
