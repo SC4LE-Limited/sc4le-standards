@@ -1,5 +1,5 @@
 ---
-schema: sc4le-meta-v1
+schema: sc4le-standard-v1
 title: "Website Information Architecture"
 tags: ["website", "information-architecture", "sc4le"]
 owner: "SC4LE Limited"
