@@ -1,5 +1,5 @@
 ---
-schema: sc4le-meta-v1
+schema: sc4le-standard-v1
 title: "SC4LE Messaging Matrix"
 tags: ["messaging", "matrix", "sc4le"]
 owner: "SC4LE Limited"
