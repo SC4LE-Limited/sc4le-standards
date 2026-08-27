@@ -1,5 +1,5 @@
 ---
-schema: sc4le-meta-v1
+schema: sc4le-standard-v1
 title: "Website Publishing Playbook"
 tags: ["website", "publishing", "playbook"]
 owner: "SC4LE Limited"
