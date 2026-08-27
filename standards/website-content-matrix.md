@@ -1,5 +1,5 @@
 ---
-schema: sc4le-meta-v1
+schema: sc4le-standard-v1
 title: "Website Content Matrix"
 tags: ["website", "content", "matrix"]
 owner: "SC4LE Limited"
