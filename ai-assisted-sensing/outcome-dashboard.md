@@ -1,5 +1,5 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-09-02T22:05:54.867405Z_
+_Last updated: 2026-09-03T00:48:55.027973Z_
 
 ---
 
@@ -11,10 +11,10 @@ _Last updated: 2026-09-02T22:05:54.867405Z_
 ---
 
 ## 🚨 High Severity Issues
-### ./standards/index.md
+### ./services/index.md
 - metadata_missing_header
 
-### ./services/index.md
+### ./standards/index.md
 - metadata_missing_header
 
 ### ./operating-model/index.md
