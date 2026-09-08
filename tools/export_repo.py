@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """
-Concatenate text files from a repo into a single Markdown export with:
- - a directory tree
- - a table-of-contents with stable anchors
- - an inline JSON manifest (export-manifest.json) and a separate file export-manifest.json
+Concatenate text files from a repo into multiple Markdown export parts
+with:
+ - a directory tree (in the first part)
+ - a global table-of-contents (in the first part)
+ - a JSON manifest (export-manifest.json) written separately and embedded info
  - per-file git blob SHA, last commit SHA/date/author
+ - split into parts when part bytes exceed --part-size
+
 Usage:
-  python tools/export_repo.py --root . --output export.md
+  python tools/export_repo.py --root . --output export.md --part-size 1000000
 """
 import argparse
 import json
@@ -44,7 +47,7 @@ def is_binary(path: Path, max_bytes=1024):
             chunk = f.read(max_bytes)
             if b'\0' in chunk:
                 return True
-            text_chars = bytearray({7,8,9,10,12,13,27} | set(range(0x20, 0x100)))
+            text_chars = bytearray({7, 8, 9, 10, 12, 13, 27} | set(range(0x20, 0x100)))
             if bool(chunk) and sum(b not in text_chars for b in chunk) / max(1, len(chunk)) > 0.30:
                 return True
     except Exception:
@@ -54,7 +57,7 @@ def is_binary(path: Path, max_bytes=1024):
 
 def run_git(args, cwd, silent=False):
     try:
-        out = subprocess.check_output(['git'] + args, cwd=cwd, text=True).strip()
+        out = subprocess.check_output(['git'] + args, cwd=cwd, text=True, stderr=subprocess.DEVNULL).strip()
         return out
     except subprocess.CalledProcessError:
         if not silent:
@@ -77,7 +80,7 @@ def git_remote_url(root: Path):
 
 
 def git_describe_tag(root: Path):
-    # try exact match then fallback
+    # try exact match then fallback, suppress stderr to avoid noisy logs
     tag = run_git(['describe', '--tags', '--exact-match', 'HEAD'], root, silent=True)
     if tag:
         return tag
@@ -152,6 +155,7 @@ def build_tree_lines(paths, root: Path):
             node = node.setdefault(part, {})
         node.setdefault(parts[-1], None)
     lines = []
+
     def walk(node, prefix=''):
         entries = sorted(node.items(), key=lambda kv: (kv[1] is None, kv[0]))
         for i, (name, child) in enumerate(entries):
@@ -161,25 +165,39 @@ def build_tree_lines(paths, root: Path):
             if child is not None:
                 new_prefix = prefix + ('   ' if is_last else '│  ')
                 walk(child, new_prefix)
+
     walk(tree)
     if not lines:
         return ["(empty)"]
     return lines
 
 
+def safe_read_text(fpath: Path):
+    try:
+        return fpath.read_text(encoding='utf-8')
+    except Exception:
+        try:
+            return fpath.read_text(encoding='latin-1')
+        except Exception:
+            return ''
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--root', default='.', help='Repo root to export')
-    p.add_argument('--output', default='export.md', help='Output Markdown file')
+    p.add_argument('--output', default='export.md', help='Output base Markdown file')
+    p.add_argument('--part-size', type=int, default=1_000_000, help='Max bytes per export part (default 1_000_000)')
     p.add_argument('--max-size', type=int, default=2_000_000, help='Skip files > bytes (default 2MB)')
     p.add_argument('--exclude', nargs='*', default=[], help='Additional paths to exclude')
     p.add_argument('--manifest-file', default='export-manifest.json', help='Write manifest JSON to this path')
     args = p.parse_args()
 
     root = Path(args.root).resolve()
-    out_path = Path(args.output).resolve()
+    output_base = Path(args.output).resolve()
     manifest_path = Path(args.manifest_file).resolve()
     excludes = set(DEFAULT_EXCLUDES) | set(args.exclude)
+    part_size = args.part_size
+    max_size = args.max_size
 
     head = git_head_sha(root)
     branch = git_branch(root)
@@ -187,21 +205,11 @@ def main():
     head_tag = git_describe_tag(root)
     blob_map = git_ls_tree_blob_map(root)
 
-    files = build_file_list(root, excludes, args.max_size)
+    files = build_file_list(root, excludes, max_size)
     tree_lines = build_tree_lines(files, root)
 
-    manifest = {
-        "repo": root.name,
-        "head": head,
-        "branch": branch,
-        "head_tag": head_tag,
-        "remote": remote,
-        "generated_at": datetime.utcnow().isoformat() + 'Z',
-        "generated_by": 'tools/export_repo.py',
-        "files": []
-    }
-
-    toc_lines = []
+    # Precompute file metadata and anchors so we can emit a global TOC (in first part)
+    file_infos = []
     for pth, size in files:
         rel = pth.relative_to(root)
         rel_str = str(rel)
@@ -210,7 +218,7 @@ def main():
         lang = EXT_LANG.get(ext, '')
         meta = git_last_commit_for_file(root, rel)
         blob_sha = blob_map.get(rel_str)
-        file_entry = {
+        file_infos.append({
             "path": rel_str,
             "size": size,
             "language": lang or None,
@@ -218,87 +226,180 @@ def main():
             "last_commit": meta['sha'] if meta else None,
             "last_commit_date": meta['date'] if meta else None,
             "last_commit_author": meta['author'] if meta else None,
-            "blob_sha": blob_sha
+            "blob_sha": blob_sha,
+            # will be filled during writing:
+            "export_file": None
+        })
+
+    # Prepare TOC lines
+    toc_lines = [f"- [{fi['path']}](#{fi['anchor']})" for fi in file_infos]
+
+    # Helper to write text and count bytes (utf-8)
+    def write_and_count(fhandle, s, counter):
+        b = s.encode('utf-8')
+        fhandle.write(s)
+        return counter + len(b)
+
+    # Generate part filenames: use output_base.stem and extension
+    base_stem = output_base.stem
+    base_suffix = output_base.suffix or '.md'
+
+    def part_filename_for(index):
+        return f"{base_stem}_{index:03}{base_suffix}"
+
+    # Open first part
+    part_index = 1
+    part_path = root / part_filename_for(part_index)
+    out = part_path.open('w', encoding='utf-8')
+    current_bytes = 0
+    parts_meta = []
+
+    # write a common header to each part when opened
+    def write_part_header(f, idx):
+        nonlocal current_bytes
+        header = f"# Repository export: {root.name} (part {idx})\n\n"
+        if head:
+            header += f"- commit: `{head}`\n\n"
+        if branch:
+            header += f"- branch: `{branch}`\n\n"
+        if head_tag:
+            header += f"- tag: `{head_tag}`\n\n"
+        if remote:
+            header += f"- remote: `{remote}`\n\n"
+        header += f"- generated_by: tools/export_repo.py\n"
+        header += f"- generated_at: {datetime.utcnow().isoformat()}Z\n\n"
+        header += "---\n\n"
+        current_bytes = write_and_count(f, header, current_bytes)
+        # First part also gets directory tree and global TOC
+        if idx == 1:
+            tree_block = "## Directory tree\n\n```\n"
+            for l in tree_lines:
+                tree_block += l + "\n"
+            tree_block += "```\n\n"
+            current_bytes = write_and_count(f, tree_block, current_bytes)
+
+            toc_block = "## Table of contents\n\n"
+            if toc_lines:
+                toc_block += "\n".join(toc_lines) + "\n\n"
+            else:
+                toc_block += "_No exported files_\n\n"
+            current_bytes = write_and_count(f, toc_block, current_bytes)
+            current_bytes = write_and_count(f, "---\n\n", current_bytes)
+            current_bytes = write_and_count(f, "## Files\n\n", current_bytes)
+
+    write_part_header(out, part_index)
+
+    # Iterate entries and write to parts, splitting as needed.
+    for fi in file_infos:
+        rel = fi['path']
+        anchor = fi['anchor']
+        fpath = root / rel
+
+        # Prepare the metadata and code fence markers
+        meta_lines = []
+        meta_lines.append(f"<a name=\"{anchor}\"></a>\n\n")
+        meta_lines.append(f"### {rel}\n\n")
+        meta_lines.append(f"- size: {fi['size']} bytes\n")
+        if fi['last_commit']:
+            meta_lines.append(f"- last_commit: `{fi['last_commit']}` ({fi['last_commit_date']}) by {fi['last_commit_author']}\n")
+        if fi['blob_sha']:
+            meta_lines.append(f"- blob_sha: `{fi['blob_sha']}`\n")
+        if fi['language']:
+            meta_lines.append(f"- language: {fi['language']}\n")
+        meta_lines.append("\n")
+
+        text = safe_read_text(fpath)
+        text_bytes_len = len(text.encode('utf-8'))
+        ext = fpath.suffix.lower()
+        lang = fi['language'] or ''
+
+        if lang:
+            fence_start = f"```{lang}\n"
+            fence_end = "```\n\n"
+        else:
+            fence_start = "```\n"
+            fence_end = "```\n\n"
+
+        # Section total size estimate in bytes:
+        meta_bytes = sum(len(s.encode('utf-8')) for s in meta_lines)
+        fence_start_bytes = len(fence_start.encode('utf-8'))
+        fence_end_bytes = len(fence_end.encode('utf-8'))
+        section_bytes = meta_bytes + fence_start_bytes + text_bytes_len + fence_end_bytes
+
+        # If adding this section would exceed part_size and current part already has content, rotate to next part
+        if current_bytes + section_bytes > part_size and current_bytes > 0:
+            # close current part and record meta
+            out.close()
+            parts_meta.append({
+                "filename": str(part_path.relative_to(root)),
+                "size": current_bytes
+            })
+            part_index += 1
+            part_path = root / part_filename_for(part_index)
+            out = part_path.open('w', encoding='utf-8')
+            current_bytes = 0
+            write_part_header(out, part_index)
+
+        # Even if section_bytes > part_size and current_bytes == 0, we'll write it into this (new) part oversized.
+        # Write meta lines
+        for s in meta_lines:
+            current_bytes = write_and_count(out, s, current_bytes)
+        # Write fence and content
+        current_bytes = write_and_count(out, fence_start, current_bytes)
+        # write content in one call (text)
+        current_bytes = write_and_count(out, text.rstrip() + "\n", current_bytes)
+        current_bytes = write_and_count(out, fence_end, current_bytes)
+
+        # record which export file contains the section
+        fi['export_file'] = str(part_path.relative_to(root))
+
+    # finalize last part
+    out.close()
+    parts_meta.append({
+        "filename": str(part_path.relative_to(root)),
+        "size": current_bytes
+    })
+
+    # Build manifest now that we know export_file for each entry
+    manifest = {
+        "repo": root.name,
+        "head": head,
+        "branch": branch,
+        "head_tag": head_tag,
+        "remote": remote,
+        "generated_at": datetime.utcnow().isoformat() + 'Z',
+        "generated_by": 'tools/export_repo.py',
+        "part_size": part_size,
+        "parts": parts_meta,
+        "files": []
+    }
+
+    for fi in file_infos:
+        entry = {
+            "path": fi['path'],
+            "size": fi['size'],
+            "language": fi['language'],
+            "anchor": fi['anchor'],
+            "last_commit": fi['last_commit'],
+            "last_commit_date": fi['last_commit_date'],
+            "last_commit_author": fi['last_commit_author'],
+            "blob_sha": fi['blob_sha'],
+            "export_file": fi['export_file']
         }
-        manifest["files"].append(file_entry)
-        toc_lines.append(f"- [{rel_str}](#{anchor})")
+        manifest["files"].append(entry)
 
     # write manifest JSON file separately
     try:
         with manifest_path.open('w', encoding='utf-8') as mf:
             json.dump(manifest, mf, indent=2)
     except Exception:
-        # ignore write errors; we'll embed manifest in export.md anyway
+        # ignore write errors
         pass
 
-    with out_path.open('w', encoding='utf-8') as out:
-        out.write(f"# Repository export: {root.name}\n\n")
-        if head:
-            out.write(f"- commit: `{head}`\n\n")
-        if branch:
-            out.write(f"- branch: `{branch}`\n\n")
-        if head_tag:
-            out.write(f"- tag: `{head_tag}`\n\n")
-        if remote:
-            out.write(f"- remote: `{remote}`\n\n")
-        out.write(f"- generated_by: tools/export_repo.py\n")
-        out.write(f"- generated_at: {manifest['generated_at']}\n\n")
-        out.write("---\n\n")
-
-        out.write("## Directory tree\n\n")
-        out.write("```\n")
-        for l in tree_lines:
-            out.write(l + "\n")
-        out.write("```\n\n")
-
-        out.write("## Table of contents\n\n")
-        if toc_lines:
-            out.write("\n".join(toc_lines) + "\n\n")
-        else:
-            out.write("_No exported files_\n\n")
-
-        out.write("---\n\n")
-        out.write("## Files\n\n")
-
-        # emit files with stable anchors
-        for entry in manifest["files"]:
-            rel = entry['path']
-            anchor = entry['anchor']
-            fpath = root / rel
-            out.write(f"<a name=\"{anchor}\"></a>\n\n")
-            out.write(f"### {rel}\n\n")
-            out.write(f"- size: {entry['size']} bytes\n")
-            if entry['last_commit']:
-                out.write(f"- last_commit: `{entry['last_commit']}` ({entry['last_commit_date']}) by {entry['last_commit_author']}\n")
-            if entry['blob_sha']:
-                out.write(f"- blob_sha: `{entry['blob_sha']}`\n")
-            if entry['language']:
-                out.write(f"- language: {entry['language']}\n")
-            out.write("\n")
-            try:
-                text = fpath.read_text(encoding='utf-8')
-            except Exception:
-                try:
-                    text = fpath.read_text(encoding='latin-1')
-                except Exception:
-                    text = ''
-            ext = fpath.suffix.lower()
-            lang = entry['language'] or ''
-            if lang:
-                out.write(f"```{lang}\n")
-                out.write(text.rstrip() + "\n")
-                out.write("```\n\n")
-            else:
-                out.write("```\n")
-                out.write(text.rstrip() + "\n")
-                out.write("```\n\n")
-
-        out.write("---\n\n")
-        out.write("## Manifest (export-manifest.json)\n\n")
-        out.write("```json\n")
-        out.write(json.dumps(manifest, indent=2) + "\n")
-        out.write("```\n\n")
-    print(f"Export written to {out_path}")
+    print("Export parts written:")
+    for pm in parts_meta:
+        print(f" - {pm['filename']} ({pm['size']} bytes)")
+    print(f"Manifest written to {manifest_path}")
 
 
 if __name__ == '__main__':
