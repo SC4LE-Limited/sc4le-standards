@@ -29,91 +29,33 @@ jobs:
         env:
           GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
-      - name: Add strip_only_svg_xml script
+      - name: Run preserve-and-sanitize
         run: |
-          cat > tools/strip_only_svg_xml.py <<'PY'
-          #!/usr/bin/env python3
-          """
-          Strip only SVG/XML sections from export parts (leave other content).
-          Produces export_*_stripped.md next to original parts.
-          """
-          import re, sys
-          from pathlib import Path
-
-          SECTION_SPLIT = re.compile(r'\n(?=<a name=")', re.M)
-          PATH_RE = re.compile(r'^###\s+(?P<path>.+)$', re.M)
-          BLOB_SHA_RE = re.compile(r'\b[0-9a-fA-F]{16,}\b')
-          ANGLE_RE = re.compile(r'[<>]')
-
-          def process_text(text: str) -> str:
-              parts = SECTION_SPLIT.split(text)
-              if not parts:
-                  return text
-              header = parts[0]
-              out_parts = [header.rstrip() + '\n']
-              for sec in parts[1:]:
-                  mpath = PATH_RE.search(sec)
-                  path = mpath.group('path').strip() if mpath else None
-                  lower = path.lower() if path else ''
-                  if lower.endswith('.svg') or lower.endswith('.xml'):
-                      # strip SVG/XML only
-                      anchor_line_end = sec.find('\n')
-                      anchor_line = sec[:anchor_line_end] if anchor_line_end != -1 else sec
-                      title_line = f"### {path}\n\n" if path else "### [REDACTED]\n\n"
-                      placeholder = f"[REDACTED: SVG/XML content omitted for upload safety]\n\n"
-                      meta_lines = ["- content_removed: true\n\n"]
-                      section_out = anchor_line + "\n\n" + title_line + "".join(meta_lines) + placeholder
-                      section_out = BLOB_SHA_RE.sub('[REDACTED_HEX]', section_out)
-                      section_out = ANGLE_RE.sub(lambda m: '&lt;' if m.group(0) == '<' else '&gt;', section_out)
-                      out_parts.append(section_out)
-                  else:
-                      # keep section but redact long hexs and escape angle brackets
-                      cleaned = BLOB_SHA_RE.sub('[REDACTED_HEX]', sec)
-                      cleaned = ANGLE_RE.sub(lambda m: '&lt;' if m.group(0) == '<' else '&gt;', cleaned)
-                      out_parts.append(cleaned)
-              return ''.join(out_parts)
-
-          def process_file(path: Path):
-              txt = path.read_text(encoding='utf-8', errors='ignore')
-              out_txt = process_text(txt)
-              out_path = path.with_name(path.stem + '_stripped' + path.suffix)
-              out_path.write_text(out_txt, encoding='utf-8')
-              print(f"Wrote {out_path} ({len(out_txt.encode('utf-8'))} bytes)")
-
-          def main():
-              args = sys.argv[1:]
-              files = [Path(f) for f in args] if args else sorted(Path('.').glob('export_*.md'))
-              if not files:
-                  print("No export_*.md files found.")
-                  sys.exit(1)
-              for f in files:
-                  process_file(f)
-
-          if __name__ == '__main__':
-              main()
-          PY
-          chmod +x tools/strip_only_svg_xml.py
-
-      - name: Strip only SVG/XML sections from parts
-        run: |
-          python3 tools/strip_only_svg_xml.py
+          # ensure script is executable
+          chmod +x tools/preserve_and_sanitize.py
+          # run it (adjust --keep-code-lines if you'd like more preserved code context)
+          python3 tools/preserve_and_sanitize.py --keep-code-lines 12
 
       - name: Sanitize manifest (remove blob_sha)
         run: |
           python3 - <<'PY'
-          import json
-          m = json.load(open('export-manifest.json'))
+          import json, sys
+          try:
+              m = json.load(open('export-manifest.json'))
+          except FileNotFoundError:
+              print('export-manifest.json not found', file=sys.stderr)
+              sys.exit(1)
           for f in m.get('files', []):
               f.pop('blob_sha', None)
           json.dump(m, open('export-manifest-sanitized.json','w'), indent=2)
           PY
 
-      - name: Upload sanitized export artifact (stripped parts + sanitized manifest + gitleaks SARIF)
+      - name: Upload preserved export artifact (preserved parts + sanitized manifest + gitleaks SARIF)
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: repo-export-sanitized
+          name: repo-export-preserved
           path: |
-            export_*_stripped.md
+            export_*_preserved.md
             export-manifest-sanitized.json
             results.sarif
