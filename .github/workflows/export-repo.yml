@@ -26,12 +26,10 @@ jobs:
 
       - name: Run gitleaks secret scan
         uses: gitleaks/gitleaks-action@v3
-        with:
-          args: detect --source=. --report-path=gitleaks-report.json --report-format=json --redact
         env:
           GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
-      - name: Upload export artifact (export + manifest + report)
+      - name: Upload export artifact (export + manifest + gitleaks SARIF)
         if: always()
         uses: actions/upload-artifact@v4
         with:
@@ -39,4 +37,4 @@ jobs:
           path: |
             export.md
             export-manifest.json
-            gitleaks-report.json
+            results.sarif
