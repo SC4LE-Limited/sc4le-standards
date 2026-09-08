@@ -1,16 +1,10 @@
 #!/usr/bin/env python3
 """
-Concatenate text files from a repo into multiple Markdown export parts
-with:
- - a directory tree (in the first part)
- - a global table-of-contents (in the first part)
- - a JSON manifest (export-manifest.json) written separately
- - per-file git blob SHA, last commit SHA/date/author
- - split into parts when part bytes exceed --part-size
- - optional sanitization to reduce "active code" signals (use --sanitize)
+Concatenate text files from a repo into multiple Markdown export parts.
+Produces export_001.md, export_002.md, ... and export-manifest.json.
 
 Usage:
-  python tools/export_repo.py --root . --output export.md --part-size 1000000 --sanitize
+  python3 tools/export_repo.py --root . --output export.md --manifest-file export-manifest.json
 """
 import argparse
 import json
@@ -20,7 +14,6 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
-# Extensions -> language hint for fenced code blocks
 EXT_LANG = {
     '.py': 'python', '.md': 'markdown', '.js': 'javascript', '.ts': 'typescript',
     '.java': 'java', '.c': 'c', '.cpp': 'cpp', '.h': 'c', '.html': 'html',
@@ -36,9 +29,7 @@ def slugify_anchor(path_str: str) -> str:
     s = path_str.lower()
     s = re.sub(r'[^a-z0-9]+', '-', s)
     s = s.strip('-')
-    if not s:
-        s = 'file'
-    return s
+    return s or 'file'
 
 
 def is_binary(path: Path, max_bytes=1024):
@@ -59,10 +50,6 @@ def run_git(args, cwd, silent=False):
     try:
         out = subprocess.check_output(['git'] + args, cwd=cwd, text=True, stderr=subprocess.DEVNULL).strip()
         return out
-    except subprocess.CalledProcessError:
-        if not silent:
-            return None
-        return None
     except Exception:
         return None
 
@@ -163,9 +150,7 @@ def build_tree_lines(paths, root: Path):
                 walk(child, new_prefix)
 
     walk(tree)
-    if not lines:
-        return ["(empty)"]
-    return lines
+    return lines or ["(empty)"]
 
 
 def safe_read_text(fpath: Path):
@@ -179,19 +164,14 @@ def safe_read_text(fpath: Path):
 
 
 def sanitize_content(text: str, relpath: str) -> str:
-    # Redact workflow files outright if they live under .github/workflows
+    # minimal sanitization (used only if --sanitize passed)
     if relpath.startswith('.github/workflows') or relpath.endswith('.workflow') or (relpath.lower().endswith(('.yml', '.yaml')) and '.github/workflows' in relpath):
         return '[REDACTED: workflow file removed for upload safety]\n'
-    # Remove YAML frontmatter at top (--- ... ---)
     text = re.sub(r'(?s)^\s*---\s*\n.*?\n---\s*\n', '[REDACTED YAML FRONTMATTER]\n', text)
-    # Escape angle brackets to avoid embedded HTML/SVG being seen as active
     text = text.replace('<', '&lt;').replace('>', '&gt;')
-    # Replace triple-backtick code fences with a neutral token
     text = text.replace('```', '[[CODE_BLOCK]]')
-    # Replace suspicious shell lines ($ prompt, sudo)
     text = re.sub(r'(?m)^[ \t]*\$.*$', '[REDACTED COMMAND]\n', text)
     text = re.sub(r'(?m)^[ \t]*sudo\b.*$', '[REDACTED COMMAND]\n', text)
-    # Replace common automation shebangs to reduce "executable" signal
     text = re.sub(r'(?m)^#!\/.*\b(sh|bash|python|env)\b.*$', '[REDACTED SHEBANG]\n', text)
     return text
 
@@ -200,11 +180,11 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--root', default='.', help='Repo root to export')
     p.add_argument('--output', default='export.md', help='Output base Markdown file')
-    p.add_argument('--part-size', type=int, default=1_000_000, help='Max bytes per export part (default 1_000_000)')
-    p.add_argument('--max-size', type=int, default=2_000_000, help='Skip files > bytes (default 2MB)')
+    p.add_argument('--part-size', type=int, default=1_000_000, help='Max bytes per export part')
+    p.add_argument('--max-size', type=int, default=2_000_000, help='Skip files > bytes')
     p.add_argument('--exclude', nargs='*', default=[], help='Additional paths to exclude')
     p.add_argument('--manifest-file', default='export-manifest.json', help='Write manifest JSON to this path')
-    p.add_argument('--sanitize', action='store_true', help='Sanitize file contents for upload (redact code/HTML/workflows)')
+    p.add_argument('--sanitize', action='store_true', help='Sanitize file contents for upload (light)')
     args = p.parse_args()
 
     root = Path(args.root).resolve()
@@ -271,7 +251,7 @@ def main():
         if branch:
             header += f"- branch: `{branch}`\n\n"
         if head_tag:
-            header += f"- tag: `{head_tag}`\n\n"
+            header += f"- tag: `{head_tag}`\n\n**
         if remote:
             header += f"- remote: `{remote}`\n\n"
         header += f"- generated_by: tools/export_repo.py\n"
@@ -380,15 +360,15 @@ def main():
     for fi in file_infos:
         entry = {
             "path": fi['path'],
-            "size': fi['size'],
-            "language': fi['language'],
-            "anchor': fi['anchor'],
-            "last_commit': fi['last_commit'],
-            "last_commit_date': fi['last_commit_date'],
-            "last_commit_author': fi['last_commit_author'],
-            "blob_sha': fi['blob_sha'],
-            "export_file': fi['export_file'],
-            "sanitized': fi.get('sanitized', False)
+            "size": fi['size'],
+            "language": fi['language'],
+            "anchor": fi['anchor'],
+            "last_commit": fi['last_commit'],
+            "last_commit_date": fi['last_commit_date'],
+            "last_commit_author": fi['last_commit_author'],
+            "blob_sha": fi['blob_sha'],
+            "export_file": fi['export_file'],
+            "sanitized": fi.get('sanitized', False)
         }
         manifest["files"].append(entry)
 
