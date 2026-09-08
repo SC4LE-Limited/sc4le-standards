@@ -1,10 +1,16 @@
 #!/usr/bin/env python3
 """
-Concatenate text files from a repo into multiple Markdown export parts.
-Produces export_001.md, export_002.md, ... and export-manifest.json.
+Concatenate text files from a repo into multiple Markdown export parts
+with:
+ - a directory tree (in the first part)
+ - a global table-of-contents (in the first part)
+ - a JSON manifest (export-manifest.json) written separately
+ - per-file git blob SHA, last commit SHA/date/author
+ - split into parts when part bytes exceed --part-size
+ - optional sanitization to reduce "active code" signals (use --sanitize)
 
 Usage:
-  python3 tools/export_repo.py --root . --output export.md --manifest-file export-manifest.json
+  python3 tools/export_repo.py --root . --output export.md --part-size 1000000 --sanitize
 """
 import argparse
 import json
@@ -14,6 +20,7 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
+# Extensions -> language hint for fenced code blocks
 EXT_LANG = {
     '.py': 'python', '.md': 'markdown', '.js': 'javascript', '.ts': 'typescript',
     '.java': 'java', '.c': 'c', '.cpp': 'cpp', '.h': 'c', '.html': 'html',
@@ -251,7 +258,7 @@ def main():
         if branch:
             header += f"- branch: `{branch}`\n\n"
         if head_tag:
-            header += f"- tag: `{head_tag}`\n\n**
+            header += f"- tag: `{head_tag}`\n\n"
         if remote:
             header += f"- remote: `{remote}`\n\n"
         header += f"- generated_by: tools/export_repo.py\n"
