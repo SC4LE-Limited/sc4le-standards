@@ -1,0 +1,31 @@
+name: Export repository snapshot
+
+on:
+  workflow_dispatch:
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Run export script
+        run: |
+          python3 tools/export_repo.py --root . --output export.md --max-size 2000000
+
+      - name: Upload export artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-export
+          path: export.md
