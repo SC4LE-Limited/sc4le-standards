@@ -22,7 +22,12 @@ jobs:
 
       - name: Run export script
         run: |
-          python3 tools/export_repo.py --root . --output export.md --max-size 2000000
+          python3 tools/export_repo.py --root . --output export.md --manifest-file export-manifest.json --max-size 2000000
+
+      - name: Run gitleaks secret scan
+        uses: zricethezav/gitleaks-action@v2
+        with:
+          args: detect --source=. --report-path=gitleaks-report.json --redact
 
       - name: Upload export artifact
         uses: actions/upload-artifact@v4
@@ -31,3 +36,4 @@ jobs:
           path: |
             export.md
             export-manifest.json
+            gitleaks-report.json
