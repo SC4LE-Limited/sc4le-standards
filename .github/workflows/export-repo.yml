@@ -11,7 +11,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
@@ -25,11 +25,14 @@ jobs:
           python3 tools/export_repo.py --root . --output export.md --manifest-file export-manifest.json --max-size 2000000
 
       - name: Run gitleaks secret scan
-        uses: zricethezav/gitleaks-action@v2
+        uses: gitleaks/gitleaks-action@v3
         with:
-          args: detect --source=. --report-path=gitleaks-report.json --redact
+          args: detect --source=. --report-path=gitleaks-report.json --report-format=json --redact
+        env:
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
-      - name: Upload export artifact
+      - name: Upload export artifact (export + manifest + report)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: repo-export
