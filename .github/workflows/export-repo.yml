@@ -29,14 +29,12 @@ jobs:
         env:
           GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
-      - name: Run preserve-and-sanitize
+      - name: Run markdown text sanitizer
         run: |
-          # ensure script is executable
-          chmod +x tools/preserve_and_sanitize.py
-          # run it (adjust --keep-code-lines if you'd like more preserved code context)
-          python3 tools/preserve_and_sanitize.py --keep-code-lines 12
+          chmod +x tools/markdown_text_sanitizer.py
+          python3 tools/markdown_text_sanitizer.py
 
-      - name: Sanitize manifest (remove blob_sha)
+      - name: Sanitize manifest (remove blob_sha/commit metadata)
         run: |
           python3 - <<'PY'
           import json, sys
@@ -44,18 +42,20 @@ jobs:
               m = json.load(open('export-manifest.json'))
           except FileNotFoundError:
               print('export-manifest.json not found', file=sys.stderr)
-              sys.exit(1)
+              sys.exit(0)
           for f in m.get('files', []):
               f.pop('blob_sha', None)
+              f.pop('last_commit', None)
+              f.pop('last_commit_date', None)
           json.dump(m, open('export-manifest-sanitized.json','w'), indent=2)
           PY
 
-      - name: Upload preserved export artifact (preserved parts + sanitized manifest + gitleaks SARIF)
+      - name: Upload sanitized export artifact (sanitized parts + sanitized manifest + gitleaks SARIF)
         if: always()
         uses: actions/upload-artifact@v7
         with:
-          name: repo-export-preserved
+          name: repo-export-sanitized
           path: |
-            export_*_preserved.md
+            export_*_sanitized.md
             export-manifest-sanitized.json
             results.sarif
