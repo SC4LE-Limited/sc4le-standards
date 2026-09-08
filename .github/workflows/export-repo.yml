@@ -31,7 +31,7 @@ jobs:
 
       - name: Upload export artifact (export + manifest + gitleaks SARIF)
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: repo-export
           path: |
