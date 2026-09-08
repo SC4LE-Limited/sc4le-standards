@@ -1,15 +1,17 @@
+```python
 #!/usr/bin/env python3
 """
 Concatenate text files from a repo into multiple Markdown export parts
 with:
  - a directory tree (in the first part)
  - a global table-of-contents (in the first part)
- - a JSON manifest (export-manifest.json) written separately and embedded info
+ - a JSON manifest (export-manifest.json) written separately
  - per-file git blob SHA, last commit SHA/date/author
  - split into parts when part bytes exceed --part-size
+ - optional sanitization to reduce "active code" signals (use --sanitize)
 
 Usage:
-  python tools/export_repo.py --root . --output export.md --part-size 1000000
+  python tools/export_repo.py --root . --output export.md --part-size 1000000 --sanitize
 """
 import argparse
 import json
@@ -25,7 +27,7 @@ EXT_LANG = {
     '.java': 'java', '.c': 'c', '.cpp': 'cpp', '.h': 'c', '.html': 'html',
     '.css': 'css', '.json': 'json', '.yml': 'yaml', '.yaml': 'yaml',
     '.sh': 'bash', '.ps1': 'powershell', '.rb': 'ruby', '.go': 'go',
-    '.rs': 'rust', '.pyi': 'python', '.txt': 'text'
+    '.rs': 'rust', '.pyi': 'python', '.txt': 'text', '.svg': 'xml'
 }
 
 DEFAULT_EXCLUDES = {'.git', '__pycache__', '.venv', 'venv', 'node_modules', '.gradle'}
@@ -182,6 +184,38 @@ def safe_read_text(fpath: Path):
             return ''
 
 
+def sanitize_content(text: str, relpath: str) -> str:
+    """
+    Reduce 'active code' signals that might trigger content-type blocking:
+    - Remove YAML frontmatter
+    - Redact workflow YAML files completely
+    - Escape angle brackets to neutralize HTML/SVG
+    - Replace code fences with a neutral marker
+    - Replace lines that look like shell invocations with a placeholder
+    """
+    # If this looks like a GitHub workflow path, redact entirely
+    if relpath.startswith('.github/workflows') or relpath.endswith('.workflow') or relpath.lower().endswith(('.yml', '.yaml')) and '.github/workflows' in relpath:
+        return '[REDACTED: workflow file removed for upload safety]\n'
+
+    # Remove YAML frontmatter at top (--- ... ---)
+    text = re.sub(r'(?s)^\s*---\s*\n.*?\n---\s*\n', '[REDACTED YAML FRONTMATTER]\n', text)
+
+    # Escape angle brackets to avoid embedded HTML/SVG being seen as active
+    text = text.replace('<', '&lt;').replace('>', '&gt;')
+
+    # Replace triple-backtick code fences with a neutral token
+    text = text.replace('```', '[[CODE_BLOCK]]')
+
+    # Replace suspicious shell lines ($ prompt, sudo)
+    text = re.sub(r'(?m)^[ \t]*\$.*$', '[REDACTED COMMAND]\n', text)
+    text = re.sub(r'(?m)^[ \t]*sudo\b.*$', '[REDACTED COMMAND]\n', text)
+
+    # Replace common automation shebangs to reduce "executable" signal
+    text = re.sub(r'(?m)^#!\/.*\b(sh|bash|python|env)\b.*$', '[REDACTED SHEBANG]\n', text)
+
+    return text
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument('--root', default='.', help='Repo root to export')
@@ -190,6 +224,7 @@ def main():
     p.add_argument('--max-size', type=int, default=2_000_000, help='Skip files > bytes (default 2MB)')
     p.add_argument('--exclude', nargs='*', default=[], help='Additional paths to exclude')
     p.add_argument('--manifest-file', default='export-manifest.json', help='Write manifest JSON to this path')
+    p.add_argument('--sanitize', action='store_true', help='Sanitize file contents for upload (redact code/HTML/workflows)')
     args = p.parse_args()
 
     root = Path(args.root).resolve()
@@ -228,7 +263,8 @@ def main():
             "last_commit_author": meta['author'] if meta else None,
             "blob_sha": blob_sha,
             # will be filled during writing:
-            "export_file": None
+            "export_file": None,
+            "sanitized": False
         })
 
     # Prepare TOC lines
@@ -309,7 +345,15 @@ def main():
         meta_lines.append("\n")
 
         text = safe_read_text(fpath)
-        text_bytes_len = len(text.encode('utf-8'))
+        if args.sanitize:
+            sanitized_text = sanitize_content(text, rel)
+            text_to_write = sanitized_text
+            fi['sanitized'] = True
+        else:
+            text_to_write = text
+            fi['sanitized'] = False
+
+        text_bytes_len = len(text_to_write.encode('utf-8'))
         ext = fpath.suffix.lower()
         lang = fi['language'] or ''
 
@@ -347,7 +391,7 @@ def main():
         # Write fence and content
         current_bytes = write_and_count(out, fence_start, current_bytes)
         # write content in one call (text)
-        current_bytes = write_and_count(out, text.rstrip() + "\n", current_bytes)
+        current_bytes = write_and_count(out, text_to_write.rstrip() + "\n", current_bytes)
         current_bytes = write_and_count(out, fence_end, current_bytes)
 
         # record which export file contains the section
@@ -384,7 +428,8 @@ def main():
             "last_commit_date": fi['last_commit_date'],
             "last_commit_author": fi['last_commit_author'],
             "blob_sha": fi['blob_sha'],
-            "export_file": fi['export_file']
+            "export_file": fi['export_file'],
+            "sanitized": fi.get('sanitized', False)
         }
         manifest["files"].append(entry)
 
@@ -404,3 +449,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+```
