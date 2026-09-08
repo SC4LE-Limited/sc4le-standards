@@ -193,7 +193,7 @@ for fi in file_infos:
     entry = {
         "path": fi['path'],
         "size": fi['size'],
-        "language': fi['language'],
+        "language": fi['language'],
         "anchor": fi['anchor'],
         "last_commit": fi['last_commit'],
         "last_commit_date": fi['last_commit_date'],
