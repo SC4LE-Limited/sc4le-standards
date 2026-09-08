@@ -29,12 +29,12 @@ jobs:
         env:
           GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
 
-      - name: Upload export artifact (export + manifest + gitleaks SARIF)
+      - name: Upload export artifact (export parts + manifest + gitleaks SARIF)
         if: always()
         uses: actions/upload-artifact@v7
         with:
           name: repo-export
           path: |
-            export.md
+            export_*.md
             export-manifest.json
             results.sarif
