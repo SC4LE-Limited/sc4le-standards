@@ -1,8 +1,7 @@
 #!/usr/bin/env python3
-"""
-Strip only SVG/XML sections from export parts (leave other content).
-Produces export_*_stripped.md next to original parts.
-"""
+#Strip only SVG/XML sections from export parts (leave other content).
+#Produces export_*_stripped.md next to original parts.
+
 import re, sys
 from pathlib import Path
 
