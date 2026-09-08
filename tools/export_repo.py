@@ -414,7 +414,7 @@ def main() -> None:
             "size": fi['size'],
             "language": fi['language'],
             "anchor": fi['anchor'],
-            "last_commit': fi.get('last_commit') if isinstance(fi.get('last_commit'), str) else fi.get('last_commit'),
+            "last_commit": fi.get('last_commit') if isinstance(fi.get('last_commit'), str) else fi.get('last_commit'),
             "last_commit_date": fi.get('last_commit_date'),
             "last_commit_author": fi.get('last_commit_author'),
             "blob_sha": fi['blob_sha'],
