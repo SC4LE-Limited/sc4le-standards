@@ -2,13 +2,14 @@
 """
 Reliable Markdown exporter for SC4LE-Limited/sc4le-standards.
 
-Fixes included:
-- Always walk the actual repo root (not workflow CWD)
-- Track skipped files (oversized or unreadable)
+Includes:
+- Anchor normalisation (Copilot-safe)
+- Full repo walk
+- Skipped file reporting
 - Deterministic anchors
-- Robust part splitting (no header-only parts)
-- Debug logging for completeness verification
-- Manifest includes skipped files
+- Robust part splitting
+- Manifest generation
+- Debug logging
 """
 
 import argparse
@@ -16,6 +17,8 @@ import json
 import os
 import subprocess
 import sys
+import unicodedata
+import re
 from datetime import datetime
 from typing import List, Dict, Any, Optional
 
@@ -73,6 +76,41 @@ def get_blob_sha(path: str) -> str:
 
 
 # -----------------------------
+# Anchor normalisation
+# -----------------------------
+
+def make_anchor(path: str) -> str:
+    """
+    Normalise anchor names for Copilot ingestion:
+    - lowercase
+    - replace non-ASCII characters with ASCII equivalents
+    - replace spaces with hyphens
+    - replace slashes with hyphens
+    - replace periods with hyphens
+    - remove parentheses
+    - remove any remaining unsafe characters
+    - collapse multiple hyphens
+    """
+
+    anchor = path.lower()
+
+    anchor = unicodedata.normalize("NFKD", anchor)
+    anchor = anchor.encode("ascii", "ignore").decode("ascii")
+
+    anchor = anchor.replace(" ", "-")
+    anchor = anchor.replace("/", "-")
+    anchor = anchor.replace(".", "-")
+    anchor = anchor.replace("(", "")
+    anchor = anchor.replace(")", "")
+
+    anchor = re.sub(r"[^a-z0-9\-]", "", anchor)
+    anchor = re.sub(r"-+", "-", anchor)
+    anchor = anchor.strip("-")
+
+    return anchor
+
+
+# -----------------------------
 # Data structures
 # -----------------------------
 
@@ -100,10 +138,6 @@ class FileInfo:
 # -----------------------------
 # Collection
 # -----------------------------
-
-def make_anchor(path: str) -> str:
-    return path.lower().replace(" ", "-").replace("/", "-")
-
 
 def collect_markdown_files(max_size_bytes: int, only_path: Optional[str] = None):
     repo_root = get_repo_root()
@@ -233,7 +267,6 @@ def write_export_parts(files: List[FileInfo], max_part_size: int, branch: str):
     current_content = []
     current_size = 0
 
-    # First part header
     header_lines = [
         f"# Repository export: sc4le-standards (part {part_index})",
         "",
