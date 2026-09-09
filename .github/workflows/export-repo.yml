@@ -30,12 +30,14 @@ jobs:
             --branch main \
             --max-size-bytes 1000000
 
-      - name: (Optional) Run gitleaks
-        if: ${{ always() }}
-        uses: gitleaks/gitleaks-action@v2
-        with:
-          config-path: .github/gitleaks.toml
-          fail-on-detection: false
+      # -----------------------------
+      # GITLEAKS v3 (license required)
+      # -----------------------------
+      - name: Run gitleaks (v3)
+        uses: gitleaks/gitleaks-action@v3
+        env:
+          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
+        continue-on-error: true
 
       - name: Upload export artifacts
         uses: actions/upload-artifact@v4
