@@ -1,9 +1,9 @@
 # Repository export: sc4le-standards (part 1)
 
-- commit: `a77749bbce76145f01fe4e40c4f1b9bfbd74f1dd`
+- commit: `83eeea6d51137b900f1eae9594cdca57a9520444`
 - branch: `main`
 - generated_by: tools/export_repo.py
-- generated_at: 2026-09-09T13:57:33.044502Z
+- generated_at: 2026-09-09T16:01:31.589727Z
 
 ---
 
@@ -117,95 +117,95 @@ TRADEMARKS.md
 
 ## Table of Contents
 
-- [CONTRIBUTING.md](#contributing.md)
-- [LICENSE.md](#license.md)
-- [README.md](#readme.md)
-- [TRADEMARKS.md](#trademarks.md)
-- [ai-assisted-sensing/adaptation-log.md](#ai-assisted-sensing-adaptation-log.md)
-- [ai-assisted-sensing/outcome-dashboard.md](#ai-assisted-sensing-outcome-dashboard.md)
-- [brand/brand-overview.md](#brand-brand-overview.md)
-- [brand/logo-usage.md](#brand-logo-usage.md)
-- [brand/tone-of-voice.md](#brand-tone-of-voice.md)
-- [diagrams/README.md](#diagrams-readme.md)
-- [diagrams/SC4LE-diagrams.md](#diagrams-sc4le-diagrams.md)
-- [diagrams/decision-pathway.md](#diagrams-decision-pathway.md)
-- [diagrams/governance-architecture.md](#diagrams-governance-architecture.md)
-- [diagrams/sensing-loop.md](#diagrams-sensing-loop.md)
-- [foundations/README.md](#foundations-readme.md)
-- [foundations/evidence-base.md](#foundations-evidence-base.md)
-- [foundations/sc4le-narrative-architecture.md](#foundations-sc4le-narrative-architecture.md)
-- [foundations/sc4le-principles.md](#foundations-sc4le-principles.md)
-- [maturity-model/README.md](#maturity-model-readme.md)
-- [maturity-model/maturity-assessment-template.md](#maturity-model-maturity-assessment-template.md)
-- [maturity-model/maturity-dashboard.md](#maturity-model-maturity-dashboard.md)
-- [maturity-model/maturity-heatmap.md](#maturity-model-maturity-heatmap.md)
-- [operating-model/ai-enabled-sensing-operating-model.md](#operating-model-ai-enabled-sensing-operating-model.md)
-- [operating-model/decision-pathways/cda-decision-guide.md](#operating-model-decision-pathways-cda-decision-guide.md)
-- [operating-model/decision-pathways/escalation-thresholds.md](#operating-model-decision-pathways-escalation-thresholds.md)
-- [operating-model/decision-pathways/lda-decision-guide.md](#operating-model-decision-pathways-lda-decision-guide.md)
-- [operating-model/decision-pathways/standard-decision-flow.md](#operating-model-decision-pathways-standard-decision-flow.md)
-- [operating-model/federated-governance.md](#operating-model-federated-governance.md)
-- [operating-model/index.md](#operating-model-index.md)
-- [operating-model/maturity-model.md](#operating-model-maturity-model.md)
-- [operating-model/operating-model-index.md](#operating-model-operating-model-index.md)
-- [operating-model/rhythms/flow-cadence.md](#operating-model-rhythms-flow-cadence.md)
-- [operating-model/rhythms/improvement-cadence.md](#operating-model-rhythms-improvement-cadence.md)
-- [operating-model/rhythms/leadership-cadence.md](#operating-model-rhythms-leadership-cadence.md)
-- [operating-model/rhythms/sensing-cadence.md](#operating-model-rhythms-sensing-cadence.md)
-- [operating-model/roles/cda.md](#operating-model-roles-cda.md)
-- [operating-model/roles/lda.md](#operating-model-roles-lda.md)
-- [operating-model/roles/sc4le-academy-lead.md](#operating-model-roles-sc4le-academy-lead.md)
-- [operating-model/roles/sc4le-enablement-lead.md](#operating-model-roles-sc4le-enablement-lead.md)
-- [operating-model/roles/sc4le-flow-architect.md](#operating-model-roles-sc4le-flow-architect.md)
-- [operating-model/roles/sc4le-governance-architect.md](#operating-model-roles-sc4le-governance-architect.md)
-- [operating-model/roles/sc4le-insight-architect.md](#operating-model-roles-sc4le-insight-architect.md)
-- [operating-model/sc4le-federated-governance-standard.md](#operating-model-sc4le-federated-governance-standard.md)
-- [operating-model/sc4le-model-overview.md](#operating-model-sc4le-model-overview.md)
-- [operating-model/sc4le-operating-model-standard.md](#operating-model-sc4le-operating-model-standard.md)
-- [programmes/SC4LE-SCALE-UPS.md](#programmes-sc4le-scale-ups.md)
-- [services/commercial/Advisory‑as‑a‑Service (Fractional Transformation Office).md](#services-commercial-advisory‑as‑a‑service-(fractional-transformation-office).md)
-- [services/commercial/change-portfolio-prioritisation-and-decision-frameworks.md](#services-commercial-change-portfolio-prioritisation-and-decision-frameworks.md)
-- [services/commercial/leadership-decision-coaching-and-executive-enablement.md](#services-commercial-leadership-decision-coaching-and-executive-enablement.md)
-- [services/commercial/strategy-activation-and-alignment-workshops.md](#services-commercial-strategy-activation-and-alignment-workshops.md)
-- [services/commercial/value-stream-mapping-and-flow-optimisation.md](#services-commercial-value-stream-mapping-and-flow-optimisation.md)
-- [services/index.md](#services-index.md)
-- [services/standard/Principle System Design.md](#services-standard-principle-system-design.md)
-- [services/standard/SC4LE Operating Model Design & Blueprinting.md](#services-standard-sc4le-operating-model-design-&-blueprinting.md)
-- [services/standard/ai-enabled-sensing-and-insight-system-design.md](#services-standard-ai-enabled-sensing-and-insight-system-design.md)
-- [services/standard/federated-governance-system-design-and-assurance.md](#services-standard-federated-governance-system-design-and-assurance.md)
-- [services/standard/local-design-authority-setup-and-enablement.md](#services-standard-local-design-authority-setup-and-enablement.md)
-- [services/standard/operating-model-health-check.md](#services-standard-operating-model-health-check.md)
-- [services/standard/risk-dependency-and-decision-latency-diagnostics.md](#services-standard-risk-dependency-and-decision-latency-diagnostics.md)
-- [services/standard/sc4le-academy-capability-building-and-skills-development.md](#services-standard-sc4le-academy-capability-building-and-skills-development.md)
-- [services/standard/sc4le-enablement-cycles-and-continuous-improvement-system.md](#services-standard-sc4le-enablement-cycles-and-continuous-improvement-system.md)
-- [services/standard/service-interlink-map.md](#services-standard-service-interlink-map.md)
-- [services/standard/service-to-principle-map.md](#services-standard-service-to-principle-map.md)
-- [standards/governance-brand.md](#standards-governance-brand.md)
-- [standards/governance-content.md](#standards-governance-content.md)
-- [standards/governance-diagrams.md](#standards-governance-diagrams.md)
-- [standards/governance-messaging.md](#standards-governance-messaging.md)
-- [standards/governance-standard.md](#standards-governance-standard.md)
-- [standards/governance-templates.md](#standards-governance-templates.md)
-- [standards/index.md](#standards-index.md)
-- [standards/messaging-matrix.md](#standards-messaging-matrix.md)
-- [standards/page-templates.md](#standards-page-templates.md)
-- [standards/website-content-matrix.md](#standards-website-content-matrix.md)
-- [standards/website-ia.md](#standards-website-ia.md)
-- [standards/website-publishing-playbook.md](#standards-website-publishing-playbook.md)
-- [templates/README.md](#templates-readme.md)
-- [templates/decision-log.md](#templates-decision-log.md)
-- [templates/flow-diagnostic-template.md](#templates-flow-diagnostic-template.md)
-- [templates/governance-record.md](#templates-governance-record.md)
-- [templates/prioritisation-template.md](#templates-prioritisation-template.md)
-- [templates/risk-log.md](#templates-risk-log.md)
-- [value-propositions/framework/sc4le-value-proposition-framework.md](#value-propositions-framework-sc4le-value-proposition-framework.md)
-- [web/master-prompt.md](#web-master-prompt.md)
-- [web/page-templates.md](#web-page-templates.md)
-- [web/workspace-pack.md](#web-workspace-pack.md)
+- [CONTRIBUTING.md](#contributing-md)
+- [LICENSE.md](#license-md)
+- [README.md](#readme-md)
+- [TRADEMARKS.md](#trademarks-md)
+- [ai-assisted-sensing/adaptation-log.md](#ai-assisted-sensing-adaptation-log-md)
+- [ai-assisted-sensing/outcome-dashboard.md](#ai-assisted-sensing-outcome-dashboard-md)
+- [brand/brand-overview.md](#brand-brand-overview-md)
+- [brand/logo-usage.md](#brand-logo-usage-md)
+- [brand/tone-of-voice.md](#brand-tone-of-voice-md)
+- [diagrams/README.md](#diagrams-readme-md)
+- [diagrams/SC4LE-diagrams.md](#diagrams-sc4le-diagrams-md)
+- [diagrams/decision-pathway.md](#diagrams-decision-pathway-md)
+- [diagrams/governance-architecture.md](#diagrams-governance-architecture-md)
+- [diagrams/sensing-loop.md](#diagrams-sensing-loop-md)
+- [foundations/README.md](#foundations-readme-md)
+- [foundations/evidence-base.md](#foundations-evidence-base-md)
+- [foundations/sc4le-narrative-architecture.md](#foundations-sc4le-narrative-architecture-md)
+- [foundations/sc4le-principles.md](#foundations-sc4le-principles-md)
+- [maturity-model/README.md](#maturity-model-readme-md)
+- [maturity-model/maturity-assessment-template.md](#maturity-model-maturity-assessment-template-md)
+- [maturity-model/maturity-dashboard.md](#maturity-model-maturity-dashboard-md)
+- [maturity-model/maturity-heatmap.md](#maturity-model-maturity-heatmap-md)
+- [operating-model/ai-enabled-sensing-operating-model.md](#operating-model-ai-enabled-sensing-operating-model-md)
+- [operating-model/decision-pathways/cda-decision-guide.md](#operating-model-decision-pathways-cda-decision-guide-md)
+- [operating-model/decision-pathways/escalation-thresholds.md](#operating-model-decision-pathways-escalation-thresholds-md)
+- [operating-model/decision-pathways/lda-decision-guide.md](#operating-model-decision-pathways-lda-decision-guide-md)
+- [operating-model/decision-pathways/standard-decision-flow.md](#operating-model-decision-pathways-standard-decision-flow-md)
+- [operating-model/federated-governance.md](#operating-model-federated-governance-md)
+- [operating-model/index.md](#operating-model-index-md)
+- [operating-model/maturity-model.md](#operating-model-maturity-model-md)
+- [operating-model/operating-model-index.md](#operating-model-operating-model-index-md)
+- [operating-model/rhythms/flow-cadence.md](#operating-model-rhythms-flow-cadence-md)
+- [operating-model/rhythms/improvement-cadence.md](#operating-model-rhythms-improvement-cadence-md)
+- [operating-model/rhythms/leadership-cadence.md](#operating-model-rhythms-leadership-cadence-md)
+- [operating-model/rhythms/sensing-cadence.md](#operating-model-rhythms-sensing-cadence-md)
+- [operating-model/roles/cda.md](#operating-model-roles-cda-md)
+- [operating-model/roles/lda.md](#operating-model-roles-lda-md)
+- [operating-model/roles/sc4le-academy-lead.md](#operating-model-roles-sc4le-academy-lead-md)
+- [operating-model/roles/sc4le-enablement-lead.md](#operating-model-roles-sc4le-enablement-lead-md)
+- [operating-model/roles/sc4le-flow-architect.md](#operating-model-roles-sc4le-flow-architect-md)
+- [operating-model/roles/sc4le-governance-architect.md](#operating-model-roles-sc4le-governance-architect-md)
+- [operating-model/roles/sc4le-insight-architect.md](#operating-model-roles-sc4le-insight-architect-md)
+- [operating-model/sc4le-federated-governance-standard.md](#operating-model-sc4le-federated-governance-standard-md)
+- [operating-model/sc4le-model-overview.md](#operating-model-sc4le-model-overview-md)
+- [operating-model/sc4le-operating-model-standard.md](#operating-model-sc4le-operating-model-standard-md)
+- [programmes/SC4LE-SCALE-UPS.md](#programmes-sc4le-scale-ups-md)
+- [services/commercial/Advisory‑as‑a‑Service (Fractional Transformation Office).md](#services-commercial-advisoryasaservice-fractional-transformation-office-md)
+- [services/commercial/change-portfolio-prioritisation-and-decision-frameworks.md](#services-commercial-change-portfolio-prioritisation-and-decision-frameworks-md)
+- [services/commercial/leadership-decision-coaching-and-executive-enablement.md](#services-commercial-leadership-decision-coaching-and-executive-enablement-md)
+- [services/commercial/strategy-activation-and-alignment-workshops.md](#services-commercial-strategy-activation-and-alignment-workshops-md)
+- [services/commercial/value-stream-mapping-and-flow-optimisation.md](#services-commercial-value-stream-mapping-and-flow-optimisation-md)
+- [services/index.md](#services-index-md)
+- [services/standard/Principle System Design.md](#services-standard-principle-system-design-md)
+- [services/standard/SC4LE Operating Model Design & Blueprinting.md](#services-standard-sc4le-operating-model-design-blueprinting-md)
+- [services/standard/ai-enabled-sensing-and-insight-system-design.md](#services-standard-ai-enabled-sensing-and-insight-system-design-md)
+- [services/standard/federated-governance-system-design-and-assurance.md](#services-standard-federated-governance-system-design-and-assurance-md)
+- [services/standard/local-design-authority-setup-and-enablement.md](#services-standard-local-design-authority-setup-and-enablement-md)
+- [services/standard/operating-model-health-check.md](#services-standard-operating-model-health-check-md)
+- [services/standard/risk-dependency-and-decision-latency-diagnostics.md](#services-standard-risk-dependency-and-decision-latency-diagnostics-md)
+- [services/standard/sc4le-academy-capability-building-and-skills-development.md](#services-standard-sc4le-academy-capability-building-and-skills-development-md)
+- [services/standard/sc4le-enablement-cycles-and-continuous-improvement-system.md](#services-standard-sc4le-enablement-cycles-and-continuous-improvement-system-md)
+- [services/standard/service-interlink-map.md](#services-standard-service-interlink-map-md)
+- [services/standard/service-to-principle-map.md](#services-standard-service-to-principle-map-md)
+- [standards/governance-brand.md](#standards-governance-brand-md)
+- [standards/governance-content.md](#standards-governance-content-md)
+- [standards/governance-diagrams.md](#standards-governance-diagrams-md)
+- [standards/governance-messaging.md](#standards-governance-messaging-md)
+- [standards/governance-standard.md](#standards-governance-standard-md)
+- [standards/governance-templates.md](#standards-governance-templates-md)
+- [standards/index.md](#standards-index-md)
+- [standards/messaging-matrix.md](#standards-messaging-matrix-md)
+- [standards/page-templates.md](#standards-page-templates-md)
+- [standards/website-content-matrix.md](#standards-website-content-matrix-md)
+- [standards/website-ia.md](#standards-website-ia-md)
+- [standards/website-publishing-playbook.md](#standards-website-publishing-playbook-md)
+- [templates/README.md](#templates-readme-md)
+- [templates/decision-log.md](#templates-decision-log-md)
+- [templates/flow-diagnostic-template.md](#templates-flow-diagnostic-template-md)
+- [templates/governance-record.md](#templates-governance-record-md)
+- [templates/prioritisation-template.md](#templates-prioritisation-template-md)
+- [templates/risk-log.md](#templates-risk-log-md)
+- [value-propositions/framework/sc4le-value-proposition-framework.md](#value-propositions-framework-sc4le-value-proposition-framework-md)
+- [web/master-prompt.md](#web-master-prompt-md)
+- [web/page-templates.md](#web-page-templates-md)
+- [web/workspace-pack.md](#web-workspace-pack-md)
 
 ---
 
-<a name="contributing.md"></a>
+<a name="contributing-md"></a>
 ## CONTRIBUTING.md
 
 - **Size:** 604 bytes
@@ -225,7 +225,7 @@ By submitting a contribution to the SC4LE Standards Repository, you agree that:
 
 If you cannot agree to these terms, do not submit contributions.
 
-<a name="license.md"></a>
+<a name="license-md"></a>
 ## LICENSE.md
 
 - **Size:** 1840 bytes
@@ -301,7 +301,7 @@ Any breach of this license terminates your rights immediately.
 For commercial licensing, partnership, or accreditation, contact:  
 **legal@sc4le.co.uk**
 
-<a name="readme.md"></a>
+<a name="readme-md"></a>
 ## README.md
 
 - **Size:** 716 bytes
@@ -326,7 +326,7 @@ See **TRADEMARKS.md** for permitted and prohibited use.
 For commercial licensing or partnership enquiries:  
 **contact@sc4le.co.uk**
 
-<a name="trademarks.md"></a>
+<a name="trademarks-md"></a>
 ## TRADEMARKS.md
 
 - **Size:** 938 bytes
@@ -366,7 +366,7 @@ Accredited partners and practitioners may use specific marks provided under a se
 For licensing or accreditation enquiries:  
 **partners@sc4le.co.uk**
 
-<a name="ai-assisted-sensing-adaptation-log.md"></a>
+<a name="ai-assisted-sensing-adaptation-log-md"></a>
 ## ai-assisted-sensing/adaptation-log.md
 
 - **Size:** 243 bytes
@@ -387,7 +387,7 @@ _Last updated: 2026-09-09T10:18:22.269001Z_
 - **./operating-model/index.md**
   - metadata_missing_header
 
-<a name="ai-assisted-sensing-outcome-dashboard.md"></a>
+<a name="ai-assisted-sensing-outcome-dashboard-md"></a>
 ## ai-assisted-sensing/outcome-dashboard.md
 
 - **Size:** 389 bytes
@@ -421,7 +421,7 @@ _Last updated: 2026-09-09T10:18:22.309618Z_
 ---
 
 
-<a name="brand-brand-overview.md"></a>
+<a name="brand-brand-overview-md"></a>
 ## brand/brand-overview.md
 
 - **Size:** 2126 bytes
@@ -485,7 +485,7 @@ SC4LE delivers **principle‑driven alignment**, **federated governance**, and *
 SC4LE is the strategic enablement model that helps organisations of any size build clarity, capability, and governance through shared principles, federated decision‑making, and AI‑augmented feedback loops.
 
 
-<a name="brand-logo-usage.md"></a>
+<a name="brand-logo-usage-md"></a>
 ## brand/logo-usage.md
 
 - **Size:** 2846 bytes
@@ -600,7 +600,7 @@ The SC4LE logo is a core brand asset.
 Use it **exactly as provided**, with no modifications, to maintain consistency, clarity, and brand integrity across all touchpoints.
 
 
-<a name="brand-tone-of-voice.md"></a>
+<a name="brand-tone-of-voice-md"></a>
 ## brand/tone-of-voice.md
 
 - **Size:** 2730 bytes
@@ -692,7 +692,7 @@ The SC4LE tone of voice is clear, strategic, modern, enabling, and confident.
 It reflects a brand built on principles, flow, governance, and AI‑ready sensing — always communicating with precision and purpose.
 
 
-<a name="diagrams-readme.md"></a>
+<a name="diagrams-readme-md"></a>
 ## diagrams/README.md
 
 - **Size:** 331 bytes
@@ -712,7 +712,7 @@ The diagrams in this folder provide visual representations of key SC4LE concepts
 
 These diagrams support clarity, alignment, and shared understanding across teams, LDAs, and the CDA.
 
-<a name="diagrams-sc4le-diagrams.md"></a>
+<a name="diagrams-sc4le-diagrams-md"></a>
 ## diagrams/SC4LE-diagrams.md
 
 - **Size:** 4125 bytes
@@ -891,7 +891,7 @@ And in **two conceptual versions**:
 
 ```
 
-<a name="diagrams-decision-pathway.md"></a>
+<a name="diagrams-decision-pathway-md"></a>
 ## diagrams/decision-pathway.md
 
 - **Size:** 866 bytes
@@ -936,7 +936,7 @@ flowchart TD
     I --> J[Sensing Loop]
 ```
 
-<a name="diagrams-governance-architecture.md"></a>
+<a name="diagrams-governance-architecture-md"></a>
 ## diagrams/governance-architecture.md
 
 - **Size:** 1054 bytes
@@ -989,7 +989,7 @@ flowchart TD
 
 ```
 
-<a name="diagrams-sensing-loop.md"></a>
+<a name="diagrams-sensing-loop-md"></a>
 ## diagrams/sensing-loop.md
 
 - **Size:** 508 bytes
@@ -1021,7 +1021,7 @@ flowchart TD
     D --> E[Outcome Observed]
     E --> A
 
-<a name="foundations-readme.md"></a>
+<a name="foundations-readme-md"></a>
 ## foundations/README.md
 
 - **Size:** 3022 bytes
@@ -1114,7 +1114,7 @@ Use the Foundations layer when:
 
 - Designing or updating SC4
 
-<a name="foundations-evidence-base.md"></a>
+<a name="foundations-evidence-base-md"></a>
 ## foundations/evidence-base.md
 
 - **Size:** 6102 bytes
@@ -1282,7 +1282,7 @@ Mitigations:
 ## 12. Version History
 - **1.0.0** – Initial canonical version created (2026-06-03)
 
-<a name="foundations-sc4le-narrative-architecture.md"></a>
+<a name="foundations-sc4le-narrative-architecture-md"></a>
 ## foundations/sc4le-narrative-architecture.md
 
 - **Size:** 12852 bytes
@@ -1799,7 +1799,7 @@ This document should be read alongside:
 
 ---
 
-<a name="foundations-sc4le-principles.md"></a>
+<a name="foundations-sc4le-principles-md"></a>
 ## foundations/sc4le-principles.md
 
 - **Size:** 5623 bytes
@@ -2026,7 +2026,7 @@ Levels:
 - **1.0.0** — Initial canonical release  
 
 
-<a name="maturity-model-readme.md"></a>
+<a name="maturity-model-readme-md"></a>
 ## maturity-model/README.md
 
 - **Size:** 5417 bytes
@@ -2224,7 +2224,7 @@ Outputs include:
 - LDAs use the model to guide local development.  
 
 
-<a name="maturity-model-maturity-assessment-template.md"></a>
+<a name="maturity-model-maturity-assessment-template-md"></a>
 ## maturity-model/maturity-assessment-template.md
 
 - **Size:** 3626 bytes
@@ -2485,7 +2485,7 @@ It supports the Enablement Cycle (Diagnose → Build → Establish → Embed →
 - Additional evidence  
 
 
-<a name="maturity-model-maturity-dashboard.md"></a>
+<a name="maturity-model-maturity-dashboard-md"></a>
 ## maturity-model/maturity-dashboard.md
 
 - **Size:** 2804 bytes
@@ -2571,7 +2571,7 @@ Legend: 🔴 Low 🟡 Medium 🟢 High
 - All updates must follow SC4LE semantic versioning.  
 - Visuals generated from sensing data and validated by LDAs.  
 
-<a name="maturity-model-maturity-heatmap.md"></a>
+<a name="maturity-model-maturity-heatmap-md"></a>
 ## maturity-model/maturity-heatmap.md
 
 - **Size:** 966 bytes
@@ -2616,7 +2616,7 @@ You can:
 
 ---
 
-<a name="operating-model-ai-enabled-sensing-operating-model.md"></a>
+<a name="operating-model-ai-enabled-sensing-operating-model-md"></a>
 ## operating-model/ai-enabled-sensing-operating-model.md
 
 - **Size:** 4220 bytes
@@ -2777,7 +2777,7 @@ It provides early insight into flow, governance, and risk, enabling organisation
 By integrating sensing into decision pathways, SC4LE creates a self‑improving, AI‑ready operating environment.
 
 
-<a name="operating-model-decision-pathways-cda-decision-guide.md"></a>
+<a name="operating-model-decision-pathways-cda-decision-guide-md"></a>
 ## operating-model/decision-pathways/cda-decision-guide.md
 
 - **Size:** 1617 bytes
@@ -2848,7 +2848,7 @@ CDA decides on:
 - improved cross-domain flow
 - stable governance patterns
 
-<a name="operating-model-decision-pathways-escalation-thresholds.md"></a>
+<a name="operating-model-decision-pathways-escalation-thresholds-md"></a>
 ## operating-model/decision-pathways/escalation-thresholds.md
 
 - **Size:** 2099 bytes
@@ -2919,7 +2919,7 @@ Escalate only when:
 - fewer unnecessary escalations
 - improved decision clarity
 
-<a name="operating-model-decision-pathways-lda-decision-guide.md"></a>
+<a name="operating-model-decision-pathways-lda-decision-guide-md"></a>
 ## operating-model/decision-pathways/lda-decision-guide.md
 
 - **Size:** 1650 bytes
@@ -2992,7 +2992,7 @@ LDAs decide on:
 - improved flow metrics
 - consistent principle interpretation
 
-<a name="operating-model-decision-pathways-standard-decision-flow.md"></a>
+<a name="operating-model-decision-pathways-standard-decision-flow-md"></a>
 ## operating-model/decision-pathways/standard-decision-flow.md
 
 - **Size:** 1763 bytes
@@ -3068,7 +3068,7 @@ Applies to all decisions made by:
 - fewer escalations
 - consistent principle interpretation
 
-<a name="operating-model-federated-governance.md"></a>
+<a name="operating-model-federated-governance-md"></a>
 ## operating-model/federated-governance.md
 
 - **Size:** 4533 bytes
@@ -3216,7 +3216,7 @@ Federated Governance enables organisations to operate with autonomy, alignment, 
 By combining shared principles, empowered LDAs, a strategic enabling centre, and AI‑enabled sensing, SC4LE creates a governance system that is fast, coherent, and scalable.
 
 
-<a name="operating-model-index.md"></a>
+<a name="operating-model-index-md"></a>
 ## operating-model/index.md
 
 - **Size:** 5637 bytes
@@ -3394,7 +3394,7 @@ For Operating Model governance queries:
 **governance@sc4le.co.uk**  
 **SC4LE Limited**
 
-<a name="operating-model-maturity-model.md"></a>
+<a name="operating-model-maturity-model-md"></a>
 ## operating-model/maturity-model.md
 
 - **Size:** 5697 bytes
@@ -3577,7 +3577,7 @@ The SC4LE Maturity Model provides a clear, principle‑driven way to assess orga
 It supports targeted uplift, reduces cognitive load, and enables organisations to become self‑sustaining, AI‑ready, and continuously improving.
 
 
-<a name="operating-model-operating-model-index.md"></a>
+<a name="operating-model-operating-model-index-md"></a>
 ## operating-model/operating-model-index.md
 
 - **Size:** 2836 bytes
@@ -3662,7 +3662,7 @@ Each file represents a governed component of the standard.
 
 
 
-<a name="operating-model-rhythms-flow-cadence.md"></a>
+<a name="operating-model-rhythms-flow-cadence-md"></a>
 ## operating-model/rhythms/flow-cadence.md
 
 - **Size:** 1245 bytes
@@ -3729,7 +3729,7 @@ Weekly (recommended)
 - reduced cycle time  
 - fewer dependencies  
 
-<a name="operating-model-rhythms-improvement-cadence.md"></a>
+<a name="operating-model-rhythms-improvement-cadence-md"></a>
 ## operating-model/rhythms/improvement-cadence.md
 
 - **Size:** 1329 bytes
@@ -3798,7 +3798,7 @@ Monthly cross‑domain improvement review
 - reduced friction  
 - improved flow and governance outcomes  
 
-<a name="operating-model-rhythms-leadership-cadence.md"></a>
+<a name="operating-model-rhythms-leadership-cadence-md"></a>
 ## operating-model/rhythms/leadership-cadence.md
 
 - **Size:** 1414 bytes
@@ -3867,7 +3867,7 @@ Quarterly strategic deep‑dive
 - reduced enterprise‑level friction  
 - consistent principle interpretation  
 
-<a name="operating-model-rhythms-sensing-cadence.md"></a>
+<a name="operating-model-rhythms-sensing-cadence-md"></a>
 ## operating-model/rhythms/sensing-cadence.md
 
 - **Size:** 1308 bytes
@@ -3937,7 +3937,7 @@ Daily automated signals (where available)
 - reduced decision latency  
 - improved flow stability  
 
-<a name="operating-model-roles-cda.md"></a>
+<a name="operating-model-roles-cda-md"></a>
 ## operating-model/roles/cda.md
 
 - **Size:** 2159 bytes
@@ -4021,7 +4021,7 @@ The CDA owns decisions that:
 - strong ethical posture  
 - coherent cross‑domain governance  
 
-<a name="operating-model-roles-lda.md"></a>
+<a name="operating-model-roles-lda-md"></a>
 ## operating-model/roles/lda.md
 
 - **Size:** 1817 bytes
@@ -4101,7 +4101,7 @@ LDAs own decisions that:
 - improved flow metrics  
 - consistent principle application  
 
-<a name="operating-model-roles-sc4le-academy-lead.md"></a>
+<a name="operating-model-roles-sc4le-academy-lead-md"></a>
 ## operating-model/roles/sc4le-academy-lead.md
 
 - **Size:** 1308 bytes
@@ -4168,7 +4168,7 @@ Builds and maintains the SC4LE capability development system, ensuring teams and
 - reduced dependency  
 - embedded behaviours  
 
-<a name="operating-model-roles-sc4le-enablement-lead.md"></a>
+<a name="operating-model-roles-sc4le-enablement-lead-md"></a>
 ## operating-model/roles/sc4le-enablement-lead.md
 
 - **Size:** 1414 bytes
@@ -4241,7 +4241,7 @@ The Enablement Lead drives the Build–Embed–Withdraw cycle, uplifting capabil
 - reduced need for enablement  
 - embedded rhythms  
 
-<a name="operating-model-roles-sc4le-flow-architect.md"></a>
+<a name="operating-model-roles-sc4le-flow-architect-md"></a>
 ## operating-model/roles/sc4le-flow-architect.md
 
 - **Size:** 1233 bytes
@@ -4310,7 +4310,7 @@ Optimises value‑stream flow, reduces friction and improves throughput across d
 - reduced WIP  
 - fewer dependencies  
 
-<a name="operating-model-roles-sc4le-governance-architect.md"></a>
+<a name="operating-model-roles-sc4le-governance-architect-md"></a>
 ## operating-model/roles/sc4le-governance-architect.md
 
 - **Size:** 1327 bytes
@@ -4379,7 +4379,7 @@ Designs, maintains and assures the federated governance system.
 - clear decision pathways  
 - improved assurance outcomes  
 
-<a name="operating-model-roles-sc4le-insight-architect.md"></a>
+<a name="operating-model-roles-sc4le-insight-architect-md"></a>
 ## operating-model/roles/sc4le-insight-architect.md
 
 - **Size:** 1334 bytes
@@ -4448,7 +4448,7 @@ Designs and maintains the AI‑enabled sensing system that provides early warnin
 - reduced decision latency  
 - improved flow insight  
 
-<a name="operating-model-sc4le-federated-governance-standard.md"></a>
+<a name="operating-model-sc4le-federated-governance-standard-md"></a>
 ## operating-model/sc4le-federated-governance-standard.md
 
 - **Size:** 6379 bytes
@@ -4681,7 +4681,7 @@ Assurance is based on **principle adherence**, not process compliance.
 - reduced governance friction  
 - increased
 
-<a name="operating-model-sc4le-model-overview.md"></a>
+<a name="operating-model-sc4le-model-overview-md"></a>
 ## operating-model/sc4le-model-overview.md
 
 - **Size:** 3762 bytes
@@ -4797,7 +4797,7 @@ This ensures SC4LE is **embedded, not owned**.
 SC4LE provides a scalable, principle‑driven operating model that enables organisations to sense, decide, and adapt with clarity and speed. It creates a federated, AI‑ready environment where teams operate with autonomy, alignment, and continuous improvement.
 
 
-<a name="operating-model-sc4le-operating-model-standard.md"></a>
+<a name="operating-model-sc4le-operating-model-standard-md"></a>
 ## operating-model/sc4le-operating-model-standard.md
 
 - **Size:** 5820 bytes
@@ -5040,7 +5040,7 @@ Assurance is principle‑driven, not process‑driven.
 # 8. Operating Rhythms
 The operating
 
-<a name="programmes-sc4le-scale-ups.md"></a>
+<a name="programmes-sc4le-scale-ups-md"></a>
 ## programmes/SC4LE-SCALE-UPS.md
 
 - **Size:** 4760 bytes
@@ -5186,7 +5186,7 @@ the SC4LE Scale-Ups Programme is designed for exactly that moment.
 **CTA:**  
 Start a conversation about the SC4LE Scale-Ups Programme.
 
-<a name="services-commercial-advisory‑as‑a‑service-(fractional-transformation-office).md"></a>
+<a name="services-commercial-advisoryasaservice-fractional-transformation-office-md"></a>
 ## services/commercial/Advisory‑as‑a‑Service (Fractional Transformation Office).md
 
 - **Size:** 6179 bytes
@@ -5366,7 +5366,7 @@ See `/foundations/evidence-base.md` for full references.
 - **2.0.0** – Enhanced external-facing version with evidence base integration (2026-06-03)  
 - **1.0.0** – Initial canonical version  
 
-<a name="services-commercial-change-portfolio-prioritisation-and-decision-frameworks.md"></a>
+<a name="services-commercial-change-portfolio-prioritisation-and-decision-frameworks-md"></a>
 ## services/commercial/change-portfolio-prioritisation-and-decision-frameworks.md
 
 - **Size:** 6944 bytes
@@ -5561,7 +5561,7 @@ See `/foundations/evidence-base.md` for full references.
 ## 15. Version History
 - **1.0.0** – Initial canonical version created (2026-06-03)
 
-<a name="services-commercial-leadership-decision-coaching-and-executive-enablement.md"></a>
+<a name="services-commercial-leadership-decision-coaching-and-executive-enablement-md"></a>
 ## services/commercial/leadership-decision-coaching-and-executive-enablement.md
 
 - **Size:** 5071 bytes
@@ -5698,7 +5698,7 @@ Leadership coaching strengthens the human system that underpins the operating mo
 - Leadership development plan  
 - Alignment and communication
 
-<a name="services-commercial-strategy-activation-and-alignment-workshops.md"></a>
+<a name="services-commercial-strategy-activation-and-alignment-workshops-md"></a>
 ## services/commercial/strategy-activation-and-alignment-workshops.md
 
 - **Size:** 6155 bytes
@@ -5876,7 +5876,7 @@ See `/foundations/evidence-base.md` for full references.
 - **2.0.0** – Enhanced external-facing version with evidence base integration (2026-06-03)  
 - **1.0.0** – Initial canonical version  
 
-<a name="services-commercial-value-stream-mapping-and-flow-optimisation.md"></a>
+<a name="services-commercial-value-stream-mapping-and-flow-optimisation-md"></a>
 ## services/commercial/value-stream-mapping-and-flow-optimisation.md
 
 - **Size:** 6298 bytes
@@ -6064,7 +6064,7 @@ See `/foundations/evidence-base.md` for full references.
 ## 15. Version History
 - **1.0.0** – Initial canonical version created (2026-06-03)
 
-<a name="services-index.md"></a>
+<a name="services-index-md"></a>
 ## services/index.md
 
 - **Size:** 3314 bytes
@@ -6166,7 +6166,7 @@ Each service is modular, composable and evidence‑based, enabling organisations
 
 The catalogue scales with organisational maturity, enabling adoption from single‑service engagements to full SC4LE operating model transformation.
 
-<a name="services-standard-principle-system-design.md"></a>
+<a name="services-standard-principle-system-design-md"></a>
 ## services/standard/Principle System Design.md
 
 - **Size:** 6506 bytes
@@ -6353,7 +6353,7 @@ See `/foundations/evidence-base.md` for full references.
 ## 15. Version History
 - **1.0.0** – Initial canonical version created (2026-06-03)
 
-<a name="services-standard-sc4le-operating-model-design-&-blueprinting.md"></a>
+<a name="services-standard-sc4le-operating-model-design-blueprinting-md"></a>
 ## services/standard/SC4LE Operating Model Design & Blueprinting.md
 
 - **Size:** 6488 bytes
@@ -6543,7 +6543,7 @@ See `/foundations/evidence-base.md` for full references.
 - **2.0.0** – Enhanced external-facing version with evidence base integration (2026-06-03)  
 - **1.0.0** – Initial canonical version  
 
-<a name="services-standard-ai-enabled-sensing-and-insight-system-design.md"></a>
+<a name="services-standard-ai-enabled-sensing-and-insight-system-design-md"></a>
 ## services/standard/ai-enabled-sensing-and-insight-system-design.md
 
 - **Size:** 6370 bytes
@@ -6729,7 +6729,7 @@ See `/foundations/evidence-base.md` for full references.
 ## 15. Version History
 - **1.0.0** – Initial canonical version created (2026-06-03)
 
-<a name="services-standard-federated-governance-system-design-and-assurance.md"></a>
+<a name="services-standard-federated-governance-system-design-and-assurance-md"></a>
 ## services/standard/federated-governance-system-design-and-assurance.md
 
 - **Size:** 6466 bytes
@@ -6922,7 +6922,7 @@ See `/foundations/evidence-base.md` for full references.
 ## 15. Version History
 - **1.0.0** – Initial canonical version created (2026-06-03)
 
-<a name="services-standard-local-design-authority-setup-and-enablement.md"></a>
+<a name="services-standard-local-design-authority-setup-and-enablement-md"></a>
 ## services/standard/local-design-authority-setup-and-enablement.md
 
 - **Size:** 6876 bytes
@@ -7121,7 +7121,7 @@ See `/foundations/evidence-base.md` for full references.
 ## 15. Version History
 - **1.0.0** – Initial canonical version created (2026-06-03)
 
-<a name="services-standard-operating-model-health-check.md"></a>
+<a name="services-standard-operating-model-health-check-md"></a>
 ## services/standard/operating-model-health-check.md
 
 - **Size:** 6126 bytes
@@ -7305,7 +7305,7 @@ See `/foundations/evidence-base.md` for full references.
 - **2.0.0** – Enhanced external-facing version with evidence base integration (2026-06-03)  
 - **1.0.0** – Initial canonical version  
 
-<a name="services-standard-risk-dependency-and-decision-latency-diagnostics.md"></a>
+<a name="services-standard-risk-dependency-and-decision-latency-diagnostics-md"></a>
 ## services/standard/risk-dependency-and-decision-latency-diagnostics.md
 
 - **Size:** 5175 bytes
@@ -7455,7 +7455,7 @@ A diagnostic provides the clarity required to reduce risk and accelerate flow.
 - Leadership misalignment  
 - Political sensitivity around risk ownership
 
-<a name="services-standard-sc4le-academy-capability-building-and-skills-development.md"></a>
+<a name="services-standard-sc4le-academy-capability-building-and-skills-development-md"></a>
 ## services/standard/sc4le-academy-capability-building-and-skills-development.md
 
 - **Size:** 6698 bytes
@@ -7653,7 +7653,7 @@ See `/foundations/evidence-base.md` for full references.
 ## 15. Version History
 - **1.0.0** – Initial canonical version created (2026-06-03)
 
-<a name="services-standard-sc4le-enablement-cycles-and-continuous-improvement-system.md"></a>
+<a name="services-standard-sc4le-enablement-cycles-and-continuous-improvement-system-md"></a>
 ## services/standard/sc4le-enablement-cycles-and-continuous-improvement-system.md
 
 - **Size:** 6571 bytes
@@ -7849,7 +7849,7 @@ See `/foundations/evidence-base.md` for full references.
 ## 15. Version History
 - **1.0.0** – Initial canonical version created (2026-06-03)
 
-<a name="services-standard-service-interlink-map.md"></a>
+<a name="services-standard-service-interlink-map-md"></a>
 ## services/standard/service-interlink-map.md
 
 - **Size:** 6354 bytes
@@ -8168,7 +8168,7 @@ A visual diagram can be generated from this map in multiple formats:
 - Interactive web diagram  
 
 
-<a name="services-standard-service-to-principle-map.md"></a>
+<a name="services-standard-service-to-principle-map-md"></a>
 ## services/standard/service-to-principle-map.md
 
 - **Size:** 6924 bytes
@@ -8416,7 +8416,7 @@ The principles act as the connective tissue of the operating model — enabling 
 - **Assurance Teams**: Validate principle adoption across services.  
 
 
-<a name="standards-governance-brand.md"></a>
+<a name="standards-governance-brand-md"></a>
 ## standards/governance-brand.md
 
 - **Size:** 7371 bytes
@@ -8756,7 +8756,7 @@ For brand governance queries:
 **SC4LE Limited**
 
 
-<a name="standards-governance-content.md"></a>
+<a name="standards-governance-content-md"></a>
 ## standards/governance-content.md
 
 - **Size:** 6104 bytes
@@ -9046,7 +9046,7 @@ For content governance queries:
 **SC4LE Limited**
 
 
-<a name="standards-governance-diagrams.md"></a>
+<a name="standards-governance-diagrams-md"></a>
 ## standards/governance-diagrams.md
 
 - **Size:** 5928 bytes
@@ -9337,7 +9337,7 @@ For diagram governance queries:
 **SC4LE Limited**
 
 
-<a name="standards-governance-messaging.md"></a>
+<a name="standards-governance-messaging-md"></a>
 ## standards/governance-messaging.md
 
 - **Size:** 5766 bytes
@@ -9633,7 +9633,7 @@ For messaging governance queries:
 **SC4LE Limited**
 
 
-<a name="standards-governance-standard.md"></a>
+<a name="standards-governance-standard-md"></a>
 ## standards/governance-standard.md
 
 - **Size:** 6268 bytes
@@ -9903,7 +9903,7 @@ For governance queries, proposals, or partnership discussions:
 **governance@sc4le.co.uk**  
 **SC4LE Limited**
 
-<a name="standards-governance-templates.md"></a>
+<a name="standards-governance-templates-md"></a>
 ## standards/governance-templates.md
 
 - **Size:** 5624 bytes
@@ -10195,7 +10195,7 @@ For template governance queries:
 **SC4LE Limited**
 
 
-<a name="standards-index.md"></a>
+<a name="standards-index-md"></a>
 ## standards/index.md
 
 - **Size:** 4246 bytes
@@ -10348,7 +10348,7 @@ For standards governance queries:
 **governance@sc4le.co.uk**  
 **SC4LE Limited**
 
-<a name="standards-messaging-matrix.md"></a>
+<a name="standards-messaging-matrix-md"></a>
 ## standards/messaging-matrix.md
 
 - **Size:** 6723 bytes
@@ -10559,7 +10559,7 @@ For messaging matrix queries:
 **SC4LE Limited**
 
 
-<a name="standards-page-templates.md"></a>
+<a name="standards-page-templates-md"></a>
 ## standards/page-templates.md
 
 - **Size:** 6319 bytes
@@ -10841,7 +10841,7 @@ For page template governance queries:
 **SC4LE Limited**
 
 
-<a name="standards-website-content-matrix.md"></a>
+<a name="standards-website-content-matrix-md"></a>
 ## standards/website-content-matrix.md
 
 - **Size:** 6290 bytes
@@ -11079,7 +11079,7 @@ For website content matrix queries:
 **SC4LE Limited**
 
 
-<a name="standards-website-ia.md"></a>
+<a name="standards-website-ia-md"></a>
 ## standards/website-ia.md
 
 - **Size:** 6046 bytes
@@ -11368,7 +11368,7 @@ For website IA queries:
 
 ```
 
-<a name="standards-website-publishing-playbook.md"></a>
+<a name="standards-website-publishing-playbook-md"></a>
 ## standards/website-publishing-playbook.md
 
 - **Size:** 6091 bytes
@@ -11704,7 +11704,7 @@ For publishing queries:
 **SC4LE Limited**
 
 
-<a name="templates-readme.md"></a>
+<a name="templates-readme-md"></a>
 ## templates/README.md
 
 - **Size:** 4757 bytes
@@ -11885,7 +11885,7 @@ Templates are **living artefacts** that evolve with the organisation.
 - Templates are part of the SC4LE Standard and subject to audit.
 
 
-<a name="templates-decision-log.md"></a>
+<a name="templates-decision-log-md"></a>
 ## templates/decision-log.md
 
 - **Size:** 1353 bytes
@@ -11976,7 +11976,7 @@ Supports transparency, sensing, and governance assurance.
 ## 9. Final Notes
 - Additional comments or observations.
 
-<a name="templates-flow-diagnostic-template.md"></a>
+<a name="templates-flow-diagnostic-template-md"></a>
 ## templates/flow-diagnostic-template.md
 
 - **Size:** 1290 bytes
@@ -12061,7 +12061,7 @@ Used by Flow Architects, LDAs, and Teams to identify bottlenecks, dependencies, 
 ## 8. Notes
 - Additional observations.
 
-<a name="templates-governance-record.md"></a>
+<a name="templates-governance-record-md"></a>
 ## templates/governance-record.md
 
 - **Size:** 1226 bytes
@@ -12142,7 +12142,7 @@ Used by LDAs and the CDA to document governance decisions, escalations, and guar
 ## 8. Notes
 - Additional commentary.
 
-<a name="templates-prioritisation-template.md"></a>
+<a name="templates-prioritisation-template-md"></a>
 ## templates/prioritisation-template.md
 
 - **Size:** 1304 bytes
@@ -12217,7 +12217,7 @@ Used by Teams, LDAs, and Flow Architects to prioritise work based on flow, risk,
 ## 6. Notes
 - Additional commentary.
 
-<a name="templates-risk-log.md"></a>
+<a name="templates-risk-log-md"></a>
 ## templates/risk-log.md
 
 - **Size:** 974 bytes
@@ -12293,7 +12293,7 @@ Tracks risks surfaced through sensing, governance, or team signals.
 ## 7. Notes
 - Additional commentary.
 
-<a name="value-propositions-framework-sc4le-value-proposition-framework.md"></a>
+<a name="value-propositions-framework-sc4le-value-proposition-framework-md"></a>
 ## value-propositions/framework/sc4le-value-proposition-framework.md
 
 - **Size:** 11435 bytes
@@ -12794,7 +12794,7 @@ This appendix provides the explicit consulting‑grade mapping that underpins th
 
 ---
 
-<a name="web-master-prompt.md"></a>
+<a name="web-master-prompt-md"></a>
 ## web/master-prompt.md
 
 - **Size:** 2655 bytes
@@ -12874,7 +12874,7 @@ Use the SC4LE Workspace Pack as the single source of truth for all brand, design
 - Never create new SC4LE concepts beyond what the Workspace Pack defines.
 
 
-<a name="web-page-templates.md"></a>
+<a name="web-page-templates-md"></a>
 ## web/page-templates.md
 
 - **Size:** 4945 bytes
@@ -13098,7 +13098,7 @@ Publish strategic insights aligned with SC4LE principles.
 - All content must reference the Workspace Pack.  
 
 
-<a name="web-workspace-pack.md"></a>
+<a name="web-workspace-pack-md"></a>
 ## web/workspace-pack.md
 
 - **Size:** 7528 bytes
