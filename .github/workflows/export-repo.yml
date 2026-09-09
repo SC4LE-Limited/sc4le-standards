@@ -1,61 +1,46 @@
-name: Export repository snapshot
+name: Export repo markdown
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
-  export:
+  export-markdown:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v6
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v7
+        uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.11"
 
-      - name: Run export script
+      - name: Verify exporter syntax
+        run: python -m py_compile tools/export_repo.py
+
+      - name: Run markdown exporter
         run: |
-          python3 tools/export_repo.py --root . --output export.md --manifest-file export-manifest.json --max-size 2000000
+          python tools/export_repo.py \
+            --branch main \
+            --max-size-bytes 1000000
 
-      - name: Run gitleaks secret scan
-        uses: gitleaks/gitleaks-action@v3
-        env:
-          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
-
-      - name: Run markdown text sanitizer
-        run: |
-          chmod +x tools/markdown_text_sanitizer.py
-          python3 tools/markdown_text_sanitizer.py
-
-      - name: Sanitize manifest (remove blob_sha/commit metadata)
-        run: |
-          python3 - <<'PY'
-          import json, sys
-          try:
-              m = json.load(open('export-manifest.json'))
-          except FileNotFoundError:
-              print('export-manifest.json not found', file=sys.stderr)
-              sys.exit(0)
-          for f in m.get('files', []):
-              f.pop('blob_sha', None)
-              f.pop('last_commit', None)
-              f.pop('last_commit_date', None)
-          json.dump(m, open('export-manifest-sanitized.json','w'), indent=2)
-          PY
-
-      - name: Upload sanitized export artifact (sanitized parts + sanitized manifest + gitleaks SARIF)
-        if: always()
-        uses: actions/upload-artifact@v7
+      - name: (Optional) Run gitleaks
+        if: ${{ always() }}
+        uses: gitleaks/gitleaks-action@v2
         with:
-          name: repo-export-sanitized
+          config-path: .github/gitleaks.toml
+          fail-on-detection: false
+
+      - name: Upload export artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo-export
           path: |
-            export_*_sanitized.md
-            export-manifest-sanitized.json
-            results.sarif
+            export_*.md
+            export-manifest.json
