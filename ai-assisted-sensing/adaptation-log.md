@@ -1,5 +1,5 @@
 # SC4LE Adaptation Log
-_Last updated: 2026-09-10T15:37:09.428140Z_
+_Last updated: 2026-09-10T18:47:45.114964Z_
 
 ---
 
@@ -7,6 +7,8 @@ _Last updated: 2026-09-10T15:37:09.428140Z_
   - metadata_missing_header
 - **./services/index.md**
   - metadata_missing_header
+- **./standards/sc4le-knowledge-instructions.md**
+  - metadata_unknown_schema
 - **./standards/index.md**
   - metadata_missing_header
 - **./operating-model/index.md**
