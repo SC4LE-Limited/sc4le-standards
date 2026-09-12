@@ -14,6 +14,7 @@ SKIP_FILENAMES = {
     "license.md",
     "contributing.md",
     "trademarks.md",
+    "index.md",
 }
 
 SKIP_DIRECTORY_KEYWORDS = {
