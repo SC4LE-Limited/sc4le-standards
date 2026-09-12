@@ -1,11 +1,6 @@
 ---
 schema: sc4le-standard-v1
 title: "SC4LE Knowledge Instructions"
-description: "Meta‑prompt defining how Copilot systems must interpret, reason with, and generate content aligned to the SC4LE Standard."
-owner: "SC4LE Governance Architect"
-status: "active"
-version: "1.0.0"
-updated: "2026-09-10"
 tags:
   - sc4le
   - governance
@@ -13,6 +8,12 @@ tags:
   - copilot
   - knowledge
   - standards
+owner: "SC4LE Governance Architect"
+status: "active"
+version: "1.0.0"
+updated: "2026-09-10"
+description: "Meta‑prompt defining how Copilot systems must interpret, reason with, and generate content aligned to the SC4LE Standard."
+
 ---
 
 # SC4LE Knowledge Instructions  
