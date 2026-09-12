@@ -24,225 +24,76 @@ For commercial licensing or partnership enquiries:
 
 SC4LE is a modern enablement system that gives organisations clarity on structure, flow, governance, and maturity — so they can scale without chaos.
 
-It is **not** a methodology, not a transformation programme, not a coaching model, and not a framework.  
+It is not a methodology, not a coaching model, and not a transformation framework.  
 SC4LE is structured enablement.
 
-The SC4LE Standards repository is the governed, canonical source of truth for how SC4LE is defined, maintained, and applied across organisations.
-
-This overview keeps complexity low and navigation simple.
+This repository contains the governed, canonical SC4LE standards used to define, maintain, and apply the enablement system across organisations.
 
 ---
 
-## 1. Foundations
+## SC4LE at a Glance
 
-Defines the philosophical and structural basis of SC4LE.
+### Principles (Alignment Layer)
+Shared behavioural guardrails that reduce cognitive load and accelerate decision‑making.
 
-**Includes:**  
-- SC4LE Principles  
-- Narrative Architecture  
-- Evidence Base  
+### Local Design Authorities (Governance Layer)
+Small, contextual governance groups that interpret principles and maintain flow.
 
-**Purpose:**  
-Anchor the entire enablement system. All other layers map back to Foundations.
+### Operational Teams (Delivery Layer)
+Teams deliver value using SC4LE’s principles, pathways, and decision clarity.
 
----
+### AI‑Enabled Feedback Loops (Sensing Layer)
+Signals on flow, governance, risk, and maturity — enabling adaptive decisions.
 
-## 2. Operating Model
-
-Defines how SC4LE works in practice inside an organisation.
-
-**Includes:**  
-- Operating Model Standard  
-- Model Overview  
-- Federated Governance Standard  
-- Sensing Operating Model  
-- Maturity Model  
-- Decision Pathways (CDA, LDA, escalation thresholds, decision flows)  
-- Rhythms (flow, leadership, improvement, sensing)  
-- Roles (CDA, LDA, architects, enablement leads, academy leads)
-
-**Purpose:**  
-Provide the structural, behavioural, and decision‑making architecture for SC4LE.
+### Continuous Improvement (Uplift Layer)
+Learning, reinforcement, and maturity growth built into the operating model.
 
 ---
 
-## 3. Governance (Standards Layer)
+## What’s Inside This Repository
 
-Defines how SC4LE itself is governed, maintained, and assured.
+### Foundations  
+Core principles, narrative architecture, and evidence base.
 
-**Includes:**  
-- Governance Standard  
-- Governance Templates  
-- Governance Messaging  
-- Governance Diagrams  
-- Website IA & Publishing Playbook  
-- Messaging Matrix  
-- Page Templates  
-- Knowledge Instructions  
+### Operating Model  
+Standards for roles, rhythms, decision pathways, governance, and maturity.
 
-**Purpose:**  
-Ensure SC4LE is consistent, versioned, and professionally maintained.
+### Governance Standards  
+Templates, messaging, diagrams, and publishing rules for maintaining SC4LE.
 
----
+### Services  
+Commercial and standardised enablement offerings built on SC4LE.
 
-## 4. Services
+### Maturity Model  
+Assessment tools, dashboards, and heatmaps for measuring organisational maturity.
 
-Defines the commercial and standardised enablement offerings built on SC4LE.
+### Templates  
+Reusable artefacts for decisions, diagnostics, governance, and prioritisation.
 
-**Includes:**  
-- Fractional Enablement Office  
-- Strategy Activation Workshops  
-- Operating Model Health Check  
-- Leadership Decision Coaching  
-- Flow Optimisation  
-- Sensing System Design  
-- Governance Assurance  
-- LDA Setup  
-- OM Blueprinting  
-- Diagnostics  
-- Academy Development  
-- Enablement Cycles  
-- Service Interlink Map  
-- Service‑to‑Principle Map  
+### Brand & Design  
+Logo usage, tone of voice, colour palette, typography, and design tokens.
 
-**Purpose:**  
-Translate SC4LE into repeatable, revenue‑generating enablement services.
+### Diagrams  
+Governed visual representations of SC4LE’s structure, flow, and governance.
+
+### Value Propositions  
+Clear articulation of SC4LE’s value for startups, scale‑ups, SMEs, and enterprises.
+
+### Web  
+Page templates, workspace packs, and publishing guidance.
+
+### Programmes  
+Packaged SC4LE enablement programmes (e.g., SC4LE for Scale‑Ups).
 
 ---
 
-## 5. Maturity Model
+## How the Layers Fit Together
 
-Defines how organisations measure progress and capability uplift.
-
-**Includes:**  
-- Maturity Assessment Template  
-- Maturity Dashboard  
-- Maturity Heatmap  
-
-**Purpose:**  
-Provide diagnostic tools to measure organisational maturity.
-
----
-
-## 6. Internal Sensing (Repo Governance)
-
-This repository includes internal sensing tools used to maintain SC4LE’s own quality, coherence, and adaptive evolution.
-
-**Includes:**  
-- Adaptation Log  
-- Outcome Dashboard  
-- Sensing Loop Diagram  
-- Sense.py  
-
-**Purpose:**  
-Support SC4LE’s internal governance by applying SC4LE principles to the standard itself.
-
-**Note:**  
-This is not a SC4LE domain.  
-It is an internal governance mechanism and does not form part of the SC4LE enablement system model.
-
----
-
-## 7. Templates
-
-Reusable artefacts for governance, diagnostics, and decision‑making.
-
-**Includes:**  
-- Decision Log  
-- Governance Record  
-- Flow Diagnostic Template  
-- Prioritisation Template  
-- Risk Log  
-
-**Purpose:**  
-Ensure consistent documentation and decision quality.
-
----
-
-## 8. Brand & Design
-
-Defines how SC4LE is visually and verbally represented.
-
-**Includes:**  
-- Brand Overview  
-- Logo Usage  
-- Tone of Voice  
-- Colour Palette  
-- Typography  
-- Design Tokens  
-- Components  
-
-**Purpose:**  
-Ensure SC4LE is recognisable, consistent, and professionally presented.
-
----
-
-## 9. Diagrams
-
-Governed visual representations of SC4LE.
-
-**Includes:**  
-- SC4LE Diagrams  
-- Governance Architecture  
-- Decision Pathway  
-- Sensing Loop  
-
-**Purpose:**  
-Provide visual clarity and governed diagram standards.
-
----
-
-## 10. Value Propositions
-
-Defines how SC4LE creates value for different customer segments.
-
-**Includes:**  
-- SC4LE Value Proposition Framework  
-
-**Purpose:**  
-Explain the value story for startups, scale‑ups, SMEs, and enterprises.
-
----
-
-## 11. Web
-
-Defines how SC4LE is presented online.
-
-**Includes:**  
-- Master Prompt  
-- Page Templates  
-- Workspace Pack  
-
-**Purpose:**  
-Ensure SC4LE content is structured and ready for web publication.
-
----
-
-## 12. Programmes
-
-Structured SC4LE programmes.
-
-**Includes:**  
-- SC4LE for Scale‑Ups  
-
-**Purpose:**  
-Provide packaged, multi‑module enablement programmes.
-
----
-
-# How the Layers Interlock
-
-- **Foundations** anchor everything.  
-- **Operating Model** expresses the principles structurally.  
-- **Governance** maintains the standard.  
-- **Services** operationalise the enablement system.  
-- **Maturity Model** measures progress.  
-- **Sensing Engine** drives adaptive decisions.  
-- **Templates** ensure consistency.  
-- **Brand & Design** ensure clarity.  
-- **Diagrams** provide visualisation.  
-- **Value Propositions** articulate customer value.  
-- **Web** publishes the standard.  
-- **Programmes** deliver structured enablement.
+- Principles anchor everything  
+- LDAs maintain governance and flow  
+- Teams deliver value with clarity  
+- Sensing provides adaptive feedback  
+- Uplift reinforces maturity and adoption  
 
 Together, these layers form **SC4LE Standards v1.x** — a complete, governed enablement system.
+
