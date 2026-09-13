@@ -1,48 +1,57 @@
-name: Export repo markdown
+name: Export repository Markdown
 
 on:
-  workflow_dispatch:
-  push:
-    branches:
-      - main
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
 
 jobs:
   export-markdown:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout repository (full history)
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - name: Set up Python 3.x
+        uses: actions/setup-python@v4
         with:
-          python-version: "3.11"
+          python-version: '3.11'
 
-      - name: Verify exporter syntax
-        run: python -m py_compile tools/export_repo.py
+      - name: Ensure tools dir exists
+        run: |
+          mkdir -p tools
+
+      - name: Syntax-check exporter
+        run: |
+          python -m py_compile tools/export_repo.py
+
+      # Optional: run gitleaks (comment out if you don't want it)
+      # - name: Run gitleaks scan (optional)
+      #   uses: zricethezav/gitleaks-action@v2
+      #   with:
+      #     args: --path=. --verbose
 
       - name: Run markdown exporter
+        env:
+          GITHUB_WORKSPACE: ${{ github.workspace }}
         run: |
           python tools/export_repo.py \
             --branch main \
-            --max-size-bytes 1000000
+            --output-dir ./repo-export-output \
+            --part-prefix export_ \
+            --part-size 1000000 \
+            --max-size 1000000
 
-      # -----------------------------
-      # GITLEAKS v3 (license required)
-      # -----------------------------
-      - name: Run gitleaks (v3)
-        uses: gitleaks/gitleaks-action@v3
-        env:
-          GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE }}
-        continue-on-error: true
+      - name: Show export files
+        run: |
+          ls -la repo-export-output || true
+          du -h repo-export-output/* || true
 
-      - name: Upload export artifacts
+      - name: Upload export artifact
         uses: actions/upload-artifact@v4
         with:
           name: repo-export
-          path: |
-            export_*.md
-            export-manifest.json
+          path: repo-export-output/*
