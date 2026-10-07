@@ -30,14 +30,14 @@ It ensures SC4LE communicates with:
 
 Messaging governance integrates with:
 
-- `/meta/governance-standard.md`  
-- `/meta/governance-content.md`  
-- `/meta/governance-brand.md`  
-- `/meta/governance-diagrams.md`  
-- `/meta/governance-templates.md`  
-- `/meta/messaging-matrix.md`  
-- `/meta/website-content-matrix.md`  
-- `/meta/website-ia.md`  
+- `/standards/governance-standard.md`  
+- `/standards/governance-content.md`  
+- `/standards/governance-brand.md`  
+- `/standards/governance-diagrams.md`  
+- `/standards/governance-templates.md`  
+- `/standards/messaging-matrix.md`  
+- `/standards/website-content-matrix.md`  
+- `/standards/website-ia.md`  
 
 ---
 
