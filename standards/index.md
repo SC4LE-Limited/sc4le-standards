@@ -74,7 +74,8 @@ Below is the complete, governed list of SC4LE Standards, grouped by domain.
 | **governance-templates.md** | Governs templates and schemas — structure, metadata, layout rules. |
 | **website-ia.md** | Defines the hierarchical structure of the SC4LE website — navigation, categories, relationships. |
 | **governance-standard.md** | Governs the SC4LE Standard itself — versioning, approvals, stewardship, evolution. |
-
+| **lda.md** | Defines the generic Local Design Authority role within the SC4LE Operating Model. |
+| **charter.md** | Defines the contextual Board Advisor LDA extension. |
 ---
 
 ## 4. Golden Source Relationships
