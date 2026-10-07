@@ -41,14 +41,14 @@ It ensures:
 
 This playbook integrates with:
 
-- `/meta/website-ia.md`  
-- `/meta/website-content-matrix.md`  
-- `/meta/page-templates.md`  
-- `/meta/governance-content.md`  
-- `/meta/governance-messaging.md`  
-- `/meta/governance-brand.md`  
-- `/meta/governance-templates.md`  
-- `/meta/messaging-matrix.md`  
+- `/standards/website-ia.md`  
+- `/standards/website-content-matrix.md`  
+- `/standards/page-templates.md`  
+- `/standards/governance-content.md`  
+- `/standards/governance-messaging.md`  
+- `/standards/governance-brand.md`  
+- `/standards/governance-templates.md`  
+- `/standards/messaging-matrix.md`  
 
 ---
 
