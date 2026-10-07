@@ -22,7 +22,7 @@ description: "Governed charter defining the responsibilities, principles, operat
 ## Relationship to the SC4LE LDA Role Standard  
 This charter is a **contextual extension** of the SC4LE Local Design Authority role defined in:
 
-`/operating-model/roles/lda.md`
+`/operating-model/roles/lda/lda.md`
 
 The LDA Role Standard defines the **generic responsibilities, decision rights, behaviours, rhythms, and maturity indicators** for all LDAs.
 
