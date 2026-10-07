@@ -18,6 +18,8 @@ import yaml
 import json
 from datetime import datetime
 
+REPO_ROOT = os.getcwd()
+
 # ---------------------------------------------------------
 # 1. Load governed schema index dynamically
 # ---------------------------------------------------------
