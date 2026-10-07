@@ -34,14 +34,14 @@ This matrix is the **single source of truth** for content placement and page pur
 
 It integrates with:
 
-- `/meta/website-ia.md`  
-- `/meta/page-templates.md`  
-- `/meta/governance-content.md`  
-- `/meta/governance-messaging.md`  
-- `/meta/governance-brand.md`  
-- `/meta/governance-templates.md`  
-- `/meta/messaging-matrix.md`  
-- `/meta/website-publishing-playbook.md`  
+- `/standards/website-ia.md`  
+- `/standards/page-templates.md`  
+- `/standards/governance-content.md`  
+- `/standards/governance-messaging.md`  
+- `/standards/governance-brand.md`  
+- `/standards/governance-templates.md`  
+- `/standards/messaging-matrix.md`  
+- `/standards/website-publishing-playbook.md`  
 
 ---
 
