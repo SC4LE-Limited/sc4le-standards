@@ -32,13 +32,13 @@ It ensures SC4LE diagrams remain:
 
 This governance model integrates with:
 
-- `/meta/governance-standard.md`  
-- `/meta/governance-content.md`  
-- `/meta/governance-brand.md`  
-- `/meta/governance-messaging.md`  
-- `/meta/governance-templates.md`  
-- `/meta/website-content-matrix.md`  
-- `/meta/website-ia.md`  
+- `/standards/governance-standard.md`  
+- `/standards/governance-content.md`  
+- `/standards/governance-brand.md`  
+- `/standards/governance-messaging.md`  
+- `/standards/governance-templates.md`  
+- `/standards/website-content-matrix.md`  
+- `/standards/website-ia.md`  
 
 ---
 
