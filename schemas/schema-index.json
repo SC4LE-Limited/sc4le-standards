@@ -1,0 +1,58 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-10-07",
+  "owner": "SC4LE Governance Architect",
+  "description": "Canonical index of all SC4LE schemas used for metadata validation, sensing, and governed content generation.",
+
+  "schemas": {
+    "sc4le-standard-v1": {
+      "description": "General-purpose schema for SC4LE standards, governance documents, and foundational artefacts.",
+      "required": ["title", "tags", "owner", "status", "version", "updated"]
+    },
+
+    "sc4le-role-v1": {
+      "description": "Schema for SC4LE operating model roles including CDA, LDA, Board Advisor LDA, and architect roles.",
+      "required": ["title", "tags", "owner", "status", "version", "updated"]
+    },
+
+    "sc4le-service-v1": {
+      "description": "Schema for SC4LE service definitions aligned to the service-definition-schema.json.",
+      "required": ["title", "service_category", "target_customer", "pricing_model", "tags"]
+    },
+
+    "sc4le-brand-v1": {
+      "description": "Schema for SC4LE brand assets such as logo usage, tone of voice, and typography.",
+      "required": ["title", "brand_asset_type", "usage_rules", "tags"]
+    },
+
+    "sc4le-diagram-v1": {
+      "description": "Schema for SC4LE diagrams including operating model, governance, and sensing visuals.",
+      "required": ["title", "diagram_type", "source_file", "tags"]
+    },
+
+    "sc4le-template-v1": {
+      "description": "Schema for SC4LE templates including page templates, decision logs, and governance records.",
+      "required": ["title", "template_type", "use_cases", "tags"]
+    },
+
+    "sc4le-web-v1": {
+      "description": "Schema for SC4LE website pages aligned to page-template-schema.json.",
+      "required": ["title", "slug", "layout", "tags"]
+    },
+
+    "sc4le-value-v1": {
+      "description": "Schema for SC4LE value propositions aligned to the value-proposition-schema.json.",
+      "required": ["title", "value_type", "target_customer", "tags"]
+    },
+
+    "sc4le-programme-v1": {
+      "description": "Schema for SC4LE programmes such as SCALE-UPS.",
+      "required": ["title", "programme_type", "target_group", "tags"]
+    },
+
+    "sc4le-maturity-v1": {
+      "description": "Schema for SC4LE maturity model components and diagnostics.",
+      "required": ["title", "maturity_dimension", "tags"]
+    }
+  }
+}
