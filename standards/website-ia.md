@@ -41,14 +41,14 @@ This IA is the **single source of truth** for website structure.
 
 It integrates with:
 
-- `/meta/website-content-matrix.md`  
-- `/meta/page-templates.md`  
-- `/meta/governance-content.md`  
-- `/meta/governance-messaging.md`  
-- `/meta/governance-brand.md`  
-- `/meta/governance-templates.md`  
-- `/meta/messaging-matrix.md`  
-- `/meta/website-publishing-playbook.md`  
+- `/standards/website-content-matrix.md`  
+- `/standards/page-templates.md`  
+- `/standards/governance-content.md`  
+- `/standards/governance-messaging.md`  
+- `/standards/governance-brand.md`  
+- `/standards/governance-templates.md`  
+- `/standards/messaging-matrix.md`  
+- `/standards/website-publishing-playbook.md`  
 
 ---
 
