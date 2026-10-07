@@ -31,14 +31,14 @@ Templates ensure:
 
 Template governance integrates with:
 
-- `/meta/governance-standard.md`  
-- `/meta/governance-content.md`  
-- `/meta/governance-brand.md`  
-- `/meta/governance-diagrams.md`  
-- `/meta/governance-messaging.md`  
-- `/meta/website-content-matrix.md`  
-- `/meta/website-ia.md`  
-- `/meta/website-publishing-playbook.md`  
+- `/standards/governance-standard.md`  
+- `/standards/governance-content.md`  
+- `/standards/governance-brand.md`  
+- `/standards/governance-diagrams.md`  
+- `/standards/governance-messaging.md`  
+- `/standards/website-content-matrix.md`  
+- `/standards/website-ia.md`  
+- `/standards/website-publishing-playbook.md`  
 
 ---
 
