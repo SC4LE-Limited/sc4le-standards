@@ -32,14 +32,14 @@ Page templates ensure:
 
 This document integrates with:
 
-- `/meta/governance-templates.md`  
-- `/meta/governance-content.md`  
-- `/meta/governance-brand.md`  
-- `/meta/governance-messaging.md`  
-- `/meta/messaging-matrix.md`  
-- `/meta/website-content-matrix.md`  
-- `/meta/website-ia.md`  
-- `/meta/website-publishing-playbook.md`  
+- `/standards/governance-templates.md`  
+- `/standards/governance-content.md`  
+- `/standards/governance-brand.md`  
+- `/standards/governance-messaging.md`  
+- `/standards/messaging-matrix.md`  
+- `/standards/website-content-matrix.md`  
+- `/standards/website-ia.md`  
+- `/standards/website-publishing-playbook.md`  
 
 ---
 
