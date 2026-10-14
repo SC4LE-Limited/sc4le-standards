@@ -1,83 +1,80 @@
 ---
 schema: sc4le-standard-v1
-title: "SC4LE GTM Standards"
+title: "SC4LE GTM Standards (Golden Source)"
 tags:
   - sc4le
   - gtm
-  - advisory
   - icp
   - messaging
   - diagnostics
+  - advisory
 owner: "SC4LE Governance Architect"
 status: "active"
-version: "1.0.0"
+version: "1.1.0"
 updated: "2026-10-14"
-description: "Defines the behavioural, psychological, strategic, and operational patterns that underpin SC4LE’s go-to-market clarity, including ICP profiles, decision psychology, leadership maturity signals, strategic pressure indicators, and narrative triggers."
+description: "The Golden Source for SC4LE’s go-to-market system. Defines ICP profiles, pains, JTBD, strategic pressures, decision psychology, leadership maturity, culture patterns, narrative triggers, consequence language, and outcome language used across all GTM, advisory, diagnostic, and narrative standards."
 ---
 
-# SC4LE GTM Standards  
+# SC4LE GTM Standards (Golden Source)  
 © 2026 SC4LE Limited — Foundations Layer
 
-This standard captures the **full GTM reasoning model** that underpins SC4LE’s founder-facing clarity, advisory work, narrative architecture, and offering design.
+This standard is the **Golden Source** for all SC4LE go-to-market inputs.
 
-It is derived from the original GTM spreadsheet (formerly “mentor shaping template”), which defined:
+It defines the **canonical GTM data model** used by:
 
-- ICP profiles  
-- founder psychology  
-- decision psychology  
-- leadership maturity  
-- culture patterns  
-- strategic pressure  
-- prioritisation behaviour  
-- advisory JTBD  
-- GTM messaging triggers  
+- SC4LE Narrative Architecture  
+- GTM → Narrative Mapping Standard  
+- GTM → Offering Mapping Standard  
+- GTM → Diagnostic Mapping Standard  
+- Board Advisor LDA Charter  
+- SC4LE website messaging  
+- AI Maturity Agent onboarding  
 
-This file ensures Copilot Business and all LDAs can generate **consistent, founder‑friendly, SC4LE‑aligned GTM content**.
+This file contains **inputs only**.  
+All narrative examples, mappings, and transformations are defined in consuming standards.
 
 ---
 
 ## 1. Purpose  
-The SC4LE GTM Standards define the **behavioural, psychological, and strategic patterns** required to:
+The GTM Standards define the **behavioural, psychological, and strategic inputs** required to:
 
-- explain SC4LE clearly  
+- understand ICP behaviour  
 - diagnose founder-facing problems  
 - generate consequence-led narratives  
-- align offerings to ICP needs  
-- support advisory LDAs  
-- support website messaging  
-- support AI Maturity Agent onboarding  
-- support SC4LE’s go-to-market clarity  
+- position offerings  
+- design advisory clarity  
+- support SC4LE’s GTM system  
 
-This standard ensures SC4LE’s GTM system remains coherent, governed, and founder-friendly.
+This file ensures all GTM-consuming standards use the same canonical definitions.
 
 ---
 
 ## 2. Relationship to Other SC4LE Standards  
 
-### 2.1 SC4LE Narrative Architecture  
-GTM Standards provide the ICP → pain → consequence → outcome chain used in:
+### 2.1 Consuming Standards  
+These standards **use** the GTM inputs defined here:
 
-`/foundations/narrative-architecture.md`
+- `/foundations/gtm-narrative-mapping-standard.md`  
+- `/foundations/narrative-architecture.md`  
+- `/foundations/gtm-offering-mapping-standard.md`  
+- `/foundations/gtm-diagnostic-mapping-standard.md`  
+- `/operating-model/roles/lda/board-advisor/charter.md`  
 
-### 2.2 Board Advisor LDA Charter  
-GTM Standards provide the ICP psychology and JTBD logic used in:
+### 2.2 Non-Duplication Rule  
+No consuming standard may redefine:
 
-`/operating-model/roles/lda/board-advisor/charter.md`
+- ICPs  
+- pains  
+- JTBD  
+- triggers  
+- consequence language  
+- outcome language  
 
-### 2.3 SC4LE Copilot Context Manifest  
-GTM Standards provide the behavioural reasoning Copilot Business must inherit:
-
-`/standards/copilot-context-manifest.md`
-
-### 2.4 CLAR Initiative  
-GTM Standards support the “Customers Understand SC4LE Instantly” initiative:
-
-`/delivery/clar/`
+They must reference this file.
 
 ---
 
-## 3. ICP Profiles  
-SC4LE GTM uses ICPs to understand founder behaviour, decision psychology, and strategic pressure.
+## 3. ICP Profiles (Canonical Definitions)
 
 ### 3.1 Scrappy Sam (Pre‑Seed)  
 - **Stage:** Pre‑Seed  
@@ -94,16 +91,18 @@ SC4LE GTM uses ICPs to understand founder behaviour, decision psychology, and st
 - increase decision velocity  
 - clarify priorities  
 
-**GTM Triggers:**  
-- “I don’t know what matters right now.”  
-- “Everything feels urgent.”  
+**Pains:**  
+- everything feels urgent  
+- unclear priorities  
+- inconsistent decisions  
+- chaotic execution  
 
 ---
 
 ### 3.2 Scaling Sarah (Seed → Series A)  
 - **Stage:** Seed / Series A  
 - **Org Size:** 10–50  
-- **Culture:** Founder‑led, evolving  
+- **Culture:** Founder-led, evolving  
 - **Leadership Maturity:** Medium  
 - **Decision Psychology:** Mixed instinct + data  
 - **Strategic Pressure:** Scale without breaking  
@@ -115,18 +114,20 @@ SC4LE GTM uses ICPs to understand founder behaviour, decision psychology, and st
 - align leadership  
 - build governance without slowing down  
 
-**GTM Triggers:**  
-- “We’re growing fast but breaking things.”  
-- “My leadership team isn’t aligned.”  
+**Pains:**  
+- breaking under growth  
+- leadership misalignment  
+- conflicting priorities  
+- inconsistent governance  
 
 ---
 
 ### 3.3 Stretched Steve (Series B → C)  
 - **Stage:** Series B/C  
 - **Org Size:** 50–200  
-- **Culture:** Multi‑team, inconsistent  
+- **Culture:** Multi-team, inconsistent  
 - **Leadership Maturity:** Mixed  
-- **Decision Psychology:** Data‑driven but overloaded  
+- **Decision Psychology:** Data-driven but overloaded  
 - **Strategic Pressure:** Deliver predictable outcomes  
 - **Budget Reality:** Healthy but scrutinised  
 - **Priority Status:** High complexity, high stakes  
@@ -134,11 +135,13 @@ SC4LE GTM uses ICPs to understand founder behaviour, decision psychology, and st
 **JTBD:**  
 - restore flow  
 - reduce decision latency  
-- fix cross‑team friction  
+- fix cross-team friction  
 
-**GTM Triggers:**  
-- “We’re too slow.”  
-- “Dependencies are killing us.”  
+**Pains:**  
+- dependency bottlenecks  
+- decision latency  
+- cross-team friction  
+- flow breakdown  
 
 ---
 
@@ -157,18 +160,19 @@ SC4LE GTM uses ICPs to understand founder behaviour, decision psychology, and st
 - reduce conflict  
 - make decisions that stick  
 
-**GTM Triggers:**  
-- “My leadership team is pulling in different directions.”  
-- “We keep revisiting decisions.”  
+**Pains:**  
+- leadership misalignment  
+- conflicting priorities  
+- decisions revisited  
+- fragmented culture  
 
 ---
 
-## 4. Decision Psychology Model  
-Founders make decisions in three modes:
+## 4. Decision Psychology (Canonical Definitions)
 
 ### 4.1 Instinctive  
-- fast but inconsistent  
 - emotional weighting  
+- fast but inconsistent  
 - high decision latency risk  
 
 ### 4.2 Mixed  
@@ -183,8 +187,7 @@ Founders make decisions in three modes:
 
 ---
 
-## 5. Leadership Maturity Signals  
-Leadership maturity determines flow and governance.
+## 5. Leadership Maturity (Canonical Definitions)
 
 ### 5.1 Low  
 - unclear roles  
@@ -201,13 +204,12 @@ Leadership maturity determines flow and governance.
 
 ---
 
-## 6. Culture → Flow → Governance Patterns  
-Culture directly impacts flow.
+## 6. Culture Patterns (Canonical Definitions)
 
 ### 6.1 Chaotic  
 - unclear priorities  
-- high decision latency  
 - governance avoidance  
+- high decision latency  
 
 ### 6.2 Founder‑Centric  
 - bottlenecks around founder  
@@ -215,12 +217,11 @@ Culture directly impacts flow.
 
 ### 6.3 Multi‑Team  
 - dependency friction  
-- cross‑team misalignment  
+- cross-team misalignment  
 
 ---
 
-## 7. Strategic Pressure Indicators  
-Strategic pressure determines GTM messaging.
+## 7. Strategic Pressure (Canonical Definitions)
 
 - build fast → clarity + prioritisation  
 - scale → governance + flow  
@@ -229,61 +230,53 @@ Strategic pressure determines GTM messaging.
 
 ---
 
-## 8. Advisory JTBD Lines  
-JTBD lines guide founder‑friendly GTM messaging.
+## 8. Narrative Trigger Library (Golden Source)  
+Used by narrative mapping, offerings, diagnostics, and advisory.
 
-- reduce decision latency  
-- restore flow  
-- align leadership  
-- clarify priorities  
-- reduce friction  
-- improve governance  
-- increase decision velocity  
+- “Everything feels urgent.”  
+- “We’re growing fast but breaking things.”  
+- “Dependencies are killing us.”  
+- “My leadership team isn’t aligned.”  
+- “We keep revisiting decisions.”  
+- “We’re too slow.”  
+- “We’re working hard but not moving fast.”  
 
 ---
 
-## 9. GTM Narrative Cues  
-Narratives must be consequence‑led.
+## 9. Consequence Language Library (Golden Source)  
+Used by narrative mapping and advisory.
 
-- “If you don’t fix X, Y will happen.”  
 - “This slows you down because…”  
 - “The consequence of this pattern is…”  
+- “This creates friction between teams…”  
+- “This makes decisions take longer…”  
+- “This leads to rework and missed deadlines…”  
 
 ---
 
-## 10. Diagnostic Triggers  
-Diagnostic triggers map ICP behaviour to SC4LE diagnostics.
+## 10. Outcome Language Library (Golden Source)  
+Used by narrative mapping, offerings, and diagnostics.
 
-- leadership misalignment  
-- decision latency  
-- unclear priorities  
-- dependency bottlenecks  
-- governance gaps  
-- flow breakdown  
-
----
-
-## 11. Operating Rhythm Implications  
-ICP behaviour determines rhythm design.
-
-- chaotic → weekly clarity cadence  
-- scaling → governance cadence  
-- stretched → dependency cadence  
-- misaligned → leadership cadence  
+- faster decisions  
+- predictable flow  
+- leadership alignment  
+- clear priorities  
+- reduced chaos  
+- decisions that stick  
 
 ---
 
-## 12. Success Criteria  
+## 11. Success Criteria  
 This standard is successful when:
 
-- GTM messaging is consistent  
-- ICP reasoning is preserved  
-- Copilot Business can generate founder‑friendly GTM content  
-- diagnostics remain aligned  
-- narratives remain aligned  
-- SC4LE offerings remain aligned  
+- all GTM-consuming standards reference it  
+- no duplication exists elsewhere  
+- ICP definitions remain stable  
+- consequence-led clarity is consistent  
+- Copilot Business can generate founder-friendly GTM content  
+- offerings, diagnostics, and narratives align  
 
 ---
 
-## 13. Review  
+## 12. Review  
 This standard must be reviewed quarterly and updated as SC4LE evolves.
