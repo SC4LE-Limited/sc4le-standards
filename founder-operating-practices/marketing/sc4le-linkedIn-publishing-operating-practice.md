@@ -1,17 +1,16 @@
 ---
 schema: sc4le-standard-v1
-title: "SC4LE LinkedIn Publishing Playbook"
+title: "SC4LE LinkedIn Publishing Operating Practice"
 tags:
   - founder-operating-practice
   - marketing
   - linkedin
   - publishing
-  - playbook
 owner: "Scott Zebedee"
-status: "proposed"
-version: "0.1.0"
+status: "active"
+version: "1.0.0"
 updated: "2026-10-17"
-description: "Provides the lightweight operational workflow used by the founder to plan, develop, review, publish, measure and improve SC4LE LinkedIn content."
+description: "Defines how the founder currently operates LinkedIn publishing to develop, grow and communicate SC4LE."
 ---
 
 # SC4LE LinkedIn Publishing Playbook
