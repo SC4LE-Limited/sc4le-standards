@@ -2,9 +2,9 @@
 schema: sc4le-standard-v1
 title: "SC4LE Principles"
 owner: "CDA"
-status: "draft"
-version: "1.0.0"
-updated: "2026-08-26"
+status: "approaved"
+version: "1.0.1"
+updated: "2026-10-17"
 tags: ["foundations", "principles", "sc4le", "behaviour", "alignment"]
 ---
 
