@@ -1,292 +1,681 @@
 ---
-id: sc4le-linkedIn-publishing-operating-practice
-title: SC4LE LinkedIn Publishing Operating Practice
-version: 0.1.0
-status: proposed
-category: publishing
-owner: Central Design Authority
-last_updated: 2026-10-16
+schema: sc4le-founder-practice-v1
+title: "SC4LE LinkedIn Publishing Playbook"
+tags:
+  - founder-operating-practice
+  - marketing
+  - linkedin
+  - publishing
+  - playbook
+owner: "Scott Zebedee"
+status: "proposed"
+version: "0.1.0"
+updated: "2026-10-17"
+description: "Provides the lightweight operational workflow used by the founder to plan, develop, review, publish, measure and improve SC4LE LinkedIn content."
+practice_area: "marketing"
+artifact_type: "playbook"
+parent_artifact: "founder-operating-practices/marketing/sc4le-linkedin-publishing-operating-practice.md"
 ---
 
-# SC4LE LinkedIn Publishing Standard
+# SC4LE LinkedIn Publishing Playbook
 
 ## 1. Purpose
 
-This standard defines how SC4LE Limited uses LinkedIn to:
+This playbook describes the current operational practices used by the founder to plan, develop, review, publish, measure and improve SC4LE LinkedIn content.
 
-- communicate approved SC4LE concepts
-- build awareness of SC4LE Limited
-- share founder insight and experience
-- support learning and validation
-- encourage meaningful professional discussion
-- ensure AI-assisted publishing remains governed and transparent
+It implements the approach defined in:
 
-The purpose of this standard is to preserve clarity, consistency and trust while keeping publishing simple and founder-friendly.
+`founder-operating-practices/marketing/sc4le-linkedin-publishing-operating-practice.md`
 
----
+The playbook is governed organisational memory. It records how the founder currently operates LinkedIn publishing to support the development, growth and communication of SC4LE.
 
-## 2. Scope
+It does not define:
 
-This standard applies to:
+- Core SC4LE standards.
+- SC4LE governance.
+- Approval authority.
+- Publication authority.
+- Source hierarchy.
+- Content classifications.
+- SC4LE terminology.
+- The SC4LE Operating Model.
 
-- the SC4LE Limited LinkedIn Company Page
-- Scott Zebedee's LinkedIn personal profile when publishing SC4LE-related content
-- AI-assisted creation of LinkedIn content
-
-This standard does not govern:
-
-- paid advertising
-- direct messaging campaigns
-- non-LinkedIn social media channels
+Where a governance gap or ambiguity is identified, it must be recorded as a dependency and referred to the parent operating practice or the appropriate SC4LE governing artefact.
 
 ---
 
-## 3. Governing Principles
+## 2. Operating Principles
 
-All LinkedIn publishing must align with the SC4LE Principles.
+This playbook applies all eight SC4LE Principles.
 
-### 3.1 Clarity Over Complexity
+### 2.1 Clarity Over Complexity
 
-Content should simplify understanding, not increase complexity.
+Content and publishing activities should remain clear, concise and easy to operate.
 
-Publishing processes should remain lightweight and easy to operate.
+Process should only be added when it resolves a recurring problem or protects an established governance requirement.
 
-### 3.2 Principles Before Processes
+### 2.2 Principles Before Processes
 
-Publishing decisions should be guided by principles.
+Publishing decisions should be guided by SC4LE Principles before introducing workflows, controls or additional steps.
 
-Processes should only be introduced where they clearly improve consistency, quality or governance.
+### 2.3 Federated Autonomy
 
-### 3.3 Federated Autonomy
+Publishing decisions should remain close to the context in which they are made, within the boundaries defined by the parent operating practice and applicable SC4LE governance.
 
-Publishing decisions should remain close to the context in which they are made.
+### 2.4 Sensing Before Steering
 
-The founder retains judgement within the boundaries defined by this standard.
+Audience signals, feedback and publishing outcomes should be observed before changing the publishing approach.
 
-### 3.4 Sensing Before Steering
+### 2.5 Flow as a First-Class Outcome
 
-Publishing should learn from audience signals and feedback before introducing new rules or assumptions.
+The publishing workflow should minimise unnecessary delay and friction between idea, development, publication and learning.
 
-### 3.5 Flow as a First-Class Outcome
+### 2.6 Build–Embed–Withdraw
 
-The publishing system should minimise unnecessary friction between idea, publication and learning.
+New publishing activities may initially require deliberate attention. Once they become repeatable, they should be simplified and embedded into the normal weekly rhythm.
 
-### 3.6 Build–Embed–Withdraw
+### 2.7 Continuous Improvement as Culture
 
-Publishing should increase understanding, capability and engagement without creating dependency on individuals or tools.
+Publishing should improve through regular learning and small adjustments rather than periodic large redesigns.
 
-### 3.7 Continuous Improvement as Culture
+### 2.8 Ethics & Transparency by Design
 
-Publishing practices should evolve through small, evidence-based improvements.
-
-### 3.8 Ethics & Transparency by Design
-
-Human accountability remains mandatory.
-
-The source, status and intent of content should be clear.
-
-AI assistance must remain transparent and auditable.
+Content must be accurate, responsible and transparent. AI assistance must not remove human accountability or misrepresent authorship, experience or evidence.
 
 ---
 
-## 4. Channel Roles
+## 3. Company-First Publishing
 
-### 4.1 SC4LE Limited Company Page
+The SC4LE LinkedIn Company Page is the primary channel for organisational publishing.
 
-The Company Page is the authoritative LinkedIn channel for:
+The founder profile supports company content by adding personal context, experience and commentary.
 
-- approved SC4LE positions
-- standards releases
-- organisational announcements
-- experiments and validation activities
-- service and capability updates
-- official SC4LE content
+The default sequence is:
 
-Company content represents the organisation.
+1. Prepare the content for the SC4LE Company Page.
+2. Review the content against the parent operating practice.
+3. Publish on the Company Page.
+4. Amplify from the founder profile where useful.
+5. Add relevant founder context rather than simply duplicating the company post.
+6. Monitor audience signals and discussion.
+7. Capture useful learning.
 
-### 4.2 Scott Zebedee Personal Profile
+Company-first publishing should remain the normal approach unless the nature of the content makes the founder profile the more appropriate initial channel.
 
-The personal profile is the primary channel for:
-
-- founder experience
-- practical observations
-- interpretation of approved content
-- reflection and learning
-- professional conversation
-
-Personal content represents the founder's voice.
+Any exception should be based on the purpose and context of the content, not on a desire to bypass the company-first approach.
 
 ---
 
-## 5. Relationship Between Channels
+## 4. Weekly Publishing Rhythm
 
-The SC4LE Limited Company Page establishes the organisational position.
+The weekly rhythm provides a simple default, not an inflexible schedule.
 
-The personal profile may:
+Consistency is preferred over publishing volume.
 
-- explain
-- amplify
-- interpret
-- discuss
+### 4.1 Weekly Planning
 
-approved company content.
+At the beginning of the publishing cycle:
 
-The personal profile must not redefine approved SC4LE concepts, terminology or governance.
+1. Review current SC4LE priorities.
+2. Review recent publishing outcomes and audience signals.
+3. Identify useful content opportunities.
+4. Select a manageable number of topics.
+5. Confirm the source material for each topic.
+6. Decide whether each topic is suitable for the Company Page, founder profile or both.
 
-Where both channels discuss the same topic, the Company Page remains the authoritative reference point.
+### 4.2 Content Development
 
----
+During the week:
 
-## 6. Source Hierarchy
+1. Define the core message.
+2. Confirm the source material.
+3. Develop the first draft.
+4. Review accuracy and terminology.
+5. Simplify the content.
+6. Prepare any supporting visual.
+7. Complete the pre-publication review.
+8. Publish when ready.
 
-When creating SC4LE-related LinkedIn content, the following source order applies:
+Content should not be delayed solely to satisfy an artificial schedule.
 
-1. Approved SC4LE Golden Source content
-2. Active governed SC4LE content
-3. Founder experience and direct observation
-4. Verified external evidence
-5. General industry observations
+### 4.3 Weekly Measurement
 
-External sources may inform content.
+At the end of the publishing cycle:
 
-They may not override approved SC4LE content.
+1. Review available engagement signals.
+2. Note the quality of discussion and feedback.
+3. Identify content that created interest or confusion.
+4. Capture significant observations.
+5. Use relevant learning in the next planning cycle.
 
----
+### 4.4 Monthly Retrospective
 
-## 7. Content Classification
+Once each month, briefly review:
 
-All LinkedIn content must be clearly understood within one of the following categories.
+- Publishing consistency.
+- Content usefulness.
+- Audience signals.
+- Operational friction.
+- Repeated problems.
+- Opportunities to simplify the workflow.
 
-### Approved Content
+The retrospective should produce no more than three categories:
 
-Content representing an approved SC4LE position.
-
-### Proposed Content
-
-Content under active development and not yet approved.
-
-### Founder Experience
-
-Personal observations, experiences and lessons learned.
-
-### External Evidence
-
-Information originating outside SC4LE.
-
-### Experiment
-
-Content intended to test, explore or validate ideas.
-
-Proposed, experimental and founder content must not be presented as approved SC4LE positions.
+- Continue.
+- Improve.
+- Stop.
 
 ---
 
-## 8. Publishing Boundaries
+## 5. Content Planning
 
-The following are prohibited:
+### 5.1 Planning Objective
 
-- inventing SC4LE concepts
-- inventing SC4LE terminology
-- presenting draft or proposed material as approved
-- fabricating founder experience
-- misrepresenting evidence
-- publishing confidential information
-- publishing private information without appropriate authority
-- publishing misleading claims
-- using LinkedIn performance as evidence to change SC4LE principles or governance
+Content planning should identify useful subjects that support awareness, understanding and professional discussion of SC4LE.
 
-Publishing should favour accuracy, usefulness and transparency over engagement optimisation.
+Planning must not create an unnecessary backlog or publishing burden.
 
----
+### 5.2 Content Sources
 
-## 9. AI-Assisted Publishing
+Potential content may be developed from:
 
-AI may assist with:
+- Approved SC4LE standards.
+- The SC4LE Operating Model.
+- Founder operating practices.
+- Founder experience.
+- Lessons learned while developing SC4LE.
+- Relevant organisational observations.
+- Questions raised by practitioners.
+- Audience feedback.
+- Professional discussion.
+- Validated operational insights.
 
-- research
-- summarisation
-- drafting
-- editing
-- content structuring
-- idea generation
+Repository content must be interpreted according to its status and repository layer.
 
-AI may not:
-
-- approve content
-- publish content autonomously
-- invent founder experiences
-- redefine SC4LE concepts
-- override the source hierarchy
-- alter approved SC4LE content without human review
-
-A human remains accountable for all published content.
-
----
-
-## 10. Governance
-
-The LinkedIn Publishing Standard is part of the SC4LE Standards Layer.
-
-Changes to this standard must follow applicable SC4LE governance processes.
-
-This standard is owned by the Central Design Authority.
-
-Review cadence:
-
-- Quarterly review
-- Earlier review if significant platform, governance or operating-model changes occur
+Draft or proposed material must not be represented as an approved SC4LE standard.
 
 LinkedIn content does not amend the SC4LE Golden Source.
 
-Any learning that may affect the Golden Source must follow the normal SC4LE change process.
+Any learning that could affect the Golden Source must follow the applicable SC4LE change process.
+
+### 5.3 Topic Selection
+
+Prioritise topics that:
+
+- Explain a SC4LE concept clearly.
+- Address a genuine practitioner need.
+- Share useful founder learning.
+- Demonstrate practical application.
+- Encourage meaningful professional discussion.
+- Support awareness of SC4LE without unnecessary promotion.
+- Can be supported by an identifiable source or direct experience.
+
+Avoid topics selected only to maintain posting frequency.
+
+### 5.4 Lightweight Content Plan
+
+For each planned item, record only:
+
+- Working topic.
+- Intended audience.
+- Core message.
+- Primary source.
+- Intended channel.
+- Current status.
+- Target publishing window, if needed.
+
+Do not add additional tracking fields unless they solve a demonstrated need.
 
 ---
 
-## 11. Dependencies
+## 6. Content Development
 
-This standard depends upon applicable SC4LE governance and operating standards, including:
+### 6.1 Define the Core Message
 
-- SC4LE Knowledge Instructions
-- Copilot Context Manifest
-- Governance Standards
-- Content Governance
-- Messaging Governance
-- Brand Governance
+Before drafting, identify:
 
-Where a conflict exists, approved SC4LE governance takes precedence.
+- What is the single main point?
+- Why is it useful?
+- Who is it for?
+- What should the reader understand or consider?
+
+If the main point cannot be expressed clearly, the topic requires further definition before drafting.
+
+### 6.2 Confirm the Source
+
+Confirm whether the content is based on:
+
+- The SC4LE Golden Source.
+- Founder operating practice.
+- Direct founder experience.
+- External information.
+- Audience feedback.
+- An observation or emerging idea.
+
+The source type should be clear enough to prevent opinion, experience or proposed content from being presented as an approved SC4LE requirement.
+
+### 6.3 Prepare the Draft
+
+The first draft should:
+
+- Lead with the main point.
+- Use clear language.
+- Avoid unnecessary jargon.
+- Explain SC4LE terminology where needed.
+- Provide practical value.
+- Distinguish approved content from emerging thinking.
+- Avoid claims that cannot be supported.
+
+### 6.4 Simplify the Draft
+
+Review the draft and remove:
+
+- Repetition.
+- Unnecessary background.
+- Unsupported claims.
+- Excessive terminology.
+- Overly complex sentences.
+- Process detail that does not help the reader.
+- Promotional wording that weakens trust.
+
+Apply Clarity Over Complexity without removing necessary meaning or qualifications.
+
+### 6.5 AI-Assisted Development
+
+AI may assist with:
+
+- Drafting.
+- Restructuring.
+- Simplifying language.
+- Generating alternative wording.
+- Identifying ambiguity.
+- Checking consistency.
+- Preparing content variations.
+- Summarising source material.
+
+Before publication, the founder must verify:
+
+- Accuracy.
+- Source alignment.
+- Terminology.
+- Context.
+- Tone.
+- Any factual claims.
+- Any implications created by AI-generated wording.
+
+AI assistance does not transfer accountability away from the founder.
 
 ---
 
-## 12. Downstream Artefacts
+## 7. Content Review
 
-This standard acts as the governing parent artefact for:
+Review should remain proportionate to the content.
 
-- linkedin-publishing-playbook.md
-- linkedin-agent-standard.md
-- linkedin-agent-instructions.md
+### 7.1 Source Review
 
-These artefacts may implement this standard.
+Confirm that:
 
-They may not override it.
+- The source is identifiable.
+- Repository content is interpreted according to its status.
+- Draft content is not presented as approved.
+- Founder experience is not presented as a universal requirement.
+- External information is not presented as SC4LE-owned knowledge.
+- The content does not silently change the Golden Source.
+
+### 7.2 Accuracy Review
+
+Confirm that:
+
+- Statements are factually supportable.
+- SC4LE concepts are represented accurately.
+- Terminology matches the Golden Source.
+- Names and references are correct.
+- Any figures or quotations can be verified.
+- The post does not overstate available evidence.
+
+### 7.3 Clarity Review
+
+Confirm that:
+
+- The main point is immediately understandable.
+- The intended audience is clear.
+- Language is concise.
+- Specialist terminology is necessary and explained.
+- The structure is easy to follow.
+- The call to discussion, if used, is relevant.
+
+### 7.4 Governance Review
+
+Confirm that:
+
+- The content stays within the parent operating practice.
+- The correct source hierarchy has been followed.
+- No governance or approval authority has been invented.
+- No publication authority has been changed.
+- No content classification has been changed.
+- No draft concept has been treated as approved.
+- Transparency requirements have been followed.
+
+### 7.5 Brand and Messaging Review
+
+Confirm that:
+
+- The content is consistent with applicable SC4LE brand and messaging guidance.
+- The tone is professional and credible.
+- The content informs before it promotes.
+- SC4LE is not described as a methodology, programme, coaching model or generic framework.
+- Claims about SC4LE remain proportionate and supportable.
+
+### 7.6 Final Review Outcome
+
+The content should have one of three outcomes:
+
+- Ready to publish.
+- Revise before publishing.
+- Do not publish.
+
+Keep the reason concise.
 
 ---
 
-## 13. Review Criteria
+## 8. Publishing Activities
 
-This standard is operating correctly when:
+### 8.1 Pre-Publication Checklist
 
-- Company Page content remains aligned to approved SC4LE content
-- Personal Profile content remains consistent with SC4LE principles
-- Founder insights remain clearly distinguishable from approved standards
-- Publishing remains simple and sustainable
-- AI assistance remains governed
-- Audience feedback informs improvement without creating governance drift
-- The SC4LE principles remain visible in publishing behaviour
+Before publishing, confirm:
+
+- The intended channel is correct.
+- The source has been checked.
+- The content status is understood.
+- Accuracy has been checked.
+- SC4LE terminology is correct.
+- The content is clear and useful.
+- Governance boundaries have been respected.
+- Brand and messaging guidance has been followed.
+- Links work.
+- Visuals are accurate and readable.
+- AI-assisted content has been reviewed by the founder.
+- The final version is ready for publication.
+
+### 8.2 Company Page Publication
+
+For Company Page content:
+
+1. Copy the final reviewed content into LinkedIn.
+2. Check paragraph spacing and formatting.
+3. Add the approved visual or link where applicable.
+4. Complete a final visual check.
+5. Publish.
+6. Verify that the published post displays correctly.
+
+### 8.3 Founder Amplification
+
+Where founder amplification is useful:
+
+1. Share or reference the Company Page post.
+2. Add genuine founder context.
+3. Explain why the subject matters.
+4. Add experience or a practical observation where relevant.
+5. Avoid simply repeating the company post.
+6. Keep the founder contribution aligned with the published company message.
+
+### 8.4 Post-Publication Check
+
+After publication, verify:
+
+- Formatting.
+- Links.
+- Visual quality.
+- Readability.
+- Correct account and channel.
+- Any obvious factual or typographical errors.
+
+If a material error is found, correct it promptly using the most appropriate LinkedIn function available.
 
 ---
 
-## 14. Approval Status
+## 9. Engagement Activities
 
-This document is currently proposed.
+Engagement should support meaningful professional discussion.
 
-It does not become active until approved through the applicable SC4LE governance process.
+After publication:
+
+- Monitor relevant comments.
+- Respond where a response adds value.
+- Clarify misunderstandings.
+- Acknowledge useful perspectives.
+- Capture questions that may inform future content.
+- Avoid engagement that creates unnecessary conflict or distracts from the purpose of the content.
+
+Not every reaction or comment requires a response.
+
+Quality of discussion is more important than response volume.
+
+---
+
+## 10. Measurement Activities
+
+The purpose of measurement is learning, not performance theatre.
+
+### 10.1 Weekly Signals
+
+Review available signals such as:
+
+- Reach or impressions.
+- Reactions.
+- Comments.
+- Shares or reposts.
+- Follower response.
+- Quality of discussion.
+- Direct questions generated by the content.
+- Evidence of misunderstanding.
+- Topics that attract repeated interest.
+
+Metrics must be interpreted in context.
+
+A high numerical response does not automatically mean that content was useful, accurate or aligned with SC4LE.
+
+### 10.2 Weekly Learning Questions
+
+Ask:
+
+- What attracted meaningful attention?
+- What created useful discussion?
+- What helped explain SC4LE?
+- What caused confusion?
+- What appeared to be ignored?
+- What should be repeated?
+- What should be refined?
+- What should stop?
+
+### 10.3 Recording Learning
+
+Record only learning that is likely to influence future decisions.
+
+A useful learning note should identify:
+
+- The observation.
+- The evidence or signal.
+- The possible implication.
+- The next small adjustment, if required.
+
+Do not create extensive reports unless a clear need emerges.
+
+---
+
+## 11. Retrospectives
+
+### 11.1 Monthly Retrospective
+
+The monthly retrospective should review:
+
+- Whether the publishing rhythm was sustainable.
+- Whether company-first publishing was followed.
+- Which topics created useful engagement.
+- Which content improved understanding.
+- Where development or review became difficult.
+- Whether any activity created unnecessary friction.
+- Whether any recurring governance question emerged.
+- Whether the playbook still reflects actual practice.
+
+### 11.2 Retrospective Outcomes
+
+Classify outcomes as:
+
+#### Continue
+
+Practices that remain useful and sustainable.
+
+#### Improve
+
+Practices that need a small, clear adjustment.
+
+#### Stop
+
+Practices that create friction without sufficient value.
+
+### 11.3 Change Control
+
+Minor operational improvements may be incorporated into the playbook through the applicable repository change process.
+
+Changes must not silently alter:
+
+- Governance.
+- Approval authority.
+- Publication authority.
+- Source hierarchy.
+- Content classifications.
+- SC4LE terminology.
+- SC4LE Principles.
+
+Any proposed change affecting these areas must be referred to the relevant governing artefact.
+
+---
+
+## 12. Operational Checklists
+
+### 12.1 Weekly Planning Checklist
+
+- [ ] Review current SC4LE priorities.
+- [ ] Review recent audience signals.
+- [ ] Identify useful content opportunities.
+- [ ] Select a manageable number of topics.
+- [ ] Confirm the source for each topic.
+- [ ] Identify the intended audience.
+- [ ] Select the appropriate publishing channel.
+- [ ] Avoid creating unnecessary backlog.
+
+### 12.2 Content Development Checklist
+
+- [ ] Define the single core message.
+- [ ] Confirm why the content is useful.
+- [ ] Identify the source type.
+- [ ] Prepare the first draft.
+- [ ] Use current SC4LE terminology.
+- [ ] Distinguish approved content from emerging thinking.
+- [ ] Remove unnecessary complexity.
+- [ ] Check that claims can be supported.
+- [ ] Prepare any required visual.
+
+### 12.3 Content Review Checklist
+
+- [ ] Source checked.
+- [ ] Repository status checked.
+- [ ] Accuracy checked.
+- [ ] Terminology checked.
+- [ ] Clarity checked.
+- [ ] Governance boundaries checked.
+- [ ] Brand and messaging checked.
+- [ ] AI-assisted content checked by the founder.
+- [ ] Final outcome recorded.
+
+### 12.4 Pre-Publication Checklist
+
+- [ ] Correct account selected.
+- [ ] Company-first approach considered.
+- [ ] Final content approved for publication.
+- [ ] Formatting checked.
+- [ ] Links checked.
+- [ ] Visuals checked.
+- [ ] Readability checked.
+- [ ] Transparency requirements checked.
+- [ ] Final preview completed.
+
+### 12.5 Post-Publication Checklist
+
+- [ ] Published post verified.
+- [ ] Formatting displays correctly.
+- [ ] Links work.
+- [ ] Visuals display correctly.
+- [ ] Founder amplification completed where useful.
+- [ ] Relevant comments monitored.
+- [ ] Material errors corrected.
+
+### 12.6 Weekly Measurement Checklist
+
+- [ ] Review available engagement signals.
+- [ ] Review the quality of discussion.
+- [ ] Identify useful audience questions.
+- [ ] Identify confusion or misunderstanding.
+- [ ] Record material learning.
+- [ ] Apply relevant learning to the next planning cycle.
+
+### 12.7 Monthly Retrospective Checklist
+
+- [ ] Review publishing consistency.
+- [ ] Review whether the rhythm remains sustainable.
+- [ ] Review company-first publishing.
+- [ ] Identify valuable content patterns.
+- [ ] Identify recurring friction.
+- [ ] Identify governance dependencies.
+- [ ] Record Continue, Improve and Stop outcomes.
+- [ ] Confirm that the playbook still reflects current practice.
+
+---
+
+## 13. Dependencies and Escalation
+
+This playbook depends on:
+
+- `founder-operating-practices/marketing/sc4le-linkedin-publishing-operating-practice.md`
+- Applicable SC4LE Principles.
+- Applicable knowledge governance.
+- Applicable content governance.
+- Applicable messaging governance.
+- Applicable brand governance.
+- The SC4LE Golden Source and repository source hierarchy.
+
+Governance gaps must not be resolved by inventing rules within this playbook.
+
+When a gap is found:
+
+1. Record the question or dependency.
+2. Identify the affected activity.
+3. Identify the governing artefact that should resolve it.
+4. Refer the issue to the parent operating practice or relevant SC4LE authority.
+5. Continue only where the existing governance boundary remains clear.
+
+---
+
+## 14. Continuous Improvement
+
+This playbook should remain lightweight, executable and proportionate to a founder-operated business.
+
+Improvements should:
+
+- Reduce unnecessary friction.
+- Improve clarity.
+- Improve consistency.
+- Protect governance.
+- Support learning.
+- Preserve founder operability.
+
+New process should only be introduced when:
+
+- A recurring problem has been observed.
+- The proposed activity addresses that problem.
+- The benefit is greater than the operational burden.
+- The change does not duplicate an existing control.
+- The change remains aligned with SC4LE Principles.
+
+When in doubt, favour the smallest useful adjustment.
