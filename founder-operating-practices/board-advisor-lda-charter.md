@@ -9,8 +9,8 @@ tags:
   - operating-model
 owner: "SC4LE Governance Architect"
 status: "active"
-version: "1.0.1"
-updated: "2026-10-06"
+version: "1.0.2"
+updated: "2026-10-17"
 description: "Governed charter defining the responsibilities, principles, operating rhythm, and CDA alignment rules for the SC4LE Board Advisor Local Design Authority (LDA)."
 ---
 
