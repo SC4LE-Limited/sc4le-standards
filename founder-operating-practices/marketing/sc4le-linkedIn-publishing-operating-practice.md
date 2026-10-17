@@ -1,5 +1,5 @@
 ---
-schema: sc4le-founder-practice-v1
+schema: sc4le-standard-v1
 title: "SC4LE LinkedIn Publishing Playbook"
 tags:
   - founder-operating-practice
@@ -12,9 +12,6 @@ status: "proposed"
 version: "0.1.0"
 updated: "2026-10-17"
 description: "Provides the lightweight operational workflow used by the founder to plan, develop, review, publish, measure and improve SC4LE LinkedIn content."
-practice_area: "marketing"
-artifact_type: "playbook"
-parent_artifact: "founder-operating-practices/marketing/sc4le-linkedin-publishing-operating-practice.md"
 ---
 
 # SC4LE LinkedIn Publishing Playbook
