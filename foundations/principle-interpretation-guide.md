@@ -2,8 +2,8 @@
 schema: sc4le-standard-v1
 title: "SC4LE Principle Interpretation Guide"
 owner: "CDA"
-status: "draft"
-version: "0.1.0"
+status: "Approved"
+version: "1.0.0"
 updated: "2026-10-19"
 tags:
   - "foundations"
