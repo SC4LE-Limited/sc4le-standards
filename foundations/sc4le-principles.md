@@ -3,215 +3,306 @@ schema: sc4le-standard-v1
 title: "SC4LE Principles"
 owner: "CDA"
 status: "approved"
-version: "1.0.1"
-updated: "2026-10-17"
-tags: ["foundations", "principles", "sc4le", "behaviour", "alignment"]
+version: "1.0.2"
+updated: "2026-10-19"
+tags:
+  - "foundations"
+  - "principles"
+  - "sc4le"
+  - "behaviour"
+  - "alignment"
 ---
 
 # SC4LE Principles (Canonical Standard)
-The SC4LE Principles are the foundational guardrails that ensure alignment, coherence and ethical integrity across all SC4LE implementations. They guide decision‑making, governance, flow, capability uplift and continuous improvement across federated teams.
 
-These principles are **non‑negotiable** and apply to all roles, services and operating model components.
+The SC4LE Principles are the foundational guardrails that ensure alignment, coherence and ethical integrity across all SC4LE implementations. They guide decision-making, governance, flow, capability uplift and continuous improvement across federated teams.
+
+These principles are **non-negotiable** and apply to all roles, services and operating model components.
 
 ---
 
 # 1. Purpose
+
 The purpose of the SC4LE Principles is to:
 
-- provide **clear, stable guardrails** for decision‑making  
-- reduce **complexity, ambiguity and rework**  
-- ensure **ethical, transparent and responsible** behaviour  
-- enable **federated autonomy** without fragmentation  
-- support **continuous improvement** and adaptive change  
-- maintain **coherence** across diverse teams and domains  
+- provide **clear, stable guardrails** for decision-making
+- reduce **complexity, ambiguity and rework**
+- ensure **ethical, transparent and responsible** behaviour
+- enable **federated autonomy** without fragmentation
+- support **continuous improvement** and adaptive change
+- maintain **coherence** across diverse teams and domains
 
 Principles replace heavy processes with **lightweight, scalable alignment**.
 
 ---
 
-# 2. Why Principles Matter (Cognitive Load & Alignment)
+# 2. Relationship to Other Foundation Artefacts
+
+This document contains the authoritative normative definitions of the SC4LE Meta-Principles.
+
+These principles are the enduring guardrails that govern decision-making, behaviour, governance and organisational design across all SC4LE implementations.
+
+The authoritative interpretation of these principles is maintained in:
+
+`foundations/principle-interpretation-guide.md`
+
+The interpretation guide explains how the principles collectively influence:
+
+- operating model design
+- governance structures
+- authority and accountability
+- decision pathways
+- enablement approaches
+- sensing and feedback mechanisms
+- continuous organisational evolution
+
+The interpretation guide does not redefine, amend or extend the Meta-Principles.
+
+Its purpose is to explain how the principles are expressed throughout the SC4LE Operating Model and supporting standards.
+
+Where interpretation guidance conflicts with a principle definition contained within this document, this document takes precedence.
+
+Together:
+
+- `foundations/sc4le-principles.md` defines the authoritative Meta-Principles
+- `foundations/principle-interpretation-guide.md` explains their architectural and behavioural interpretation
+- operating model standards define how those principles are expressed through governance structures, authority models, sensing mechanisms and operating rhythms
+- supporting standards, practices, playbooks and templates define context-specific implementation approaches
+
+The SC4LE Operating Model should be understood as the collective expression of the Meta-Principles operating together as a coherent system.
+
+No principle belongs exclusively to a single operating model component, and no operating model component owns a principle.
+
+The relationship between principles and operating model elements is many-to-many and should be interpreted accordingly.
+
+---
+
+# 3. Why Principles Matter (Cognitive Load & Alignment)
+
 SC4LE uses principles to:
 
-- reduce cognitive load  
-- accelerate decision‑making  
-- avoid unnecessary escalation  
-- create alignment without bureaucracy  
-- enable autonomy within shared guardrails  
+- reduce cognitive load
+- accelerate decision-making
+- avoid unnecessary escalation
+- create alignment without bureaucracy
+- enable autonomy within shared guardrails
 
 Principles allow teams to **move fast without breaking coherence**.
 
 ---
 
-# 3. The Eight SC4LE Meta‑Principles
+# 4. The Eight SC4LE Meta-Principles
 
-## **1. Clarity Over Complexity**
-Decisions, processes and governance must be simplified wherever possible.  
+## 1. Clarity Over Complexity
+
+Decisions, processes and governance must be simplified wherever possible.
+
 Complexity is only justified when it demonstrably improves outcomes.
 
-**Implications:**  
-- remove unnecessary steps  
-- reduce cognitive load  
-- communicate simply and transparently  
+### Implications
 
-**Anti‑patterns:**  
-- over‑engineering  
-- jargon  
-- unnecessary governance layers  
+- remove unnecessary steps
+- reduce cognitive load
+- communicate simply and transparently
+
+### Anti-Patterns
+
+- over-engineering
+- jargon
+- unnecessary governance layers
 
 ---
 
-## **2. Principles Before Processes**
-Principles guide behaviour; processes support them.  
+## 2. Principles Before Processes
+
+Principles guide behaviour; processes support them.
+
 When in conflict, **principles take precedence**.
 
-**Implications:**  
-- avoid rigid, prescriptive workflows  
-- empower contextual judgement  
-- ensure processes remain lightweight and adaptable  
+### Implications
 
-**Anti‑patterns:**  
-- blind process adherence  
-- “checklist thinking”  
+- avoid rigid, prescriptive workflows
+- empower contextual judgement
+- ensure processes remain lightweight and adaptable
+
+### Anti-Patterns
+
+- blind process adherence
+- checklist thinking
 
 ---
 
-## **3. Federated Autonomy**
+## 3. Federated Autonomy
+
 Decisions should be made **as close to the work as possible**, within shared guardrails.
 
-**Implications:**  
-- LDAs interpret principles locally  
-- teams own operational decisions  
-- escalation occurs only when thresholds are exceeded  
+### Implications
 
-**Anti‑patterns:**  
-- centralised bottlenecks  
-- uncontrolled fragmentation  
+- LDAs interpret principles locally
+- teams own operational decisions
+- escalation occurs only when thresholds are exceeded
 
----
+### Anti-Patterns
 
-## **4. Sensing Before Steering**
-Governance and leadership decisions must be informed by **real‑time insight**, not assumptions.
-
-**Implications:**  
-- integrate AI‑enabled sensing  
-- use data to detect risk early  
-- adjust governance based on evidence  
-
-**Anti‑patterns:**  
-- decisions made without evidence  
-- lagging indicators only  
+- centralised bottlenecks
+- uncontrolled fragmentation
 
 ---
 
-## **5. Flow as a First‑Class Outcome**
-Flow is a strategic asset.  
+## 4. Sensing Before Steering
+
+Governance and leadership decisions must be informed by **real-time insight**, not assumptions.
+
+### Implications
+
+- integrate AI-enabled sensing
+- use data to detect risk early
+- adjust governance based on evidence
+
+### Anti-Patterns
+
+- decisions made without evidence
+- lagging indicators only
+
+---
+
+## 5. Flow as a First-Class Outcome
+
+Flow is a strategic asset.
+
 Work should move through the system with minimal friction, delay or rework.
 
-**Implications:**  
-- prioritise bottleneck removal  
-- reduce handoffs and dependencies  
-- optimise for throughput, not utilisation  
+### Implications
 
-**Anti‑patterns:**  
-- local optimisation  
-- over‑specialisation  
-- excessive WIP  
+- prioritise bottleneck removal
+- reduce handoffs and dependencies
+- optimise for throughput, not utilisation
+
+### Anti-Patterns
+
+- local optimisation
+- over-specialisation
+- excessive WIP
 
 ---
 
-## **6. Build–Embed–Withdraw**
+## 6. Build–Embed–Withdraw
+
 Enablement teams build capability, embed behaviours, and withdraw once maturity is reached.
 
-**Implications:**  
-- avoid long‑term external dependency  
-- uplift LDAs and teams  
-- ensure sustainable capability  
+### Implications
 
-**Anti‑patterns:**  
-- permanent coaching presence  
-- dependency on central teams  
+- avoid long-term external dependency
+- uplift LDAs and teams
+- ensure sustainable capability
 
----
+### Anti-Patterns
 
-## **7. Continuous Improvement as Culture**
-Improvement is not an event — it is a **habit**.
-
-**Implications:**  
-- regular retrospectives  
-- sensing‑driven adjustments  
-- leadership modelling learning behaviours  
-
-**Anti‑patterns:**  
-- one‑off initiatives  
-- no feedback loops  
+- permanent coaching presence
+- dependency on central teams
 
 ---
 
-## **8. Ethics & Transparency by Design**
+## 7. Continuous Improvement as Culture
+
+Improvement is not an event. It is a **habit**.
+
+### Implications
+
+- regular retrospectives
+- sensing-driven adjustments
+- leadership modelling learning behaviours
+
+### Anti-Patterns
+
+- one-off initiatives
+- no feedback loops
+
+---
+
+## 8. Ethics & Transparency by Design
+
 Ethical considerations and transparency must be embedded into all decisions, especially those involving AI.
 
-**Implications:**  
-- clear audit trails  
-- explainable decisions  
-- responsible AI usage  
-- customer trust and regulatory alignment  
+### Implications
 
-**Anti‑patterns:**  
-- black‑box decisions  
-- unclear accountability  
+- clear audit trails
+- explainable decisions
+- responsible AI usage
+- customer trust and regulatory alignment
 
----
+### Anti-Patterns
 
-# 4. How Principles Are Used
-
-## 4.1 In Governance
-- define decision rights  
-- shape escalation thresholds  
-- guide assurance  
-- ensure ethical oversight  
-
-## 4.2 In Operating Model Design
-- shape roles and rhythms  
-- define governance pathways  
-- inform value‑stream design  
-
-## 4.3 In Enablement Cycles
-- embedded during Establish and Embed phases  
-- used to assess maturity  
-- reinforced through coaching  
-
-## 4.4 In AI‑Enabled Sensing
-- define ethical boundaries  
-- guide interpretation of signals  
-- ensure transparency  
+- black-box decisions
+- unclear accountability
 
 ---
 
-# 5. Principle Interpretation Guide
-Each principle includes:
+# 5. How Principles Are Used
 
-- **Intent**  
-- **Behaviours**  
-- **Anti‑patterns**  
-- **Decision tests**  
+## 5.1 In Governance
 
-This guide is provided in `/foundations/principle-interpretation-guide.md` (to be created).
+- define decision rights
+- shape escalation thresholds
+- guide assurance
+- ensure ethical oversight
+
+## 5.2 In Operating Model Design
+
+- shape roles and rhythms
+- define governance pathways
+- inform value-stream design
+
+## 5.3 In Enablement Cycles
+
+- embedded during Establish and Embed phases
+- used to assess maturity
+- reinforced through coaching
+
+## 5.4 In AI-Enabled Sensing
+
+- define ethical boundaries
+- guide interpretation of signals
+- ensure transparency
 
 ---
 
-# 6. Principle Adoption Maturity
+# 6. Principle Interpretation
+
+The authoritative interpretation of the SC4LE Meta-Principles is maintained in:
+
+`foundations/principle-interpretation-guide.md`
+
+The interpretation guide explains how the principles are expressed through:
+
+- operating model design
+- governance structures
+- organisational behaviour
+- decision-making
+- enablement approaches
+- sensing and feedback mechanisms
+- continuous organisational evolution
+
+The interpretation guide is explanatory rather than normative.
+
+This document remains the authoritative source for the Meta-Principles and their definitions.
+
+---
+
+# 7. Principle Adoption Maturity
 
 Levels:
 
-1. **Initial** — principles known but not applied  
-2. **Emerging** — inconsistent application  
-3. **Established** — principles guide most decisions  
-4. **Optimised** — principles embedded in governance and flow  
-5. **Adaptive** — principles drive continuous improvement and sensing  
+1. **Initial** — principles known but not applied
+2. **Emerging** — inconsistent application
+3. **Established** — principles guide most decisions
+4. **Optimised** — principles embedded in governance and flow
+5. **Adaptive** — principles drive continuous improvement and sensing
 
 ---
 
-# 7. Version History
-- **1.1.0** — Merged canonical version (2026‑06‑08)  
-- **1.0.0** — Initial canonical release  
+# 8. Version History
 
+- **1.0.2** — Added relationship to Foundation Artefacts and formal cross-reference to the Principle Interpretation Guide (2026-10-19)
+- **1.0.1** — Canonical principles refresh (2026-10-17)
+- **1.0.0** — Initial canonical release
