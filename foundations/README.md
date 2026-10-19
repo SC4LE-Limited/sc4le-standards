@@ -1,9 +1,12 @@
 # Foundations
 
-The Foundations layer defines the core concepts, principles, and architectural elements that underpin the SC4LE Standard.  
-It provides the shared mental models, language, and structural patterns that enable federated autonomy without fragmentation.
+The Foundations layer defines the core concepts, principles, architectural assumptions and shared language that underpin SC4LE.
 
-Foundations reduce cognitive load, accelerate decision‑making, and ensure that every SC4LE service, role, and governance mechanism is built on a coherent, stable base.
+It provides the intellectual and structural basis upon which all operating models, governance structures, standards, practices and services are built.
+
+The Foundations layer exists to create coherence without unnecessary centralisation. It establishes the shared understanding that enables federated autonomy, consistent decision-making and organisational adaptability.
+
+Foundations are intentionally stable and relatively slow-changing. They are not operational procedures or implementation guidance. They are the load-bearing architecture of SC4LE.
 
 ---
 
@@ -11,73 +14,186 @@ Foundations reduce cognitive load, accelerate decision‑making, and ensure that
 
 The Foundations layer exists to:
 
-- Establish the **core principles** that guide behaviour and decision‑making.  
-- Define the **structural elements** of the SC4LE Operating Model.  
-- Provide **shared language** and **conceptual clarity** across teams, LDAs, and the CDA.  
-- Anchor the **governance model**, **decision pathways**, and **templates**.  
-- Ensure that SC4LE remains coherent as it scales across domains.  
-- Enable federated autonomy by giving teams a clear, lightweight framework to operate within.
+- establish the core principles that guide behaviour and decision-making
+- define the underlying concepts and architectural patterns that shape SC4LE
+- provide shared language and conceptual clarity across organisations, CDAs, LDAs and teams
+- create alignment without requiring heavy governance
+- reduce cognitive load through common mental models
+- support federated autonomy without fragmentation
+- maintain coherence as SC4LE evolves across domains and implementations
 
-Foundations are intentionally minimal.  
-They are not a rulebook — they are the *load‑bearing architecture* of SC4LE.
+The Foundations layer answers:
 
----
+> Why does SC4LE work the way it does?
 
-# 2. What Foundations Contain
+It does not define implementation details.
 
-The Foundations folder includes the following canonical elements:
-
-## 2.1 Shared Principles  
-The SC4LE Shared Principles define the behavioural and decision‑making guardrails that apply across all domains.  
-They reduce the need for heavy governance by providing a consistent, lightweight framework for alignment.
-
-File:  
-- `shared-principles.md`
-
-## 2.2 Governance Model  
-The SC4LE Governance Model defines how decisions flow through the federated structure:  
-Executive Leadership → CDA → LDAs → Teams → Sensing → Improvement.
-
-File:  
-- `SC4LE-GOVERNANCE.md`
-
-## 2.3 Operating Model (Referenced)  
-The Operating Model describes how SC4LE functions as a federated enablement system, including roles, rhythms, and the enablement cycle.
-
-Referenced folder:  
-- `/operating-model/`
-
-## 2.4 Templates and Standards (Referenced)  
-Foundations anchor the templates and standards used across SC4LE, ensuring consistency and traceability.
-
-Referenced folder:  
-- `/templates/`
-
-## 2.5 Diagrams (Referenced)  
-Foundational diagrams provide visual representations of the SC4LE architecture, governance, and sensing loops.
-
-Referenced folder:  
-- `/diagrams/`
+Implementation guidance belongs within the Operating Model, Standards and Operating Practices layers.
 
 ---
 
-# 3. How Foundations Fit Into the SC4LE Architecture
+# 2. Information Hierarchy
 
-SC4LE is built as a **federated enablement system**.  
-Foundations sit at the base of this system and provide the structural integrity required for:
+The Foundations layer operates through a defined hierarchy of artefacts.
 
-- **Autonomy** at the team and domain level  
-- **Alignment** across the organisation  
-- **Scalability** without central bottlenecks  
-- **Governance** without bureaucracy  
-- **Continuous improvement** through sensing and feedback loops  
+```text
+Narrative Architecture
+          ↓
+SC4LE Meta-Principles
+          ↓
+Principle Interpretation
+          ↓
+Operating Model
+          ↓
+Standards and Practices
+```
 
-Foundations ensure that every SC4LE component — services, governance, templates, roles, and diagrams — is coherent and interoperable.
+Each layer builds upon the layers above it.
+
+The purpose of the Foundations layer is to establish and explain the first three levels of this hierarchy.
 
 ---
 
-# 4. When to Use the Foundations Layer
+# 3. What Foundations Contain
 
-Use the Foundations layer when:
+## 3.1 Narrative Architecture
 
-- Designing or updating SC4
+The Narrative Architecture explains the worldview, assumptions and conceptual patterns that underpin SC4LE.
+
+It establishes:
+
+- why SC4LE exists
+- how SC4LE views organisations and complexity
+- the relationship between principles, governance and adaptation
+- the conceptual structure of the SC4LE pattern
+
+Primary artefact:
+
+- `sc4le-narrative-architecture.md`
+
+---
+
+## 3.2 SC4LE Meta-Principles
+
+The Meta-Principles are the authoritative behavioural and decision-making guardrails for SC4LE.
+
+They define the core principles that apply across:
+
+- governance
+- operating models
+- enablement
+- sensing
+- delivery
+- continuous improvement
+
+The principles are normative.
+
+They define what must remain true.
+
+Primary artefact:
+
+- `sc4le-principles.md`
+
+---
+
+## 3.3 Principle Interpretation
+
+The Principle Interpretation Guide explains how the Meta-Principles collectively shape and govern the SC4LE system.
+
+It provides:
+
+- architectural interpretation
+- behavioural interpretation
+- operating-model context
+- organisational significance
+- principle relationships
+
+The interpretation guide is explanatory rather than normative.
+
+It explains how the principles are expressed.
+
+Primary artefact:
+
+- `principle-interpretation-guide.md`
+
+---
+
+# 4. Relationship to the Operating Model Layer
+
+The Foundations layer establishes the concepts and principles that guide SC4LE.
+
+The Operating Model layer defines how those principles are expressed through:
+
+- governance structures
+- authority boundaries
+- decision pathways
+- sensing mechanisms
+- enablement approaches
+- organisational rhythms
+
+The Operating Model does not redefine the principles.
+
+It operationalises them.
+
+---
+
+# 5. Governance of Foundation Artefacts
+
+The Central Design Authority (CDA) is responsible for stewarding the Foundations layer.
+
+Changes to foundation artefacts should be approached with caution because they influence every downstream layer of SC4LE.
+
+When updating a foundation artefact:
+
+1. Preserve alignment with existing principles and architectural intent.
+2. Avoid introducing competing terminology or alternative frameworks.
+3. Ensure changes remain consistent with the Narrative Architecture.
+4. Assess impacts on the Operating Model and supporting standards.
+5. Maintain clarity and minimise unnecessary complexity.
+
+Foundation artefacts should evolve when understanding improves, not in response to local implementation preferences.
+
+---
+
+# 6. Relationship Between Foundation Artefacts
+
+The relationship between the core foundation artefacts is:
+
+| Artefact | Purpose |
+|-----------|----------|
+| `sc4le-narrative-architecture.md` | Explains the SC4LE worldview and conceptual model |
+| `sc4le-principles.md` | Defines the authoritative Meta-Principles |
+| `principle-interpretation-guide.md` | Explains how the principles are interpreted and applied across the system |
+
+Together, these artefacts establish the conceptual and behavioural foundations of SC4LE.
+
+---
+
+# 7. Design Philosophy
+
+The Foundations layer itself should embody the SC4LE principles.
+
+In particular:
+
+- Clarity Over Complexity
+- Principles Before Processes
+- Federated Autonomy
+- Continuous Improvement as Culture
+
+Foundation artefacts should remain concise, understandable and maintainable.
+
+The goal is not to create additional governance.
+
+The goal is to create shared understanding.
+
+---
+
+# 8. Related Repository Layers
+
+The Foundations layer should be read alongside:
+
+- `/operating-model/` – structural expression of SC4LE
+- `/standards/` – governed implementation standards
+- `/founder-operating-practices/` – documented operational practices and organisational memory
+
+Together these layers provide a complete view of SC4LE from principle through implementation.
