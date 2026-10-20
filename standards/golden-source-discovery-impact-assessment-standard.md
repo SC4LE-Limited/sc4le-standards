@@ -9,8 +9,8 @@ tags:
   - copilot
   - ai-governance
 owner: CDA
-status: proposed
-version: 0.3.0
+status: Active
+version: 1.0.0
 updated: 2026-10-20
 description: "Defines the mandatory discovery impact assessment process used to identify, classify and govern repository changes that could affect discoverability, navigation, authority, metadata, dependencies, Golden Source compliance or understanding across the SC4LE Golden Source."
 ---
