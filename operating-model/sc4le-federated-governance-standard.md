@@ -3,7 +3,7 @@ schema: sc4le-standard-v1
 title: "SC4LE Federated Governance Standard"
 tags: ["governance", "standard", "lda", "decision-flow"]
 owner: "Scott Zebedee"
-status: "draft"
+status: "active"
 version: "1.0.0"
 updated: "2026-08-22"
 description: "The authoritative standard describing how federated governance operates within SC4LE, including escalation pathways and decision ownership."
