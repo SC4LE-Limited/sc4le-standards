@@ -2,7 +2,7 @@
 schema: sc4le-standard-v1
 title: "SC4LE Operating Model Standard"
 owner: "SC4LE"
-status: "draft"
+status: "active"
 version: "1.1.0"
 updated: "2026-10-21"
 tags:
