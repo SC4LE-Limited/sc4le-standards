@@ -3,7 +3,7 @@ schema: sc4le-standard-v1
 title: "Federated Governance Model"
 tags: ["governance", "federated", "lda", "decision-making"]
 owner: "Scott Zebedee"
-status: "draft"
+status: "active"
 version: "1.0.0"
 updated: "2026-08-22"
 description: "Explains how SC4LE uses federated governance through Local Design Authorities to balance autonomy with strategic alignment."
