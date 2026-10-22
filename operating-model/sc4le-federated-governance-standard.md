@@ -9,7 +9,7 @@ tags:
   - "decision-flow"
   - "assurance"
 owner: "SC4LE"
-status: "draft"
+status: "active"
 version: "1.1.0"
 updated: "2026-10-22"
 description: "The authoritative standard defining how federated governance operates within SC4LE, including governance responsibilities, decision rights, escalation pathways, operating rhythms and assurance requirements."
