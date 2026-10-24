@@ -13,11 +13,11 @@ tags:
   - "alignment"
 ---
 
-The SC4LE Principles are the foundational ethical guardrails that ensure alignment, coherence and ethical integrity across all SC4LE implementations. They guide decision-making, governance, flow, capability uplift and continuous improvement across federated teams.
+The SC4LE Principles are the foundational ethical guardrails that provide alignment, coherence and integrity across the federated SC4LE system. They guide decision-making, governance, flow, capability uplift and continuous improvement across all roles, services and operating model components.
 
-The SC4LE Principles enable alignment through shared principles across the federated SC4LE system.
+The Principles enable alignment through shared understanding and consistent application of SC4LE ways of working, regardless of organisational structure, function or location.
 
-These principles are **non-negotiable** and apply to all roles, services and operating model components.
+The SC4LE Principles are non-negotiable and must be upheld across all SC4LE implementations.
 
 ---
 
@@ -25,30 +25,28 @@ These principles are **non-negotiable** and apply to all roles, services and ope
 
 The purpose of the SC4LE Principles is to:
 
-- provide **clear, stable guardrails** for decision-making
-- reduce **complexity, ambiguity and rework**
-- ensure **ethical, transparent and responsible** behaviour
-- enable **federated autonomy** without fragmentation
-- support **continuous improvement** and adaptive change
-- maintain **coherence** across diverse teams and domains
+- provide clear, stable guardrails for decision-making
+- reduce complexity, ambiguity and rework
+- ensure ethical, transparent and responsible behaviour
+- enable federated autonomy without fragmentation
+- support continuous improvement and adaptive change
+- maintain coherence across diverse teams and domains
 
-Principles replace heavy processes with **lightweight, scalable alignment**.
-
-The Principles act as ethical guardrails, enabling alignment through shared principles across the federated SC4LE system.
+Principles replace heavy processes with lightweight, scalable alignment.
 
 ---
 
 ## 2. Relationship to Other Foundation Artefacts
 
-This document contains the authoritative normative definitions of the SC4LE Principles.
+This document contains the authoritative definitions of the SC4LE Principles.
 
-These principles are the enduring ethical guardrails that govern decision-making, behaviour, governance and organisational design across all SC4LE implementations.
+The Principles govern decision-making, behaviour, governance and organisational design across all SC4LE implementations.
 
-The authoritative interpretation of these principles is maintained in:
+The authoritative interpretation of the Principles is maintained in:
 
 `foundations/principle-interpretation-guide.md`
 
-The interpretation guide explains how the principles collectively influence:
+The interpretation guide explains how the Principles influence:
 
 - operating model design
 - governance structures
@@ -60,7 +58,7 @@ The interpretation guide explains how the principles collectively influence:
 
 The interpretation guide does not redefine, amend or extend the Principles.
 
-Its purpose is to explain how the principles are expressed throughout the SC4LE Operating Model and supporting standards.
+Its purpose is to explain how the Principles are expressed throughout the SC4LE Operating Model and supporting standards.
 
 Where interpretation guidance conflicts with a principle definition contained within this document, this document takes precedence.
 
@@ -68,20 +66,20 @@ Together:
 
 - `foundations/sc4le-principles.md` defines the authoritative Principles
 - `foundations/principle-interpretation-guide.md` explains their architectural and behavioural interpretation
-- operating model standards define how those principles are expressed through governance structures, authority models, sensing mechanisms and operating rhythms
+- operating model standards define how the Principles are expressed through governance structures, authority models, sensing mechanisms and operating rhythms
 - supporting standards, practices, playbooks and templates define context-specific implementation approaches
 
-The SC4LE Operating Model should be understood as the collective expression of the Principles operating together as a coherent system.
+The SC4LE Operating Model is the collective expression of the Principles operating as a coherent system.
 
 No principle belongs exclusively to a single operating model component, and no operating model component owns a principle.
 
-The relationship between principles and operating model elements is many-to-many and should be interpreted accordingly.
+The relationship between principles and operating model elements is many-to-many.
 
 ---
 
-## 3. Why Principles Matter (Cognitive Load & Alignment)
+## 3. Why Principles Matter
 
-SC4LE uses principles to:
+SC4LE uses Principles to:
 
 - reduce cognitive load
 - accelerate decision-making
@@ -89,7 +87,7 @@ SC4LE uses principles to:
 - create alignment without bureaucracy
 - enable autonomy within shared guardrails
 
-Principles allow teams to **move fast without breaking coherence**.
+Principles allow teams to move fast without breaking coherence.
 
 ---
 
@@ -119,7 +117,7 @@ Complexity is only justified when it demonstrably improves outcomes.
 
 Principles guide behaviour; processes support them.
 
-When in conflict, **principles take precedence**.
+When in conflict, principles take precedence.
 
 #### Implications
 
@@ -136,7 +134,7 @@ When in conflict, **principles take precedence**.
 
 ### 3. Federated Autonomy
 
-Decisions should be made **as close to the work as possible**, within shared guardrails.
+Decisions should be made as close to the work as possible, within shared guardrails.
 
 #### Implications
 
@@ -153,7 +151,7 @@ Decisions should be made **as close to the work as possible**, within shared gua
 
 ### 4. Sensing Before Steering
 
-Governance and leadership decisions must be informed by **real-time insight**, not assumptions.
+Governance and leadership decisions must be informed by real-time insight, not assumptions.
 
 #### Implications
 
@@ -184,13 +182,13 @@ Work should move through the system with minimal friction, delay or rework.
 
 - local optimisation
 - over-specialisation
-- excessive WIP
+- excessive WIP and aging
 
 ---
 
 ### 6. Build–Embed–Withdraw
 
-Enablement teams build capability, embed behaviours, and withdraw once maturity is reached.
+Enablement teams build capability, embed behaviours and withdraw once maturity is reached.
 
 #### Implications
 
@@ -207,7 +205,7 @@ Enablement teams build capability, embed behaviours, and withdraw once maturity 
 
 ### 7. Continuous Improvement as Culture
 
-Improvement is not an event. It is a **habit**.
+Improvement is not an event. It is a habit.
 
 #### Implications
 
@@ -275,7 +273,7 @@ The authoritative interpretation of the SC4LE Principles is maintained in:
 
 `foundations/principle-interpretation-guide.md`
 
-The interpretation guide explains how the principles are expressed through:
+The interpretation guide explains how the Principles are expressed through:
 
 - operating model design
 - governance structures
@@ -305,7 +303,7 @@ Levels:
 
 ## 8. Version History
 
-- **1.1.0** — Aligned terminology around SC4LE Principles as the canonical concept, retired Meta-Principles terminology, and clarified the role of Principles as ethical guardrails enabling alignment through shared principles (2026-10-23)
+- **1.1.0** — Aligned terminology around SC4LE Principles as the canonical concept, retired Meta-Principles terminology, simplified wording and clarified the role of the Principles within the SC4LE operating model (2026-10-23)
 - **1.0.2** — Added relationship to Foundation Artefacts and formal cross-reference to the Principle Interpretation Guide (2026-10-19)
 - **1.0.1** — Canonical principles refresh (2026-10-17)
 - **1.0.0** — Initial canonical release
