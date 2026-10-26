@@ -17,10 +17,6 @@
 ./foundations/evidence-base.md
 ./foundations/sc4le-narrative-architecture.md
 ./foundations/sc4le-principles.md
-./maturity-model/README.md
-./maturity-model/maturity-assessment-template.md
-./maturity-model/maturity-dashboard.md
-./maturity-model/maturity-heatmap.md
 ./operating-model/ai-enabled-sensing-operating-model.md
 ./operating-model/decision-pathways/cda-decision-guide.md
 ./operating-model/decision-pathways/escalation-thresholds.md
@@ -28,7 +24,10 @@
 ./operating-model/decision-pathways/standard-decision-flow.md
 ./operating-model/federated-governance.md
 ./operating-model/index.md
-./operating-model/maturity-model.md
+./operating-model/maturity/README.md
+./operating-model/maturity/maturity-model.md
+./operating-model/maturity/maturity-assessment-template.md
+./operating-model/maturity/maturity-dashboard.md
 ./operating-model/operating-model-index.md
 ./operating-model/rhythms/flow-cadence.md
 ./operating-model/rhythms/improvement-cadence.md

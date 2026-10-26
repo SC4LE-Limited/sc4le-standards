@@ -818,11 +818,12 @@ This standard is the authoritative architectural reference for the Operating Mod
 
 ### 13.7 Maturity
 
-- `operating-model/maturity-model.md`
-- `maturity-model/README.md`
-- `maturity-model/maturity-assessment-template.md`
-- `maturity-model/maturity-dashboard.md`
-- `maturity-model/maturity-heatmap.md`
+maturity-model.md is authoritative and other files are derive from it.
+
+- `operating-model/maturity/README.md`
+- `operating-model/maturity/maturity-model.md`
+- `operating-model/maturity/maturity-assessment-template.md`
+- `operating-model/maturity/maturity-dashboard.md`
 
 Supporting artefacts must remain aligned with:
 
