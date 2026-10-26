@@ -9,7 +9,7 @@ updated: "2026-08-22"
 description: "Index of all SC4LE operating model components, including roles, rhythms, decision pathways, and governance structures."
 ---
 
-# SC4LE Operating Modelindex 
+## SC4LE Operating Modelindex 
 ### Canonical Overview of the SC4LE Standard  
 © 2026 SC4LE Limited
 
