@@ -780,8 +780,7 @@ This standard is the authoritative architectural reference for the Operating Mod
 ### 13.1 Operating Model Overview and Navigation
 
 - `operating-model/sc4le-model-overview.md`
-- `operating-model/operating-model-index.md`
-- `operating-model/index.md`
+- `operating-model/README.md`
 
 ### 13.2 Federated Governance
 

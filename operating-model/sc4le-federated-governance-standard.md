@@ -684,7 +684,6 @@ This standard should be read alongside the following artefacts.
 - `operating-model/sc4le-operating-model-standard.md`
 - `operating-model/sc4le-model-overview.md`
 - `operating-model/federated-governance.md`
-- `operating-model/operating-model-index.md`
 
 #### 15.3 Role Definitions
 
