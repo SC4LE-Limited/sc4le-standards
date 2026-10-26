@@ -1,12 +1,12 @@
-# SC4LE Operating Model Index  
+# SC4LE Operating Model README  
 ### Authoritative Map of the SC4LE Operating Model  
 © 2026 SC4LE Limited
 
 ---
 
-## 1. Purpose of the Operating Model Index
+## 1. Purpose of the Operating Model README
 
-The SC4LE Operating Model Index is the single, governed reference point for all artefacts that define how SC4LE works in practice.  
+The SC4LE Operating Model README is the single, governed reference point for all artefacts that define how SC4LE works in practice.  
 It provides:
 
 - a complete inventory of operating model components  
@@ -15,7 +15,7 @@ It provides:
 - relationships to SC4LE’s golden sources  
 - a navigable structure for contributors, clients, and automation  
 
-This index ensures the Operating Model remains coherent, governable, and easy to maintain.
+This README ensures the Operating Model remains coherent, governable, and easy to maintain.
 
 ---
 
@@ -42,7 +42,6 @@ Below is the complete, governed list of SC4LE Operating Model artefacts, grouped
 
 | File | Purpose |
 |------|---------|
-| **operating-model-index.md** | The master index for the Operating Model domain. |
 | **sc4le-model-overview.md** | High‑level overview of the SC4LE Operating Model — principles, structure, and intent. |
 | **sc4le-operating-model-standard.md** | The governed standard for the Operating Model — versioning, approvals, stewardship. |
 | **maturity-model.md** | Defines how organisations progress through SC4LE maturity stages. |
@@ -145,9 +144,9 @@ Current Operating Model version: **1.1.0**
 
 ---
 
-## 7. How to Use This Index
+## 7. How to Use This README
 
-Use this index to:
+Use this README to:
 
 - locate the correct Operating Model artefact  
 - understand governance boundaries  
@@ -157,7 +156,7 @@ Use this index to:
 - support sensing engine domain mapping  
 - ensure structural and governance coherence  
 
-This index is the master map of the SC4LE Operating Model.
+This README is the master map of the SC4LE Operating Model.
 
 ---
 
