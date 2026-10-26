@@ -153,7 +153,7 @@ operating-model/
 - `operating-model/sc4le-operating-model-standard.md`
 - `operating-model/federated-governance.md`
 - `operating-model/ai-enabled-sensing-operating-model.md`
-- `operating-model/index.md`
+- `operating-model/README.md`
 
 ---
 
