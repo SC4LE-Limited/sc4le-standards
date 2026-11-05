@@ -18,7 +18,7 @@ SC4LE (Strategic Centre for Leading Enablement) offers a different approach. It 
 
 SC4LE is applicable across organisation sizes: preventing complexity in startups, stabilising scale‑ups, restoring adaptability in SMEs, and unwinding systemic complexity in large enterprises.
 
-The strategic promise is simple:  
+The strategic promise is simple:
 **SC4LE enables organisations to evolve faster than their environment — without relying on episodic transformation or centralised control.**
 
 ---
@@ -31,10 +31,10 @@ Every organisation begins with clarity. Small teams share context, decisions are
 
 In highly regulated or risk‑sensitive environments, controls multiply. Each new incident, audit finding, or regulatory update adds another layer of governance. Over time:
 
-- Controls overlap  
-- Processes contradict  
-- Decision pathways fragment  
-- Accountability becomes unclear  
+- Controls overlap
+- Processes contradict
+- Decision pathways fragment
+- Accountability becomes unclear
 
 The intent is safety. The outcome is confusion.
 
@@ -42,10 +42,10 @@ The intent is safety. The outcome is confusion.
 
 People cannot learn, adapt, or innovate when they are cognitively overloaded. In complex organisations:
 
-- Teams spend more time navigating governance than delivering value  
-- Leaders struggle to communicate intent through layers of interpretation  
-- Operational teams lose sight of purpose and focus on compliance  
-- Innovation becomes a luxury rather than a necessity  
+- Teams spend more time navigating governance than delivering value
+- Leaders struggle to communicate intent through layers of interpretation
+- Operational teams lose sight of purpose and focus on compliance
+- Innovation becomes a luxury rather than a necessity
 
 Cognitive overload becomes a **strategic risk**, not just an operational one.
 
@@ -53,9 +53,9 @@ Cognitive overload becomes a **strategic risk**, not just an operational one.
 
 As complexity grows, leadership messages become distorted:
 
-- Vision becomes diluted  
-- Priorities become unclear  
-- Strategy becomes disconnected from execution  
+- Vision becomes diluted
+- Priorities become unclear
+- Strategy becomes disconnected from execution
 
 Operational teams do not resist change — they simply cannot see it clearly.
 
@@ -63,10 +63,10 @@ Operational teams do not resist change — they simply cannot see it clearly.
 
 Organisations trapped in complexity:
 
-- Change slowly  
-- Change episodically  
-- Change reactively  
-- Change with high cost and low sustainability  
+- Change slowly
+- Change episodically
+- Change reactively
+- Change with high cost and low sustainability
 
 This is the complexity trap. SC4LE exists to break it.
 
@@ -80,11 +80,11 @@ Traditional transformation approaches fail not because they are poorly executed,
 
 Centralised Centres of Excellence (CoEs):
 
-- Become bottlenecks  
-- Are spread too thin  
-- Cannot understand local context  
-- Create dependency rather than capability  
-- Slow down decision‑making  
+- Become bottlenecks
+- Are spread too thin
+- Cannot understand local context
+- Create dependency rather than capability
+- Slow down decision‑making
 
 Centralisation creates the illusion of control while reducing actual control.
 
@@ -92,10 +92,10 @@ Centralisation creates the illusion of control while reducing actual control.
 
 When governance becomes performative:
 
-- People follow the process, not the purpose  
-- Controls exist without clear outcomes  
-- Compliance replaces learning  
-- Risk is not reduced — it is obscured  
+- People follow the process, not the purpose
+- Controls exist without clear outcomes
+- Compliance replaces learning
+- Risk is not reduced — it is obscured
 
 This is governance theatre: activity without impact.
 
@@ -103,9 +103,9 @@ This is governance theatre: activity without impact.
 
 Episodic change assumes:
 
-- Stability between interventions  
-- Predictable environments  
-- Linear cause‑and‑effect  
+- Stability between interventions
+- Predictable environments
+- Linear cause‑and‑effect
 
 None of these assumptions hold in modern organisations.
 
@@ -113,10 +113,10 @@ None of these assumptions hold in modern organisations.
 
 As organisations grow:
 
-- Decisions require more approvals  
-- More stakeholders are involved  
-- More documentation is required  
-- More meetings are needed  
+- Decisions require more approvals
+- More stakeholders are involved
+- More documentation is required
+- More meetings are needed
 
 Decision latency becomes a structural tax.
 
@@ -124,15 +124,15 @@ Decision latency becomes a structural tax.
 
 Leaders often believe:
 
-- More controls = more safety  
-- More governance = more alignment  
-- More process = more consistency  
+- More controls = more safety
+- More governance = more alignment
+- More process = more consistency
 
 In reality:
 
-- More controls = more confusion  
-- More governance = more delay  
-- More process = more cognitive load  
+- More controls = more confusion
+- More governance = more delay
+- More process = more cognitive load
 
 Traditional models fail because they try to **control complexity** rather than **reduce it**.
 
@@ -144,15 +144,15 @@ SC4LE begins with a different set of assumptions about organisations, complexity
 
 ## 4.1 Principles Over Processes
 
-Processes create compliance.  
+Processes create compliance.
 Principles create coherence.
 
 SC4LE centralises:
 
-- Purpose  
-- Principles  
-- Standards of behaviour  
-- Strategic intent  
+- Purpose
+- Principles
+- Standards of behaviour
+- Strategic intent
 
 Everything else is federated.
 
@@ -160,11 +160,11 @@ Everything else is federated.
 
 SC4LE distributes control to where context lives:
 
-- Local Design Authorities  
-- Central Design Authority  
-- Clear boundaries  
-- Shared principles  
-- Continuous feedback loops  
+- Central Design Authority
+- Local Design Authorities
+- Clear boundaries
+- Shared principles
+- Continuous feedback loops
 
 This creates autonomy without fragmentation.
 
@@ -172,10 +172,10 @@ This creates autonomy without fragmentation.
 
 SC4LE rejects episodic change. Instead, it embeds:
 
-- sensing  
-- learning  
-- adaptation  
-- improvement  
+- sensing
+- learning
+- adaptation
+- improvement
 
 …into everyday work.
 
@@ -183,17 +183,17 @@ SC4LE rejects episodic change. Instead, it embeds:
 
 AI in SC4LE:
 
-- detects early signals  
-- identifies deviations from principles  
-- simplifies governance  
-- reduces cognitive load  
-- supports human judgment  
+- detects early signals
+- identifies deviations from principles
+- simplifies governance
+- reduces cognitive load
+- supports human judgment
 
 AI does not replace governance — it **augments** it.
 
 ## 4.5 Humans in the Loop
 
-SC4LE is grounded in ethical, transparent, human‑centred governance.  
+SC4LE is grounded in ethical, transparent, human‑centred governance.
 AI supports decisions; it does not make them.
 
 ---
@@ -206,10 +206,10 @@ SC4LE is not a framework. It is a **pattern** — a repeatable way of structurin
 
 The foundation of SC4LE is a set of shared principles that:
 
-- guide decisions  
-- shape behaviours  
-- align teams  
-- reduce ambiguity  
+- guide decisions
+- shape behaviours
+- align teams
+- reduce ambiguity
 
 Principles create coherence without requiring centralised control.
 
@@ -217,11 +217,11 @@ Principles create coherence without requiring centralised control.
 
 Local Design Authorities (LDAs):
 
-- interpret principles in context  
-- design local controls  
-- maintain alignment  
-- sense emerging risks  
-- adapt quickly  
+- interpret principles in context
+- design local controls
+- maintain alignment
+- sense emerging risks
+- adapt quickly
 
 They are the engines of local autonomy.
 
@@ -229,11 +229,11 @@ They are the engines of local autonomy.
 
 The Central Design Authority (CDA):
 
-- defines principles  
-- sets strategic intent  
-- ensures coherence  
-- monitors systemic patterns  
-- intervenes only when necessary  
+- defines principles
+- sets strategic intent
+- ensures coherence
+- monitors systemic patterns
+- intervenes only when necessary
 
 It is a strategic body, not an operational one.
 
@@ -241,9 +241,9 @@ It is a strategic body, not an operational one.
 
 Enablement teams are temporary scaffolding:
 
-- Build  
-- Embed  
-- Withdraw  
+- Build
+- Embed
+- Withdraw
 
 They uplift capability, establish feedback loops, and then move on.
 
@@ -251,11 +251,11 @@ They uplift capability, establish feedback loops, and then move on.
 
 AI provides:
 
-- early warning signals  
-- behavioural insights  
-- governance simplification  
-- regulatory interpretation  
-- continuous feedback  
+- early warning signals
+- behavioural insights
+- governance simplification
+- regulatory interpretation
+- continuous feedback
 
 This maintains alignment after enablement teams withdraw.
 
@@ -263,10 +263,10 @@ This maintains alignment after enablement teams withdraw.
 
 SC4LE embeds:
 
-- sensing  
-- learning  
-- adapting  
-- evolving  
+- sensing
+- learning
+- adapting
+- evolving
 
 …into the operating rhythm of the organisation.
 
@@ -280,11 +280,11 @@ SC4LE is not only for large enterprises. It is a universal pattern that applies 
 
 Startups often scale faster than their operating model can support. SC4LE helps them:
 
-- establish principles early  
-- avoid cultural debt  
-- prevent governance bloat  
-- build clarity into their DNA  
-- scale without losing coherence  
+- establish principles early
+- avoid cultural debt
+- prevent governance bloat
+- build clarity into their DNA
+- scale without losing coherence
 
 Startups benefit by **starting simple and staying simple**.
 
@@ -292,11 +292,11 @@ Startups benefit by **starting simple and staying simple**.
 
 Scale‑ups face the highest risk of complexity collapse. SC4LE helps them:
 
-- maintain alignment as teams multiply  
-- prevent governance fragmentation  
-- scale decision‑making  
-- embed sensing mechanisms  
-- avoid bureaucracy forming under pressure  
+- maintain alignment as teams multiply
+- prevent governance fragmentation
+- scale decision‑making
+- embed sensing mechanisms
+- avoid bureaucracy forming under pressure
 
 Scale‑ups benefit by **scaling clarity faster than headcount**.
 
@@ -304,17 +304,17 @@ Scale‑ups benefit by **scaling clarity faster than headcount**.
 
 SMEs often accumulate:
 
-- ad‑hoc processes  
-- undocumented controls  
-- inconsistent governance  
-- localised decision bottlenecks  
+- ad‑hoc processes
+- undocumented controls
+- inconsistent governance
+- localised decision bottlenecks
 
 SC4LE helps them:
 
-- remove early rigidity  
-- simplify governance  
-- restore adaptability  
-- prepare for future scaling  
+- remove early rigidity
+- simplify governance
+- restore adaptability
+- prepare for future scaling
 
 SMEs benefit by **resetting their operating model before complexity becomes permanent**.
 
@@ -322,19 +322,19 @@ SMEs benefit by **resetting their operating model before complexity becomes perm
 
 Large enterprises face:
 
-- cognitive overload  
-- governance noise  
-- slow decision cycles  
-- fragmented controls  
-- episodic change  
+- cognitive overload
+- governance noise
+- slow decision cycles
+- fragmented controls
+- episodic change
 
 SC4LE helps them:
 
-- unwind accumulated complexity  
-- replace episodic change with continuous adaptation  
-- strengthen regulatory alignment  
-- restore flow and clarity  
-- reduce dependency on central teams  
+- unwind accumulated complexity
+- replace episodic change with continuous adaptation
+- strengthen regulatory alignment
+- restore flow and clarity
+- reduce dependency on central teams
 
 Large enterprises benefit by **becoming adaptive at scale**.
 
@@ -403,38 +403,38 @@ Enablement teams enter a new area.
 
 They map:
 
-- complexity  
-- controls  
-- decision pathways  
-- cognitive load  
-- alignment gaps  
+- complexity
+- controls
+- decision pathways
+- cognitive load
+- alignment gaps
 
 ## 9.3 Align
 
 They establish:
 
-- principles  
-- purpose  
-- boundaries  
-- governance clarity  
+- principles
+- purpose
+- boundaries
+- governance clarity
 
 ## 9.4 Enable
 
 They uplift:
 
-- capability  
-- local design authority  
-- sensing mechanisms  
-- feedback loops  
+- capability
+- local design authority
+- sensing mechanisms
+- feedback loops
 
 ## 9.5 Sense
 
 AI and human sensing detect:
 
-- deviations  
-- risks  
-- misalignment  
-- emerging patterns  
+- deviations
+- risks
+- misalignment
+- emerging patterns
 
 ## 9.6 Adapt
 
@@ -442,15 +442,15 @@ Local teams adjust quickly.
 
 ## 9.7 Withdraw
 
-Enablement teams move on.  
+Enablement teams move on.
 The area becomes self‑sustaining.
 
 This pattern can run:
 
-- sequentially  
-- in parallel  
-- in waves  
-- with pauses for absorption  
+- sequentially
+- in parallel
+- in waves
+- with pauses for absorption
 
 It is non‑linear and adaptive.
 
@@ -460,16 +460,16 @@ It is non‑linear and adaptive.
 
 SC4LE enables organisations to:
 
-- reduce complexity  
-- increase clarity  
-- accelerate decisions  
-- strengthen governance  
-- empower local teams  
-- embed continuous adaptation  
-- evolve faster than their environment  
+- reduce complexity
+- increase clarity
+- accelerate decisions
+- strengthen governance
+- empower local teams
+- embed continuous adaptation
+- evolve faster than their environment
 
-It is not a framework.  
-It is not a methodology.  
+It is not a framework.
+It is not a methodology.
 It is not a transformation programme.
 
 It is a **pattern** for building organisations that can sense, adapt, and evolve continuously.
@@ -480,13 +480,13 @@ It is a **pattern** for building organisations that can sense, adapt, and evolve
 
 This narrative architecture is a **foundational standard**. It should be used to:
 
-- guide value proposition development  
-- shape service offerings  
-- inform messaging  
-- align operating model artefacts  
-- support executive communication  
-- anchor design decisions  
-- provide coherence across the SC4LE ecosystem  
+- guide value proposition development
+- shape service offerings
+- inform messaging
+- align operating model artefacts
+- support executive communication
+- anchor design decisions
+- provide coherence across the SC4LE ecosystem
 
 It is the philosophical and strategic spine of SC4LE.
 
@@ -496,12 +496,12 @@ It is the philosophical and strategic spine of SC4LE.
 
 This document should be read alongside:
 
-- SC4LE Operating Model  
-- SC4LE Design Tokens  
-- SC4LE Schemas  
-- SC4LE Visual System Rules  
-- SC4LE Content System  
-- SC4LE Service Definition Schema  
-- SC4LE Value Proposition Schema  
+- SC4LE Operating Model
+- SC4LE Design Tokens
+- SC4LE Schemas
+- SC4LE Visual System Rules
+- SC4LE Content System
+- SC4LE Service Definition Schema
+- SC4LE Value Proposition Schema
 
 ---
