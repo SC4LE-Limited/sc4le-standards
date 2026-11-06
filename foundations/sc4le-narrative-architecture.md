@@ -3,505 +3,741 @@ schema: sc4le-standard-v1
 title: "SC4LE Narrative Architecture"
 owner: "CDA"
 status: "draft"
-version: "1.0.0"
-updated: "2026-08-26"
+version: "1.1.0"
+updated: "2026-11-06"
 tags: ["foundations", "narrative", "architecture", "sc4le", "story", "positioning"]
 ---
 
-# 1. Executive Summary
+This document defines the narrative architecture used to explain the problem SC4LE addresses, the change it enables and the relationship between that narrative and the authoritative SC4LE standards.
 
-Organisations today face a structural challenge: they are collapsing under the weight of their own complexity. As they grow, they accumulate layers of governance, controls, processes, and communication pathways intended to create safety and alignment. Instead, these layers often create cognitive overload, slow decision‑making, and a widening gap between leadership intent and operational reality.
+It does not redefine the SC4LE Principles, Operating Model, Federated Governance, Maturity Model, services or go-to-market inputs.
 
-Traditional transformation models fail because they treat change as an episodic intervention rather than a continuous capability. Centralised Centres of Excellence become bottlenecks. Governance becomes theatre. Controls multiply without improving outcomes. People become overwhelmed, unable to learn or adapt, and innovation stalls.
+## 1. Purpose
 
-SC4LE (Strategic Centre for Leading Enablement) offers a different approach. It is not a framework, not a methodology, and not a delivery model. It is a **pattern** for building organisations that can sense, adapt, and evolve continuously. SC4LE centralises purpose and principles while federating control. It replaces bureaucracy with clarity, episodic change with continuous adaptation, and centralised authority with distributed decision‑making supported by AI‑enabled sensing.
+The purpose of the SC4LE Narrative Architecture is to:
 
-SC4LE is applicable across organisation sizes: preventing complexity in startups, stabilising scale‑ups, restoring adaptability in SMEs, and unwinding systemic complexity in large enterprises.
+- provide a coherent explanation of why SC4LE exists
+- connect recognisable organisational problems to the SC4LE Operating Model
+- support consistent founder, leadership and practitioner communication
+- distinguish evidence-supported claims from proposed narrative interpretations
+- prevent customer-facing language from redefining approved SC4LE concepts
+- guide value propositions, services, website messaging and executive communication
+- maintain continuity between the problem narrative, SC4LE mechanisms and intended outcomes
 
-The strategic promise is simple:
-**SC4LE enables organisations to evolve faster than their environment — without relying on episodic transformation or centralised control.**
+The narrative architecture is an explanatory layer.
 
----
+It translates the SC4LE Golden Source into language that different audiences can understand without introducing a competing framework, operating model or set of principles.
 
-# 2. The Complexity Trap
+## 2. Narrative Authority
 
-Every organisation begins with clarity. Small teams share context, decisions are fast, and purpose is obvious. But as organisations grow, they accumulate complexity faster than they accumulate capability.
+This document must remain aligned with the following authority chain:
 
-## 2.1 The Accumulation of Governance Layers
+1. `foundations/sc4le-principles.md`
+2. `foundations/principle-interpretation-guide.md`
+3. `operating-model/sc4le-operating-model-standard.md`
+4. `operating-model/sc4le-federated-governance-standard.md`
+5. `operating-model/maturity/maturity-model.md`
+6. `foundations/gtm-standards.md`
+7. `foundations/evidence-base.md`
+8. supporting services, practices, playbooks and communication artefacts
 
-In highly regulated or risk‑sensitive environments, controls multiply. Each new incident, audit finding, or regulatory update adds another layer of governance. Over time:
+Where this narrative conflicts with an approved or active authoritative standard, the authoritative standard takes precedence.
 
-- Controls overlap
-- Processes contradict
-- Decision pathways fragment
-- Accountability becomes unclear
+The canonical definitions of ideal customer profiles, pains, jobs to be done, narrative triggers, consequences and outcomes remain in:
 
-The intent is safety. The outcome is confusion.
+`foundations/gtm-standards.md`
 
-## 2.2 Cognitive Overload as a Systemic Risk
+This document may interpret and connect those inputs, but it must not redefine them.
 
-People cannot learn, adapt, or innovate when they are cognitively overloaded. In complex organisations:
+## 3. The Organisational Challenge
 
-- Teams spend more time navigating governance than delivering value
-- Leaders struggle to communicate intent through layers of interpretation
-- Operational teams lose sight of purpose and focus on compliance
-- Innovation becomes a luxury rather than a necessity
+### 3.1 Growth changes the organisation
 
-Cognitive overload becomes a **strategic risk**, not just an operational one.
+As organisations grow, they usually add:
 
-## 2.3 The Collapse of Leadership Intent
-
-As complexity grows, leadership messages become distorted:
-
-- Vision becomes diluted
-- Priorities become unclear
-- Strategy becomes disconnected from execution
-
-Operational teams do not resist change — they simply cannot see it clearly.
-
-## 2.4 The Result: Slow, Episodic, Fragile Change
-
-Organisations trapped in complexity:
-
-- Change slowly
-- Change episodically
-- Change reactively
-- Change with high cost and low sustainability
-
-This is the complexity trap. SC4LE exists to break it.
-
----
-
-# 3. Why Traditional Models Fail
-
-Traditional transformation approaches fail not because they are poorly executed, but because they are structurally mismatched to the complexity of modern organisations.
-
-## 3.1 Centralised Control Cannot Scale
-
-Centralised Centres of Excellence (CoEs):
-
-- Become bottlenecks
-- Are spread too thin
-- Cannot understand local context
-- Create dependency rather than capability
-- Slow down decision‑making
-
-Centralisation creates the illusion of control while reducing actual control.
-
-## 3.2 Governance Theatre
-
-When governance becomes performative:
-
-- People follow the process, not the purpose
-- Controls exist without clear outcomes
-- Compliance replaces learning
-- Risk is not reduced — it is obscured
-
-This is governance theatre: activity without impact.
-
-## 3.3 Episodic Change Is Too Slow
-
-Episodic change assumes:
-
-- Stability between interventions
-- Predictable environments
-- Linear cause‑and‑effect
-
-None of these assumptions hold in modern organisations.
-
-## 3.4 Fragmented Decision Pathways
-
-As organisations grow:
-
-- Decisions require more approvals
-- More stakeholders are involved
-- More documentation is required
-- More meetings are needed
-
-Decision latency becomes a structural tax.
-
-## 3.5 The Illusion of Control
-
-Leaders often believe:
-
-- More controls = more safety
-- More governance = more alignment
-- More process = more consistency
-
-In reality:
-
-- More controls = more confusion
-- More governance = more delay
-- More process = more cognitive load
-
-Traditional models fail because they try to **control complexity** rather than **reduce it**.
-
----
-
-# 4. The SC4LE Worldview
-
-SC4LE begins with a different set of assumptions about organisations, complexity, and human behaviour.
-
-## 4.1 Principles Over Processes
-
-Processes create compliance.
-Principles create coherence.
-
-SC4LE centralises:
-
-- Purpose
-- Principles
-- Standards of behaviour
-- Strategic intent
-
-Everything else is federated.
-
-## 4.2 Federated Governance
-
-SC4LE distributes control to where context lives:
-
-- Central Design Authority
-- Local Design Authorities
-- Clear boundaries
-- Shared principles
-- Continuous feedback loops
-
-This creates autonomy without fragmentation.
-
-## 4.3 Transformation as a Continuous State
-
-SC4LE rejects episodic change. Instead, it embeds:
-
-- sensing
-- learning
-- adaptation
-- improvement
-
-…into everyday work.
-
-## 4.4 AI as a Sensing Amplifier
-
-AI in SC4LE:
-
-- detects early signals
-- identifies deviations from principles
-- simplifies governance
-- reduces cognitive load
-- supports human judgment
-
-AI does not replace governance — it **augments** it.
-
-## 4.5 Humans in the Loop
-
-SC4LE is grounded in ethical, transparent, human‑centred governance.
-AI supports decisions; it does not make them.
-
----
-
-# 5. The SC4LE Pattern
-
-SC4LE is not a framework. It is a **pattern** — a repeatable way of structuring organisations to reduce complexity and increase adaptability.
-
-## 5.1 Shared Principles
-
-The foundation of SC4LE is a set of shared principles that:
-
-- guide decisions
-- shape behaviours
-- align teams
-- reduce ambiguity
-
-Principles create coherence without requiring centralised control.
-
-## 5.2 Local Design Authorities
-
-Local Design Authorities (LDAs):
-
-- interpret principles in context
-- design local controls
-- maintain alignment
-- sense emerging risks
-- adapt quickly
-
-They are the engines of local autonomy.
-
-## 5.3 Central Design Authority
-
-The Central Design Authority (CDA):
-
-- defines principles
-- sets strategic intent
-- ensures coherence
-- monitors systemic patterns
-- intervenes only when necessary
-
-It is a strategic body, not an operational one.
-
-## 5.4 Enablement Teams
-
-Enablement teams are temporary scaffolding:
-
-- Build
-- Embed
-- Withdraw
-
-They uplift capability, establish feedback loops, and then move on.
-
-## 5.5 AI‑Enabled Sensing
-
-AI provides:
-
-- early warning signals
-- behavioural insights
-- governance simplification
-- regulatory interpretation
-- continuous feedback
-
-This maintains alignment after enablement teams withdraw.
-
-## 5.6 Continuous Improvement Loops
-
-SC4LE embeds:
-
-- sensing
-- learning
-- adapting
-- evolving
-
-…into the operating rhythm of the organisation.
-
----
-
-# 6. Applicability Across Organisation Sizes
-
-SC4LE is not only for large enterprises. It is a universal pattern that applies across organisational maturity levels.
-
-## 6.1 Startups — Preventing Complexity from Forming
-
-Startups often scale faster than their operating model can support. SC4LE helps them:
-
-- establish principles early
-- avoid cultural debt
-- prevent governance bloat
-- build clarity into their DNA
-- scale without losing coherence
-
-Startups benefit by **starting simple and staying simple**.
-
-## 6.2 Scale‑Ups — Avoiding Collapse Under Growth
-
-Scale‑ups face the highest risk of complexity collapse. SC4LE helps them:
-
-- maintain alignment as teams multiply
-- prevent governance fragmentation
-- scale decision‑making
-- embed sensing mechanisms
-- avoid bureaucracy forming under pressure
-
-Scale‑ups benefit by **scaling clarity faster than headcount**.
-
-## 6.3 SMEs — Removing Early Rigidity Before It Calcifies
-
-SMEs often accumulate:
-
-- ad‑hoc processes
-- undocumented controls
-- inconsistent governance
-- localised decision bottlenecks
-
-SC4LE helps them:
-
-- remove early rigidity
-- simplify governance
-- restore adaptability
-- prepare for future scaling
-
-SMEs benefit by **resetting their operating model before complexity becomes permanent**.
-
-## 6.4 Large Enterprises — Unwinding Systemic Complexity
-
-Large enterprises face:
-
-- cognitive overload
-- governance noise
-- slow decision cycles
-- fragmented controls
-- episodic change
-
-SC4LE helps them:
-
-- unwind accumulated complexity
-- replace episodic change with continuous adaptation
-- strengthen regulatory alignment
-- restore flow and clarity
-- reduce dependency on central teams
-
-Large enterprises benefit by **becoming adaptive at scale**.
-
----
-
-# 7. The Shift: Old World → SC4LE World
-
-| Old World | SC4LE World |
-|----------|-------------|
-| Episodic change | Continuous adaptation |
-| Centralised control | Federated governance |
-| Cognitive overload | Cognitive clarity |
-| Bureaucratic drag | Principle‑driven flow |
-| Slow decisions | AI‑supported sensing |
-| Governance theatre | Evidence‑based alignment |
-| Dependency on CoEs | Local capability uplift |
-| Reactive risk management | Early sensing and adaptation |
-
-This shift is not incremental — it is structural.
-
----
-
-# 8. Consequences of Adopting SC4LE
-
-Organisations that adopt SC4LE experience:
-
-## 8.1 Faster Decision Cycles
-
-Clear principles + federated control = rapid decisions.
-
-## 8.2 Reduced Cognitive Load
-
-Simplified governance frees people to think, learn, and innovate.
-
-## 8.3 Clearer Leadership Messaging
-
-Principles travel faster than processes.
-
-## 8.4 Stronger Regulatory Alignment
-
-AI‑enabled sensing + principle‑driven governance = higher confidence.
-
-## 8.5 More Innovation at the Edges
-
-Local autonomy unlocks creativity.
-
-## 8.6 Less Dependency on Central Teams
-
-Capability is built locally, not held centrally.
-
-## 8.7 Higher Organisational Resilience
-
-Continuous adaptation replaces episodic change.
-
----
-
-# 9. Adoption Pattern
-
-SC4LE spreads through a repeatable, scalable pattern.
-
-## 9.1 Deploy
-
-Enablement teams enter a new area.
-
-## 9.2 Diagnose
-
-They map:
-
-- complexity
+- people
+- teams
+- specialists
+- products and services
+- customers and markets
+- locations
+- technologies
 - controls
+- dependencies
+- decisions
+
+This growth creates greater differentiation and interdependence.
+
+Differentiation allows teams and specialists to develop local knowledge and capability. Interdependence means that their decisions and work increasingly affect other parts of the organisation.
+
+Growth is not itself the problem.
+
+The challenge appears when the way the organisation operates does not evolve with the additional scale, differentiation and interdependence.
+
+### 3.2 The operating-model mismatch
+
+An operating-model mismatch occurs when the organisation's:
+
 - decision pathways
+- shared context
+- governance
+- roles and accountabilities
+- coordination mechanisms
+- operating rhythms
+- sensing capabilities
+- improvement practices
+
+no longer adequately support the organisation it has become.
+
+This is not an inevitable consequence of growth.
+
+It is a condition that can emerge when operating practices, authority and organisational capability do not adapt alongside increasing organisational demands.
+
+A simple founder-facing expression of this challenge is:
+
+**Your company may have outgrown the way it operates.**
+
+### 3.3 Recognisable symptoms
+
+The mismatch is rarely experienced as an abstract operating-model problem.
+
+People usually experience its symptoms:
+
+- leadership priorities are interpreted differently
+- decisions take longer or are repeatedly revisited
+- more decisions escalate to founders or senior leaders
+- teams optimise locally while cross-team work slows down
+- dependencies and hand-offs create friction
+- meetings and coordination overhead increase
+- unclear ownership creates duplication or gaps
+- work is delayed, blocked or reworked
+- governance becomes inconsistent or unnecessarily heavy
+- the organisation responds more slowly to change
+
+These symptoms may have several causes. Their presence does not by itself prove that an operating-model mismatch is the cause.
+
+SC4LE therefore treats them as signals to investigate rather than conclusions to assume.
+
+## 4. The Evidence-Calibrated Narrative
+
+The SC4LE scaling narrative follows this logic:
+
+1. Growth increases differentiation and interdependence.
+2. Greater interdependence increases the need for shared context and effective coordination.
+3. The organisation's operating practices, decision rights and governance may not adapt at the same rate.
+4. A mismatch can emerge between the organisation's needs and the way it operates.
+5. The mismatch can contribute to decision latency, cross-team friction, escalation, rework and reduced adaptability.
+6. The organisation must evolve how authority, context, coordination, sensing and improvement operate.
+
+This is a diagnostic hypothesis, not a universal law.
+
+The narrative must not imply that:
+
+- growth automatically creates dysfunction
+- every organisation experiences the same symptoms
+- all organisational differentiation is harmful
+- all decisions should be decentralised
+- greater coherence requires uniformity
+- one operating model will suit every context
+- SC4LE guarantees a particular business outcome
+
+Context, strategy, risk, capability, regulation and organisational maturity influence how the challenge appears and how it should be addressed.
+
+## 5. Why Common Responses Can Make the Problem Worse
+
+When leaders experience slowing decisions, inconsistency or fragmentation, the instinct may be to add:
+
+- another approval
+- another governance forum
+- another central team
+- another reporting requirement
+- another standard process
+- another transformation initiative
+
+Some additional structure may be justified.
+
+However, structure added without understanding the underlying system can increase:
+
 - cognitive load
-- alignment gaps
+- hand-offs
+- approval dependencies
+- decision latency
+- local disempowerment
+- duplication
+- coordination overhead
 
-## 9.3 Align
+The question is not whether an organisation should have governance, process or central capability.
 
-They establish:
+The question is whether each element:
 
-- principles
+- serves a clear purpose
+- improves outcomes
+- places decisions at the appropriate level
+- supports rather than obstructs flow
+- remains proportionate to context and risk
+- can adapt as conditions change
+
+SC4LE does not replace all process with principles, distribute every decision or remove central governance.
+
+SC4LE uses Principles, governance, decision pathways, sensing and continuous improvement to determine what should be shared, what should be local and what should change.
+
+## 6. The SC4LE Response
+
+SC4LE provides a principle-led operating system for maintaining alignment and integrity while enabling contextual judgement and distributed authority.
+
+The response is not maximum centralisation or maximum decentralisation.
+
+It is coordinated autonomy.
+
+Coordinated autonomy means that teams can exercise judgement and make decisions close to the work while remaining connected through:
+
+- strategic direction and outcomes
+- the SC4LE Principles
+- ethical and regulatory guardrails
+- clear decision rights
+- defined escalation thresholds
+- Federated Governance
+- shared sensing and evidence
+- continuous learning and improvement
+
+This enables autonomy without uncontrolled fragmentation.
+
+### 6.1 SC4LE Principles
+
+The SC4LE Principles provide stable ethical and behavioural guardrails.
+
+They help the organisation:
+
+- reduce unnecessary complexity and ambiguity
+- create alignment without excessive bureaucracy
+- make contextual decisions within shared boundaries
+- minimise avoidable escalation
+- protect flow
+- maintain ethical and transparent behaviour
+- adapt through evidence and learning
+
+The Principles do not prescribe identical behaviour in every context.
+
+They provide a shared basis for judgement across different teams and domains.
+
+### 6.2 Federated Governance
+
+Federated Governance distributes authority to the level best placed to understand the relevant context while maintaining organisational coherence.
+
+It establishes:
+
+- clear ownership
+- defined accountabilities
+- decision rights
+- escalation thresholds
+- assurance expectations
+- shared boundaries
+- connections between local and system-wide governance
+
+Federation does not mean that every decision is local.
+
+Decisions should be made at the lowest appropriate authority level, considering:
+
+- impact
+- risk
+- reversibility
+- dependencies
+- regulatory obligations
+- system-wide consequences
+
+### 6.3 Flow and decision pathways
+
+SC4LE treats flow as a strategic outcome.
+
+This means examining how:
+
+- decisions move
+- work moves
+- dependencies are managed
+- hand-offs affect progress
+- bottlenecks form
+- escalation affects delivery
+- rework is created
+
+The aim is not simply to make every activity faster.
+
+The aim is to reduce unnecessary friction, delay and rework while maintaining appropriate quality, safety, ethics and control.
+
+### 6.4 Sensing Before Steering
+
+SC4LE uses human and AI-enabled sensing to identify emerging conditions before leaders intervene.
+
+Sensing can provide insight into:
+
+- decision latency
+- dependency bottlenecks
+- ageing work
+- repeated escalation
+- governance friction
+- flow breakdown
+- emerging risk
+- inconsistent application of Principles
+- changing organisational capability
+
+Evidence informs steering.
+
+It does not replace human accountability or contextual judgement.
+
+### 6.5 Continuous Improvement as Culture
+
+SC4LE treats improvement as an ongoing organisational capability rather than a one-off transformation event.
+
+The organisation repeatedly:
+
+1. senses current conditions
+2. interprets evidence
+3. identifies constraints and opportunities
+4. adapts governance, decision pathways or ways of working
+5. observes the effects
+6. retains, revises or withdraws the intervention
+
+This allows the operating model to evolve as the organisation, its environment and its risks change.
+
+### 6.6 Build, Embed, Withdraw
+
+Enablement should build sustainable organisational capability rather than create permanent dependency.
+
+Enablement teams:
+
+1. build capability
+2. embed Principles, behaviours and feedback loops
+3. strengthen local ownership
+4. assess maturity
+5. withdraw when the capability can be sustained
+
+Withdrawal is evidence that the organisation has developed capability. It does not mean that improvement has ended.
+
+## 7. Coherence, Autonomy and Differentiation
+
+### 7.1 What coherence means in SC4LE
+
+Within SC4LE, coherence means that different parts of the organisation remain connected through sufficient shared:
+
 - purpose
+- outcomes
+- Principles
+- language
+- context
 - boundaries
-- governance clarity
+- evidence
+- accountability
 
-## 9.4 Enable
+Coherence does not mean:
 
-They uplift:
+- conformity
+- uniform structures
+- central approval of every decision
+- elimination of disagreement
+- identical local practices
+- control for its own sake
 
-- capability
-- local design authority
-- sensing mechanisms
-- feedback loops
+The objective is sufficient coherence for distributed autonomy to work.
 
-## 9.5 Sense
+### 7.2 Why differentiation remains valuable
 
-AI and human sensing detect:
+Different teams may need different:
 
-- deviations
-- risks
-- misalignment
-- emerging patterns
+- capabilities
+- decision approaches
+- controls
+- structures
+- operating rhythms
+- local practices
 
-## 9.6 Adapt
+SC4LE does not seek to remove useful differentiation.
 
-Local teams adjust quickly.
+It seeks to prevent differentiation from becoming uncontrolled fragmentation.
 
-## 9.7 Withdraw
+Local variation is appropriate when it:
 
-Enablement teams move on.
-The area becomes self‑sustaining.
+- reflects genuine contextual needs
+- remains within shared Principles and boundaries
+- does not create unjustified system-wide risk
+- supports intended outcomes
+- can be explained and reviewed
+- does not unreasonably obstruct wider flow
 
-This pattern can run:
+### 7.3 The central design tension
 
-- sequentially
-- in parallel
-- in waves
-- with pauses for absorption
+The central organisational question is:
 
-It is non‑linear and adaptive.
+**How can an organisation maintain sufficient shared direction and integrity for teams to act autonomously without introducing unnecessary central control?**
 
----
+SC4LE addresses this tension through the combined operation of:
 
-# 10. The Strategic Promise
+- Principles
+- strategic direction
+- Federated Governance
+- decision pathways
+- flow
+- sensing
+- enablement
+- maturity
+- continuous improvement
 
-SC4LE enables organisations to:
+No single component resolves the tension independently.
 
-- reduce complexity
-- increase clarity
-- accelerate decisions
-- strengthen governance
-- empower local teams
-- embed continuous adaptation
-- evolve faster than their environment
+## 8. Applicability Across Organisational Contexts
 
-It is not a framework.
-It is not a methodology.
-It is not a transformation programme.
+The underlying SC4LE mechanisms can be applied in different organisational contexts, but the narrative and intervention must remain proportionate to the organisation's needs.
 
-It is a **pattern** for building organisations that can sense, adapt, and evolve continuously.
+### 8.1 Startups
 
----
+Startups may experience:
 
-# 11. How to Use This Document
+- founder-centric decisions
+- unclear priorities
+- inconsistent delegation
+- rapid changes in direction
+- emerging cultural and operational debt
 
-This narrative architecture is a **foundational standard**. It should be used to:
+SC4LE can help establish lightweight Principles, decision clarity and learning practices before unnecessary complexity becomes embedded.
 
-- guide value proposition development
-- shape service offerings
-- inform messaging
-- align operating model artefacts
-- support executive communication
-- anchor design decisions
-- provide coherence across the SC4LE ecosystem
+The objective is not to introduce enterprise governance prematurely.
 
-It is the philosophical and strategic spine of SC4LE.
+It is to preserve clarity while developing the capabilities needed for growth.
 
----
+### 8.2 Scale-ups
 
-# 12. Cross‑References
+Scale-ups may experience:
+
+- leadership misalignment
+- conflicting priorities
+- decision latency
+- cross-team friction
+- dependency bottlenecks
+- inconsistent governance
+- repeated founder escalation
+- flow breakdown
+
+SC4LE can help evolve shared direction, decision rights, governance, flow and sensing as teams and dependencies multiply.
+
+The objective is to scale organisational capability without defaulting to either founder centralisation or excessive bureaucracy.
+
+### 8.3 Established organisations
+
+Established organisations may experience:
+
+- accumulated governance layers
+- unclear decision pathways
+- overlapping controls
+- fragmented ownership
+- local optimisation
+- slow adaptation
+- dependency on central functions
+- repeated transformation activity
+
+SC4LE can help expose unnecessary complexity, strengthen federated capability and embed learning into the operating model.
+
+The objective is not to remove all existing structures.
+
+It is to retain what remains valuable, simplify what does not and improve the organisation's capacity to adapt.
+
+### 8.4 Regulated and risk-sensitive organisations
+
+Regulated and risk-sensitive organisations require clear accountability, assurance and control.
+
+SC4LE does not position autonomy as an alternative to regulatory responsibility.
+
+It uses:
+
+- explicit guardrails
+- proportionate escalation
+- transparent decisions
+- accountable governance
+- evidence-based assurance
+- ethical and regulatory boundaries
+
+to enable contextual decision-making without weakening control.
+
+## 9. The Narrative Progression
+
+SC4LE communication should normally follow this sequence.
+
+### 9.1 Recognition
+
+Begin with language the audience already uses.
+
+Examples from the canonical GTM trigger library include:
+
+- "We're growing fast but breaking things."
+- "My leadership team isn't aligned."
+- "We keep revisiting decisions."
+- "Dependencies are killing us."
+- "We're too slow."
+- "We're working hard but not moving fast."
+
+Do not begin with internal SC4LE terminology.
+
+### 9.2 Consequence
+
+Connect the recognised symptom to its organisational consequence.
+
+Examples include:
+
+- decisions take longer
+- teams wait for other teams
+- work is repeated
+- priorities conflict
+- founders become bottlenecks
+- deadlines are missed
+- governance grows without improving outcomes
+- the organisation adapts more slowly
+
+### 9.3 Systemic interpretation
+
+Explain that several symptoms may reflect a wider mismatch between the organisation and the way it operates.
+
+A suitable expression is:
+
+**Your company may have outgrown the way it operates.**
+
+This must be presented as a hypothesis to investigate, not a predetermined diagnosis.
+
+### 9.4 SC4LE response
+
+Explain the SC4LE response using the mechanisms relevant to the identified condition.
+
+These may include:
+
+- clearer strategic outcomes
+- stronger adoption of the SC4LE Principles
+- clarified decision rights
+- Federated Governance
+- improved flow and dependency management
+- sensing and evidence
+- enablement cycles
+- maturity development
+- continuous improvement
+
+Do not present the entire SC4LE Operating Model if only part of it is relevant to the audience's immediate problem.
+
+### 9.5 Outcome
+
+Use the canonical GTM outcome language:
+
+- faster decisions
+- predictable flow
+- leadership alignment
+- clear priorities
+- reduced chaos
+- decisions that stick
+
+Outcome statements should describe intended improvements, not guaranteed results.
+
+## 10. Core Positioning Narrative
+
+### 10.1 Concise narrative
+
+**Your organisation may have outgrown the way it operates.**
+
+As teams, decisions and dependencies multiply, existing ways of coordinating can contribute to slower decisions, cross-team friction, rework and repeated escalation.
+
+SC4LE helps organisations improve clarity and flow by distributing authority within shared Principles and guardrails, enabling greater autonomy without fragmentation and supporting continuous adaptation as the organisation grows.
+
+### 10.2 Founder-friendly explanation
+
+What worked when the organisation was small may not continue to work as it grows.
+
+Early in a company's development, people often share context directly. Priorities are understood through close contact, decisions happen quickly and founders can resolve uncertainty themselves.
+
+As the company adds teams, specialists, leaders, customers and dependencies, that direct coordination becomes harder to sustain.
+
+The company may respond by adding meetings, approvals, processes or central oversight. Some of these changes may be necessary. Others can create more delay, confusion and dependency.
+
+The underlying issue may be that the company has outgrown the way it operates.
+
+SC4LE helps the organisation evolve how direction, authority, governance, flow and learning work together. It creates shared Principles and clear guardrails, moves appropriate decisions closer to the work, senses emerging friction and builds the capability to improve continuously.
+
+The objective is not greater control.
+
+The objective is enough shared direction and integrity for teams to act with greater autonomy without the organisation becoming fragmented.
+
+### 10.3 Strategic promise
+
+**SC4LE helps organisations build the capability to remain clear, connected and adaptive as their complexity and context change.**
+
+This is a strategic promise, not a guarantee of a particular performance result.
+
+## 11. Claims and Guardrails
+
+### 11.1 Permitted narrative claims
+
+SC4LE communications may state that:
+
+- organisational growth can increase differentiation and interdependence
+- operating practices may fail to evolve alongside organisational demands
+- decision latency, cross-team friction, escalation and rework can be signals of a wider operating-model mismatch
+- shared Principles and guardrails can support distributed judgement
+- Federated Governance can place appropriate decisions closer to context
+- sensing can improve visibility of risk, dependencies and flow
+- continuous improvement supports ongoing organisational adaptation
+- enablement should build sustainable capability rather than permanent dependency
+
+### 11.2 Claims requiring caution
+
+SC4LE communications must qualify claims that:
+
+- growth causes fragmentation
+- centralisation is always harmful
+- decentralisation is always beneficial
+- Principles always outperform processes
+- AI improves governance in every context
+- a specific symptom has a single cause
+- implementation of SC4LE guarantees faster decisions or improved performance
+- SC4LE applies identically to every organisation
+
+### 11.3 Prohibited overclaims
+
+SC4LE communications must not state that:
+
+- every organisation begins with complete clarity
+- organisations inevitably collapse under complexity
+- traditional transformation approaches always fail
+- centralised governance cannot scale
+- all governance is bureaucracy or theatre
+- operational teams do not resist change
+- complexity can or should be eliminated
+- SC4LE is universally applicable without contextual adaptation
+- SC4LE enables an organisation to evolve faster than its environment as a guaranteed outcome
+- SC4LE has proven causal impact where supporting evidence is unavailable
+
+## 12. Narrative Validation
+
+The narrative remains draft until it has been tested with relevant audiences.
+
+Validation should assess the following areas.
+
+### 12.1 Recognition
+
+- Does the audience recognise the problem before SC4LE terminology is introduced?
+- Which symptoms arise spontaneously?
+- Does "outgrown the way it operates" reflect the audience's experience?
+
+### 12.2 Causal clarity
+
+- Does the explanation help connect apparently separate symptoms?
+- Does the audience understand the explanation without assuming that growth automatically causes dysfunction?
+- Does the narrative encourage investigation rather than premature diagnosis?
+
+### 12.3 Autonomy interpretation
+
+- Is coherence understood as shared direction and integrity?
+- Does the audience mistakenly interpret the proposition as greater standardisation or central control?
+- Is "autonomy without fragmentation" meaningful to the audience?
+
+### 12.4 Differentiation
+
+- Does the SC4LE response sound distinct from generic organisational-design or transformation consulting?
+- Which SC4LE mechanisms create that distinction?
+- Is the difference clear without explaining the whole Operating Model?
+
+### 12.5 Commercial relevance
+
+- Does the problem feel sufficiently important to address?
+- Does the narrative connect to measurable organisational consequences?
+- Does it create interest in diagnosis or further discussion?
+
+### 12.6 Language capture
+
+Narrative testing should capture the audience's own words.
+
+Validated language should inform future revisions to:
+
+- GTM standards
+- narrative mappings
+- website messaging
+- value propositions
+- diagnostic questions
+- service positioning
+
+Research evidence can support the narrative's credibility.
+
+It cannot replace direct audience validation.
+
+## 13. Relationship to Evidence
+
+The evidence base supporting this narrative should distinguish between:
+
+- established organisational research
+- industry and practitioner research
+- founder and leadership evidence
+- SC4LE diagnostic observations
+- proposed SC4LE synthesis
+- claims requiring future validation
+
+The following interpretation currently applies.
+
+### 13.1 Strongly supported
+
+- growth increases organisational differentiation and interdependence
+- differentiated organisations require effective coordination and integration
+- shared context supports coordinated performance
+- decision rights and governance affect organisational responsiveness
+- continuous learning supports adaptation
+
+### 13.2 Supported with caveats
+
+- operating-model mismatch can contribute to decision latency, cross-team friction, escalation and rework
+- founders can become bottlenecks as organisations scale
+- shared Principles and guardrails can support distributed authority
+- federated approaches can reduce inappropriate central dependency
+
+### 13.3 Requiring direct validation
+
+- the precise symptoms most important to SC4LE target customers
+- whether "outgrown the way it operates" is the strongest founder-facing hook
+- whether audiences understand coherence without interpreting it as conformity
+- the commercial distinctiveness of the narrative
+- the measurable effect of SC4LE interventions on organisational outcomes
+
+The concept of a "coherence gap" is not part of the approved SC4LE terminology.
+
+Coherence remains an important intended property of the SC4LE system, but it should not currently be presented as a separate diagnostic construct or formal framework.
+
+## 14. How to Use This Document
+
+Use this document to:
+
+- explain the problem SC4LE addresses
+- structure founder and leadership conversations
+- guide website and public-facing narratives
+- connect GTM triggers to SC4LE mechanisms
+- review value propositions and services
+- test communication for consistency with the Golden Source
+- distinguish evidence-supported claims from narrative hypotheses
+- prevent new messaging from redefining approved SC4LE concepts
+
+Do not use this document to:
+
+- redefine a SC4LE Principle
+- create a new maturity dimension
+- replace the SC4LE Operating Model
+- diagnose an organisation without evidence
+- guarantee business outcomes
+- introduce unapproved terminology into the Golden Source
+- duplicate the canonical GTM definitions
+
+## 15. Cross-References
 
 This document should be read alongside:
 
-- SC4LE Operating Model
-- SC4LE Design Tokens
-- SC4LE Schemas
-- SC4LE Visual System Rules
-- SC4LE Content System
-- SC4LE Service Definition Schema
-- SC4LE Value Proposition Schema
+- `foundations/sc4le-principles.md`
+- `foundations/principle-interpretation-guide.md`
+- `foundations/gtm-standards.md`
+- `foundations/gtm-narrative-mapping-standard.md`
+- `foundations/evidence-base.md`
+- `operating-model/sc4le-operating-model-standard.md`
+- `operating-model/sc4le-federated-governance-standard.md`
+- `operating-model/maturity/maturity-model.md`
+- `value-propositions/framework/sc4le-value-proposition-framework.md`
 
----
+## 16. Version History
+
+- **1.1.0** - Rewrote the narrative around an evidence-calibrated operating-model mismatch; removed deterministic and unsupported claims; retained coherence as an intended system property rather than introducing a separate "coherence gap" construct; aligned terminology with the approved SC4LE Principles and active GTM standards; added narrative guardrails, evidence classifications and customer-validation requirements (2026-11-06)
+- **1.0.0** - Initial draft narrative architecture (2026-08-26)
