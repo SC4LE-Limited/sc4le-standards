@@ -2,7 +2,7 @@
 schema: sc4le-standard-v1
 title: "SC4LE Narrative Architecture"
 owner: "CDA"
-status: "draft"
+status: "active"
 version: "1.1.0"
 updated: "2026-11-06"
 tags: ["foundations", "narrative", "architecture", "sc4le", "story", "positioning"]
